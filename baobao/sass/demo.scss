@@ -1,0 +1,85 @@
+/*----------import module----------*/
+@import "../../_sass/bourbon/bourbon";
+@import "../../_sass/normalize/normalize";
+@import "../../_sass/public/public";
+
+/*----------my style----------*/
+$fontSize: 'Microsoft YaHei';
+
+body {
+    background: #fff;
+    color: #fff;
+    font-family: "Microsoft YaHei UI Light", "Microsoft YaHei UI", "Microsoft YaHei";
+}
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.wrap {
+    margin: 2rem 0;
+    text-align: center;
+    button {
+        margin: 0 rem(10) 1rem;
+        padding: 0 rem(20);
+        position: relative;
+        background: #515151;
+        border: none;
+        border-radius: rem(5);
+        display: inline-block;
+        height: 2rem;
+        color: #fff;
+        line-height: 2rem;
+        span {
+            position: absolute;
+            right: rem(-10);
+            top: rem(-10);
+            background: #d91a29;
+            border-radius: 100%;
+            display: none;
+            height: rem(20);
+            width: rem(20);
+            font-size: rem(12);
+            line-height: rem(20);
+        }
+    }
+}
+
+button.add-btn {
+    margin: rem(20) auto;
+    background: #515151;
+    border: none;
+    border-radius: rem(5);
+    display: block;
+    height: 2.6rem;
+    width: 6rem;
+    color: #fff;
+}
+
+.app-wrap {
+    padding: rem(46) rem(20);
+    .app-con {
+        width: 100%;
+        li {
+            float: left;
+            margin-bottom: rem(46);
+            display: block;
+            width: 25%;
+            text-align: center;
+            a {
+                background: #515151;
+                border-radius: rem(20);
+                display: inline-block;
+                height: rem(100);
+                width: rem(100);
+                color: #fff;
+                line-height: rem(100);
+            }
+        }
+    }
+}

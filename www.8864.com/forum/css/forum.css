@@ -1,0 +1,1566 @@
+/*----------import module----------*/
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a, a:hover {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+
+/*style reset*/
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, p, ul, ol {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+li {
+  list-style: none;
+}
+
+a, a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+em, i {
+  font-style: normal;
+}
+
+/*clearfix*/
+.clearfix:before, .clearfix:after {
+  content: "\20";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+/*mobile width 640px rem caculate*/
+/*----------my style----------*/
+body {
+  background: #f2f2f2;
+  color: #303030;
+}
+
+/*forum-main*/
+.forum-main {
+  background: url("../images/body-bg.jpg") no-repeat top center;
+}
+.forum-main div.header {
+  background: url("../images/header-bg.jpg") repeat-x;
+  display: block;
+  height: 45px;
+  color: #717171;
+  line-height: 45px;
+}
+.forum-main div.header .header-content {
+  margin: 0 auto;
+  height: 100%;
+  width: 1200px;
+}
+.forum-main .forum-content {
+  margin: 0 auto;
+  width: 1200px;
+}
+
+/*----------header-content----------*/
+.header-content {
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Microsoft YaHei UI Light";
+}
+.header-content .forum-logo {
+  float: left;
+  margin-top: 7.5px;
+  background: url("../images/icon.png") no-repeat;
+  background-position: 0 -404px;
+  display: block;
+  height: 30px;
+  width: 155px;
+}
+.header-content .right-func {
+  float: right;
+  height: 100%;
+}
+.header-content .mobile-version {
+  float: left;
+  margin-right: 5px;
+  position: relative;
+  z-index: 999;
+}
+.header-content .mobile-version a {
+  margin-top: 11.5px;
+  padding-left: 25px;
+  background: url("../images/icon2.png") no-repeat;
+  background-position: -8px -140px;
+  display: block;
+  height: 22px;
+  width: 45px;
+  color: #717171;
+  font-size: 12px;
+  line-height: 22px;
+}
+.header-content .mobile-version span {
+  padding: 5px;
+  position: absolute;
+  left: -50%;
+  top: 45px;
+  background: #fff;
+  display: none;
+  width: 120px;
+}
+.header-content .mobile-version span img {
+  display: block;
+  width: 100%;
+}
+.header-content .mobile-version:hover span {
+  display: block;
+}
+.header-content .search-con {
+  float: left;
+  margin-top: 7.5px;
+  background: #fff;
+  border: 1px solid #d1d1d1;
+  border-radius: 14px;
+  height: 28px;
+  width: 170px;
+  color: #c3c3c3;
+  line-height: 28px;
+}
+.header-content .search-con input {
+  float: left;
+  margin: 0 0 0 8px;
+  padding: 0;
+  background: none;
+  border: none;
+  height: 28px;
+  width: 110px;
+  color: #c3c3c3;
+  font-size: 12px;
+  line-height: 28px;
+  outline: none;
+}
+.header-content .search-con .pulldown-list {
+  float: right;
+  position: relative;
+  height: 100%;
+  width: 50px;
+  color: #717171;
+  font-size: 12px;
+  z-index: 999;
+}
+.header-content .search-con .pulldown-list a.pd-btn {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.header-content .search-con .pulldown-list a.pd-btn:after, .header-content .search-con .pulldown-list a.pd-btn:before {
+  content: '';
+  position: absolute;
+  right: 12px;
+  top: 11.5px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #717171;
+}
+.header-content .search-con .pulldown-list .pd-con {
+  position: absolute;
+  right: 10px;
+  top: 28px;
+  background: #fff;
+  display: none;
+  border: 1px solid #d1d1d1;
+  border-top: none;
+  width: 54px;
+  text-align: center;
+}
+.header-content .search-con .pulldown-list .pd-con span.pd-item {
+  display: block;
+  cursor: pointer;
+}
+.header-content .search-con .pulldown-list .pd-con span.pd-item:hover {
+  background: #e7e7e7;
+}
+.header-content a.search-btn {
+  float: left;
+  margin: 12.5px 0 0 10px;
+  background: url("../images/icon2.png") no-repeat;
+  background-position: -6px -170px;
+  display: block;
+  height: 20px;
+  width: 20px;
+}
+
+/*----------forum-content----------*/
+.opacitybg {
+  padding: 0 14px;
+  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.forum-content {
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Microsoft YaHei UI Light";
+  /*forum-nav*/
+  /*layout-one*/
+}
+.forum-content .forum-nav {
+  margin-bottom: 270px;
+  padding-top: 8px;
+  position: relative;
+  height: 38px;
+  z-index: 0;
+}
+.forum-content .forum-nav ul {
+  margin: 0 auto;
+  height: 100%;
+  width: 915px;
+}
+.forum-content .forum-nav ul li {
+  float: left;
+  margin-right: 9px;
+  height: 38px;
+  width: 123px;
+}
+.forum-content .forum-nav ul li a {
+  background: url("../images/icon.png") no-repeat;
+  background-position: 0px -85px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 38px;
+  text-align: center;
+}
+.forum-content .forum-nav ul li.current a, .forum-content .forum-nav ul li:hover a {
+  background-position: 0px -134px;
+}
+.forum-content .forum-nav ul li.last {
+  margin-right: 0;
+}
+.forum-content .forum-nav a.signin {
+  position: absolute;
+  right: 0;
+  top: 4px;
+  background: url("../images/icon.png") no-repeat;
+  background-position: 0px -187px;
+  display: block;
+  height: 85px;
+  width: 136px;
+}
+.forum-content .layout-one {
+  margin-bottom: 10px;
+}
+.forum-content .layout-one .part-one, .forum-content .layout-one .part-two {
+  float: left;
+  margin-right: 10px;
+}
+.forum-content .layout-one .part-three {
+  float: right;
+}
+
+/*block-login*/
+.block-login {
+  padding-top: 25px;
+  height: 570px;
+  width: 347px;
+}
+.block-login .logined {
+  color: #383838;
+  font-size: 14px;
+}
+.block-login .logined .logined-header h3 {
+  float: left;
+  color: #fb7c68;
+  font-weight: bold;
+}
+.block-login .logined .logined-header a {
+  float: right;
+}
+.block-login .logined .avatar {
+  margin-bottom: 10px;
+  height: 80px;
+  text-align: center;
+}
+.block-login .logined .avatar span {
+  border-radius: 100%;
+  display: inline-block;
+  height: 100%;
+  width: 80px;
+  overflow: hidden;
+}
+.block-login .logined .avatar span img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.block-login .logined .slide-wrap {
+  position: relative;
+  display: inline-block;
+}
+.block-login .logined a.slide-button {
+  position: relative;
+}
+.block-login .logined a.slide-button:after, .block-login .logined a.slide-button:before {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 7px;
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 6px solid #bbbbbb;
+}
+.block-login .logined div.slide-down {
+  position: absolute;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 1px #e3dfdc;
+  display: none;
+  text-align: left;
+  overflow: hidden;
+  z-index: 999;
+}
+.block-login .logined div.slide-down a {
+  padding: 0 10px;
+  display: block;
+}
+.block-login .logined div.slide-down a:hover {
+  background: #eeeeee;
+  color: #bb9266;
+}
+.block-login .logined .mine, .block-login .logined .user-group {
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+}
+.block-login .logined .mine .slide-down {
+  width: 50px;
+}
+.block-login .logined .user-group .slide-down {
+  width: 100px;
+}
+.block-login .logined .user-group a.slide-button {
+  color: #bb9266;
+}
+.block-login .logined .func-logined {
+  padding: 15px 0;
+  border-bottom: 1px solid #dbdbdb;
+}
+.block-login .logined .func-logined li {
+  float: left;
+  border-right: 1px solid #c5c5c5;
+  width: 112px;
+  text-align: center;
+  line-height: 18px;
+}
+.block-login .logined .func-logined li.last {
+  border: none;
+}
+.block-login .logined .func-logined li span.one {
+  margin-bottom: 10px;
+  position: relative;
+  display: block;
+  height: 18px;
+}
+.block-login .logined .func-logined li span.one:hover em.emtips {
+  display: block;
+}
+.block-login .logined .func-logined li span.one.setting a {
+  padding-left: 20px;
+  display: inline-block;
+  background: url("../images/icon2.png") no-repeat;
+  background-position: -5px -288px;
+}
+.block-login .logined .func-logined li span.one em.emtips {
+  padding: 0 8px;
+  position: absolute;
+  left: 25px;
+  top: -24px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 1px #e3dfdc;
+  display: none;
+  width: 200px;
+  line-height: 24px;
+  text-align: left;
+}
+.block-login .logined .func-logined li span.one em.emtips a {
+  color: #383838;
+  text-decoration: underline;
+}
+.block-login .logined .func-logined li a.two {
+  display: block;
+  height: 18px;
+}
+.block-login .logined .func-logined li a.two.msg span, .block-login .logined .func-logined li a.two.task span {
+  padding-left: 22px;
+  background: url("../images/icon2.png") no-repeat;
+  display: inline-block;
+}
+.block-login .logined .func-logined li a.two.msg span {
+  background-position: -5px -315px;
+}
+.block-login .logined .func-logined li a.two.task span {
+  background-position: -5px -345px;
+}
+.block-login .logined .func-logined li .slide-wrap a.tips {
+  padding-left: 22px;
+  background: url("../images/icon2.png") no-repeat;
+  background-position: -5px -376px;
+  display: inline-block;
+}
+.block-login .logined .func-logined li .slide-wrap a.tips:after, .block-login .logined .func-logined li .slide-wrap a.tips:before {
+  display: none;
+}
+.block-login .logined .func-logined li .slide-wrap .slide-down {
+  width: 100px;
+  line-height: 24px;
+}
+.block-login .logined .func-logined li .slide-wrap .slide-down a span {
+  color: #fb7c68;
+}
+.block-login .logined h4 {
+  margin: 15px 0 18px;
+  color: #383838;
+  text-align: center;
+}
+.block-login .logined h4 span {
+  color: #fb7c68;
+}
+.block-login .logined .myprice {
+  margin-bottom: 10px;
+  height: 36px;
+}
+.block-login .logined .myprice .myprice-btn {
+  float: left;
+  background: url("../images/icon.png") no-repeat;
+  background-position: 0 -454px;
+  height: 100%;
+  width: 241px;
+}
+.block-login .logined .myprice .myprice-btn a {
+  float: left;
+  margin-right: 15px;
+  position: relative;
+  height: 100%;
+  width: 36px;
+}
+.block-login .logined .myprice .myprice-btn a.last {
+  margin: 0;
+}
+.block-login .logined .myprice .myprice-btn a:hover span {
+  display: block;
+}
+.block-login .logined .myprice .myprice-btn a span {
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 38px;
+  left: 0;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 0 5px 1px #e3dfdc;
+  display: none;
+  width: 90px;
+  color: #383838;
+  font-size: 12px;
+  line-height: 18px;
+}
+.block-login .logined .myprice a.myprice-word {
+  float: right;
+  margin-top: 6px;
+  padding: 0 10px;
+  background: #bb9266;
+  display: block;
+  height: 24px;
+  color: #fff;
+  line-height: 24px;
+  text-align: center;
+}
+.block-login .logined .myprice a.myprice-word:hover {
+  background: #c38646;
+}
+.block-login .logined p {
+  margin-bottom: 12px;
+  border-bottom: 1px solid #dbdbdb;
+  line-height: 40px;
+  text-align: center;
+}
+.block-login .logined p a {
+  color: #383838;
+  text-decoration: underline;
+}
+.block-login .input-text {
+  margin-bottom: 10px;
+  background: #fff;
+  border: 1px solid #d9e1ed;
+  border-radius: 20px;
+  height: 39px;
+  overflow: hidden;
+}
+.block-login .input-text input {
+  margin-left: 20px;
+  padding-left: 20px;
+  background: url("../images/icon2.png") no-repeat;
+  background-position: -8px 13px;
+  border: none;
+  height: 100%;
+  width: 310px;
+  color: #c6c6c6;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Microsoft YaHei UI Light";
+  font-size: 14px;
+  line-height: 39px;
+  outline: none;
+}
+.block-login .input-text input.password {
+  background-position: -8px -16px;
+}
+.block-login .other-btn {
+  padding: 10px 0 28px;
+  height: 24px;
+  color: #383838;
+  font-size: 14px;
+  line-height: 24px;
+}
+.block-login .other-btn .auto-login {
+  float: left;
+  margin: 0 30px 0 50px;
+}
+.block-login .other-btn .auto-login input {
+  margin: 6px 5px 0 0;
+  float: left;
+}
+.block-login .other-btn .auto-login span {
+  float: left;
+}
+.block-login .other-btn a {
+  float: left;
+  margin-right: 30px;
+  color: #383838;
+}
+.block-login button {
+  background: #bb9266;
+  border: none;
+  border-radius: 20px;
+  height: 40px;
+  width: 100%;
+  color: #fff;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Microsoft YaHei UI Light";
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+}
+.block-login button:hover {
+  background: #c38646;
+}
+.block-login a.ads {
+  margin: 28px 0;
+  display: block;
+}
+.block-login a.ads img {
+  display: block;
+}
+.block-login .forum-tasks .tasks-list {
+  margin: 0 15px;
+}
+.block-login .forum-tasks .tasks-list li {
+  margin-top: 16px;
+  height: 24px;
+  font-size: 14px;
+  line-height: 24px;
+}
+.block-login .forum-tasks .tasks-list li a.task-title {
+  float: left;
+  height: 100%;
+  width: 130px;
+  color: #383838;
+  overflow: hidden;
+}
+.block-login .forum-tasks .tasks-list li span {
+  float: left;
+  width: 100px;
+  color: #bb9266;
+}
+.block-login .forum-tasks .tasks-list li a.apply {
+  float: right;
+  background: #bb9266;
+  display: block;
+  height: 100%;
+  width: 80px;
+  color: #fff;
+  text-align: center;
+}
+.block-login .forum-tasks .tasks-list li a.apply:hover {
+  background: #c38646;
+}
+
+/*func-title*/
+.func-title {
+  height: 32px;
+  color: #383838;
+  line-height: 32px;
+}
+.func-title h3 {
+  float: left;
+  font-size: 18px;
+  font-weight: bold;
+}
+.func-title a {
+  float: right;
+  color: #383838;
+  font-size: 14px;
+}
+
+/*block-topics*/
+.block-topics {
+  padding: 25px 30px 0;
+  height: 258px;
+  width: 350px;
+}
+.block-topics h3 {
+  color: #303030;
+  font-size: 18px;
+}
+.block-topics a {
+  display: block;
+  height: 46px;
+  color: #303030;
+  font-size: 14px;
+  line-height: 46px;
+  overflow: hidden;
+}
+.block-topics a:hover {
+  color: #515151;
+}
+.block-topics a span {
+  padding-left: 5px;
+  background: url("../images/icon.png") no-repeat;
+  background-position: 0 -360px;
+  display: inline-block;
+  height: 20px;
+  width: 45px;
+  color: #fff;
+  line-height: 20px;
+}
+
+/*block-link*/
+.block-link {
+  margin-top: 10px;
+  padding-top: 15px;
+  height: 287px;
+}
+.block-link .qr-code {
+  height: 224px;
+  overflow: hidden;
+}
+.block-link .qr-code span.qr-code-img {
+  float: left;
+  width: 188px;
+}
+.block-link .qr-code span.qr-code-img img {
+  border: 1px solid #e6e6e6;
+  display: block;
+  width: 186px;
+}
+.block-link .qr-code span.qr-code-img em {
+  display: block;
+  color: #383838;
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+}
+.block-link .qr-code div.link-btn {
+  float: right;
+  width: 178px;
+}
+.block-link .qr-code div.link-btn a {
+  margin-bottom: 16px;
+  padding-left: 30px;
+  padding-top: 17.33333px;
+  background: #5da1fe;
+  display: block;
+  height: 41.33333px;
+}
+.block-link .qr-code div.link-btn a:hover {
+  background: #3d89f2;
+}
+.block-link .qr-code div.link-btn a span {
+  padding-left: 25px;
+  background: url("../images/icon2.png") no-repeat;
+  background-position: -5px -54px;
+  display: block;
+  color: #fff;
+  font-size: 18px;
+  line-height: 24px;
+}
+.block-link .qr-code div.link-btn a.two {
+  background: #fb7c68;
+}
+.block-link .qr-code div.link-btn a.two:hover {
+  background: #f36048;
+}
+.block-link .qr-code div.link-btn a.two span {
+  background-position: -5px -83px;
+}
+.block-link .qr-code div.link-btn a.three {
+  background: #8c97cb;
+}
+.block-link .qr-code div.link-btn a.three:hover {
+  background: #7380bd;
+}
+.block-link .qr-code div.link-btn a.three span {
+  background-position: -5px -112px;
+}
+.block-link .link-other-btn {
+  height: 49px;
+  color: #fff;
+  line-height: 49px;
+}
+.block-link .link-other-btn a {
+  float: left;
+  background: url("../images/icon.png") no-repeat;
+  background-position: 0px -287px;
+  display: block;
+  height: 100%;
+  width: 184px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+.block-link .link-other-btn a.two {
+  float: right;
+}
+
+/*block-gift*/
+.block-gift {
+  padding-top: 18px;
+  height: 265px;
+  width: 366px;
+}
+.block-gift .have-got-gift li .game-title {
+  width: 290px;
+}
+.block-gift .have-got-gift li a.get-gift {
+  display: none;
+}
+.block-gift li {
+  margin-top: 16px;
+  height: 56px;
+  color: #383838;
+  font-size: 14px;
+  overflow: hidden;
+}
+.block-gift li span.game-icon {
+  float: left;
+  margin-right: 16px;
+  border-radius: 15px;
+  display: block;
+  height: 100%;
+  width: 56px;
+  overflow: hidden;
+}
+.block-gift li div.game-title {
+  float: left;
+  height: 100%;
+  width: 230px;
+  font-size: 14px;
+}
+.block-gift li div.game-title a {
+  display: block;
+  color: #383838;
+  line-height: 32px;
+}
+.block-gift li div.game-title span {
+  display: block;
+}
+.block-gift li div.game-title span em {
+  display: inline-block;
+  color: #666666;
+}
+.block-gift li div.game-title span em.one {
+  padding-right: 10px;
+}
+.block-gift li a.get-gift {
+  float: right;
+  margin-top: 16px;
+  padding: 0 10px;
+  background: #bb9266;
+  display: block;
+  height: 24px;
+  color: #fff;
+  line-height: 24px;
+}
+.block-gift li a.get-gift:hover {
+  background: #c38646;
+}
+
+/*block-award*/
+.block-award {
+  margin-top: 10px;
+  padding-top: 16px;
+  height: 286px;
+  width: 366px;
+  overflow: inherit;
+}
+.block-award .award-wrap {
+  height: 240px;
+  overflow: hidden;
+}
+.block-award .award-wrap a {
+  float: left;
+  margin: 15px 10px 0 0;
+  position: relative;
+  display: block;
+  height: 105px;
+  width: 178px;
+}
+.block-award .award-wrap a.double {
+  margin-right: 0;
+}
+.block-award .award-wrap a img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.block-award .award-wrap a span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #666;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  height: 34px;
+  width: 100%;
+  color: #fff;
+  font-size: 14px;
+  line-height: 34px;
+  text-align: center;
+}
+.block-award .award-wrap a:hover span {
+  display: block;
+}
+
+/*layout-two*/
+.layout-two {
+  padding: 15px;
+}
+
+/*block-postinfo*/
+.block-postinfo {
+  margin-bottom: 25px;
+  padding: 15px;
+  border: 1px solid #cdcdcd;
+  color: #383838;
+  font-size: 14px;
+}
+.block-postinfo .up-con {
+  margin-bottom: 16px;
+  height: 24px;
+  line-height: 24px;
+}
+.block-postinfo .up-con span em {
+  color: #fb7c68;
+  font-weight: bold;
+}
+.block-postinfo .up-con span.sort em {
+  padding-right: 15px;
+  background: url("../images/icon4.png") no-repeat right;
+  display: inline-block;
+}
+.block-postinfo .up-con span.sort.down em {
+  background: url("../images/icon5.png") no-repeat right;
+}
+.block-postinfo .up-con .up-left {
+  float: left;
+}
+.block-postinfo .up-con .up-left span {
+  margin-right: 20px;
+}
+.block-postinfo .up-con .up-right {
+  float: right;
+}
+.block-postinfo .up-con .up-right span {
+  margin-left: 20px;
+  padding-left: 20px;
+  background: url("../images/icon2.png") no-repeat;
+}
+.block-postinfo .up-con .up-right span.favorite {
+  background-position: -5px -228px;
+}
+.block-postinfo .up-con .up-right span.subscribe {
+  background-position: -5px -256px;
+}
+.block-postinfo .down-con em {
+  color: #336699;
+}
+
+/*block-pageing*/
+.block-pageing {
+  height: 52px;
+}
+.block-pageing a.send-post {
+  float: left;
+  background: url("../images/icon3.jpg") no-repeat;
+  display: block;
+  height: 100%;
+  width: 150px;
+}
+.block-pageing div.pageing-btn {
+  float: right;
+  height: 30px;
+}
+.block-pageing div.pageing-btn a, .block-pageing div.pageing-btn div.gopage {
+  float: left;
+  margin-left: 5px;
+  padding: 0 10px;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 3px;
+  display: block;
+  height: 28px;
+  color: #2f3032;
+  font-size: 12px;
+  line-height: 28px;
+}
+.block-pageing div.pageing-btn a.current, .block-pageing div.pageing-btn a:hover {
+  background: #d91a29;
+  border: 1px solid #d91523;
+  color: #fff;
+}
+.block-pageing div.pageing-btn a.prev {
+  padding-left: 18px;
+  position: relative;
+}
+.block-pageing div.pageing-btn a.prev:after, .block-pageing div.pageing-btn a.prev:before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-right: 8px solid #d50616;
+  border-bottom: 5px solid transparent;
+}
+.block-pageing div.pageing-btn a.prev:hover:after, .block-pageing div.pageing-btn a.prev:hover:before {
+  border-right: 8px solid #fff;
+}
+.block-pageing div.pageing-btn a.next {
+  padding-right: 18px;
+  position: relative;
+}
+.block-pageing div.pageing-btn a.next:after, .block-pageing div.pageing-btn a.next:before {
+  content: '';
+  position: absolute;
+  right: 5px;
+  top: 9px;
+  width: 0;
+  height: 0;
+  border-top: 5px solid transparent;
+  border-left: 8px solid #d50616;
+  border-bottom: 5px solid transparent;
+}
+.block-pageing div.pageing-btn a.next:hover:after, .block-pageing div.pageing-btn a.next:hover:before {
+  border-left: 8px solid #fff;
+}
+.block-pageing div.pageing-btn div.gopage input {
+  background: #fff;
+  border: 1px solid #dedede;
+  height: 16px;
+  width: 20px;
+  text-align: center;
+}
+
+/*block-category-btn*/
+.block-category-btn {
+  margin: 20px 0 36px 36px;
+  height: 38px;
+  color: #fff;
+  font-size: 14px;
+}
+.block-category-btn a {
+  float: left;
+  margin-right: 5px;
+  background: url("../images/category-btn.gif") no-repeat center;
+  display: block;
+  height: 100%;
+  width: 112px;
+  line-height: 38px;
+  text-align: center;
+}
+.block-category-btn a span {
+  color: #ffea00;
+}
+.block-category-btn a:hover, .block-category-btn a.current {
+  background: url("../images/category-btnhover.gif") no-repeat center;
+}
+
+/*next-page-btn*/
+a.next-page-btn {
+  margin: 10px 0;
+  background: #f2f2f2;
+  border: 1px solid #c2d5e3;
+  border-radius: 3px;
+  display: block;
+  height: 30px;
+  color: #333333;
+  font-size: 12px;
+  line-height: 30px;
+  text-align: center;
+}
+a.next-page-btn span {
+  background: url("../images/icon4.jpg") no-repeat center;
+  display: inline-block;
+  height: 8px;
+  width: 10px;
+}
+
+/*block-send-msg*/
+.block-send-msg {
+  margin-top: 10px;
+}
+.block-send-msg a.send-comment-btn {
+  padding: 0 12px;
+  background: #d91a29;
+  display: inline-block;
+  height: 28px;
+  color: #fff;
+  font-size: 12px;
+  line-height: 28px;
+}
+.block-send-msg a.send-comment-btn:hover {
+  background: #e33946;
+}
+
+/*block-float-right*/
+.block-float-right {
+  margin-top: -129px;
+  position: fixed;
+  right: 0;
+  top: 50%;
+  background: url("../images/icon.png") no-repeat;
+  background-position: -155px -2px;
+  height: 258px;
+  width: 50px;
+  overflow: hidden;
+}
+.block-float-right a {
+  margin-bottom: 2px;
+  position: relative;
+  display: block;
+  height: 50px;
+  width: 100%;
+}
+.block-float-right a span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.2);
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+.block-float-right a:hover span {
+  display: block;
+}
+
+/*login-tips*/
+.login-tips {
+  margin: -90px 0 0 -195px;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0 #e0e0e0;
+  height: 180px;
+  width: 290px;
+  font-family: "Microsoft YaHei UI", "Microsoft YaHei", "Microsoft YaHei UI Light";
+  text-align: center;
+}
+.login-tips span {
+  margin: -20px 0 0 100px;
+  background: url("../images/icon.png") no-repeat;
+  background-position: 0 0;
+  display: block;
+  height: 70px;
+  width: 90px;
+}
+.login-tips p {
+  color: #383838;
+  font-size: 24px;
+  line-height: 70px;
+  text-align: center;
+}
+.login-tips a {
+  margin: 0 auto;
+  background: #bb9266;
+  display: block;
+  height: 36px;
+  width: 90px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 36px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=forum.css.map */

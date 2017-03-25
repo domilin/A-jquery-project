@@ -1,0 +1,303 @@
+/*----------import module----------*/
+@import "../../../../_sass/bourbon/bourbon";
+@import "../../../../_sass/normalize/normalize";
+@import "../../../../_sass/public/public";
+
+/*----------my style----------*/
+body {
+    background: #1b1a18;
+    color: #fff;
+}
+
+/*header*/
+header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.8);
+    height: rem(124);
+    width: 100%;
+    z-index: 999;
+    .logo {
+        position: absolute;
+        left: rem(18);
+        top: rem(20);
+        height: rem(138);
+        a {
+            float: left;
+            margin-right: rem(10);
+            display: block;
+            height: 100%;
+            width: rem(138);
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        div.game-title {
+            float: left;
+            color: #fff;
+            h1 {
+                font-size: rem(30);
+                font-weight: bolder;
+                line-height: rem(60);
+            }
+            h2 {
+                font-size: rem(17);
+            }
+        }
+    }
+    a.game-download {
+        padding: 0 rem(38);
+        position: absolute;
+        right: rem(20);
+        top: rem(25);
+        border: rem(3) solid #ddb756;
+        border-radius: rem(5);
+        display: block;
+        height: rem(70);
+        color: #ddb756;
+        line-height: rem(70);
+    }
+}
+
+/*banner*/
+.banner {
+    img {
+        width: 100%;
+    }
+}
+
+/*download*/
+.download {
+    margin: 0 0 rem(38);
+    padding: 0 rem(35);
+    height: rem(188);
+    .video {
+        float: left;
+        background: #000;
+        height: 100%;
+        width: rem(306);
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    .download-btn {
+        float: right;
+        width: rem(251);
+        a {
+            display: block;
+            height: rem(89);
+            img {
+                height: 100%;
+                width: 100%;
+            }
+            &:last-child {
+                margin-top: rem(188-89*2);
+            }
+        }
+    }
+}
+
+/*land-title*/
+.land-title {
+    height: rem(26);
+    text-align: center;
+    img {
+        height: 100%;
+    }
+}
+
+/*role-tab*/
+.role-tab {
+    margin: rem(28) 0 rem(40) 0;
+    padding-top: rem(140);
+    height: 100%;
+    width: 100%;
+    .swiper-slide {
+        height: 100%;
+        width: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+        .role-con {
+            position: absolute;
+            left: rem(290);
+            top: rem(260);
+            h3 {
+                margin-bottom: rem(35);
+                font-size: rem(30);
+            }
+            p {
+                font-size: rem(18);
+                line-height: rem(28);
+            }
+        }
+    }
+    .swiper-pagination-bullets {
+        bottom: inherit;
+        top: 0;
+        width: 100%;
+        span.swiper-pagination-bullet {
+            background: url("../images/land/land-btn.png") no-repeat center;
+            background-size: 100% 100%;
+            border-radius: 0;
+            height: rem(150);
+            width: rem(136);
+            opacity: 1;
+            &:nth-child(2) {
+                background: url("../images/land/land-btn1.png") no-repeat center;
+                background-size: 100% 100%;
+            }
+            &:nth-child(3) {
+                background: url("../images/land/land-btn2.png") no-repeat center;
+                background-size: 100% 100%;
+            }
+            &:nth-child(4) {
+                background: url("../images/land/land-btn3.png") no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+        span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background: url("../images/land/land-btn-hover.png") no-repeat center;
+            background-size: 100% 100%;
+            &:nth-child(2) {
+                background: url("../images/land/land-btn1-hover.png") no-repeat center;
+                background-size: 100% 100%;
+            }
+            &:nth-child(3) {
+                background: url("../images/land/land-btn2-hover.png") no-repeat center;
+                background-size: 100% 100%;
+            }
+            &:nth-child(4) {
+                background: url("../images/land/land-btn3-hover.png") no-repeat center;
+                background-size: 100% 100%;
+            }
+        }
+    }
+}
+
+/*img-tab*/
+.img-tab {
+    padding: rem(40) 0 rem(140);
+    .swiper-wrapper {
+        height: 100%;
+        width: 100%;
+    }
+    .swiper-slide {
+        height: 100%;
+        width: 100%;
+        text-align: center;
+        img {
+            width: rem(576);
+        }
+    }
+    .swiper-pagination-bullets {
+        bottom: rem(68);
+        span.swiper-pagination-bullet {
+            background: #3a3a3a;
+            height: rem(20);
+            width: rem(20);
+            opacity: 1;
+        }
+        span.swiper-pagination-bullet.swiper-pagination-bullet-active {
+            background: #a2874a;
+        }
+    }
+}
+
+/*footer*/
+footer {
+    padding: rem(20) 0;
+    background: #000000;
+    width: 100%;
+    color: #626262;
+    font-size: 1rem;
+    text-align: center;
+    overflow: hidden;
+    z-index: 999;
+    span {
+        margin-bottom: rem(20);
+        display: block;
+        height: rem(42);
+        img {
+            height: 100%;
+        }
+    }
+    p {
+        margin-left: - rem(150);
+        display: block;
+        width: 150%;
+        @include transform(scale(0.6));
+    }
+    em {
+        margin: rem(5) 0 rem(5) (- rem(160));
+        display: block;
+        width: 150%;
+        @include transform(scale(0.5));
+    }
+}
+
+
+/*pc-tips*/
+.pc-tips{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+    .qr-code{
+        margin: -120px 0 0 -150px;
+        padding: 10px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        background: rgba(255, 255, 255, 1);
+        width: 280px;
+        span{
+            display: block;
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        p{
+            display: block;
+            color: #666;
+            font-family: "Microsoft YaHei";
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+        }
+    }
+}
+
+
+/*undown-bg*/
+.undown-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: none;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
+}
+
+.undown-text {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url("../images/land/msg_weixin.png") no-repeat;
+    background-size: 100% auto;
+    height: 100%;
+    width: 100%;
+}
+
+

@@ -1,0 +1,417 @@
+/*----------import module----------*/
+@import "../../../_sass/bourbon/bourbon";
+@import "../../../_sass/normalize/normalize";
+@import "../../../_sass/public/public";
+@import "animate/animate";
+
+/*----------my style----------*/
+$myh: "Microsoft YaHei UI Light", "Microsoft YaHei UI", "Microsoft YaHei";
+
+body {
+    background: #f9f9f9;
+    color: #ffffff;
+    font-family: $myh;
+}
+
+/*banner*/
+$contentWidth: 1000px;
+$noPaddingWidth: 970px;
+.banner {
+    position: relative;
+    background: url("../images/wallpaper/wp-header-bg-dragon.jpg") no-repeat center;
+    height: 300px;
+    overflow: hidden;
+    .content {
+        margin: 0 auto;
+        position: relative;
+        height: 100%;
+        width: $contentWidth;
+        overflow: hidden;
+        a.game-logo {
+            position: absolute;
+            left: 110px;
+            top: 30px;
+            @include animation(bounceInDown 1s);
+            @include animation-fill-mode(both);
+        }
+        a.backto-official {
+            position: absolute;
+            left: 180px;
+            top: 145px;
+            @include animation(bounceInLeft 1s .2s);
+            @include animation-fill-mode(both);
+        }
+        span.page-title {
+            position: absolute;
+            left: 440px;
+            top: 80px;
+            @include animation(bounceInUp 1s .4s);
+            @include animation-fill-mode(both);
+        }
+    }
+}
+
+/*wallpaper*/
+.wallpaper {
+    padding-top: 20px;
+    background: url("../images/wallpaper/wp-conent-bg.jpg") no-repeat center;
+    .content {
+        margin: 0 auto;
+        width: $contentWidth;
+    }
+}
+
+/*----------label-btn----------*/
+.label-btn {
+    height: 79px;
+    @include animation(slideInUp 1s .6s);
+    @include animation-fill-mode(both);
+    .btn-con {
+        margin: 0 auto;
+        height: 100%;
+        width: $noPaddingWidth;
+        a {
+            $height: 46px;
+            float: left;
+            padding: (70-$height)/2 0;
+            background: #fff;
+            display: block;
+            height: $height;
+            width: 321px;
+            color: #000;
+            font-size: 20px;
+            text-align: center;
+            span {
+                margin-right: 20px;
+                background: url("../images/wallpaper/wp-icon.png") no-repeat;
+                background-position: -60px 0;
+                display: inline-block;
+                height: $height;
+                width: 40px;
+                vertical-align: middle;
+            }
+            em {
+                display: inline-block;
+                height: $height;
+                line-height: $height;
+                vertical-align: middle;
+            }
+            &:hover, &.current {
+                background: url("../images/wallpaper/wp-tabbtn-hover.png") no-repeat center;
+                height: $height + 9;
+                span {
+                    background-position: 0 0;
+                }
+                em {
+                    color: #fff;
+                }
+            }
+            &.two {
+                margin-left: 4px;
+                span {
+                    background-position: -60px -53px;
+                }
+                &:hover, &.current {
+                    span {
+                        background-position: 0 -53px;
+                    }
+                }
+            }
+            &.three {
+                float: right;
+                span {
+                    background-position: -60px -105px;
+                }
+                &:hover, &.current {
+                    span {
+                        background-position: 0 -105px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*----------label-con----------*/
+.label-con {
+    margin-top: 6px;
+    @include animation(slideInUp 1s .8s);
+    @include animation-fill-mode(both);
+}
+
+
+/*wallpaper-con*/
+.wallpaper-con {
+    margin: 0 auto;
+    width: $noPaddingWidth;
+    li {
+        $margin: ($noPaddingWidth - 484 * 2 + 2) / 2;
+        float: left;
+        margin: 0 $margin $margin 0;
+        position: relative;
+        height: 272px;
+        width: 484px;
+        overflow: hidden;
+        .rules{
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: url("../images/wallpaper/wp-opacity-bg.png");
+            height: 100%;
+            width: 100%;
+            opacity: 0;
+            @include transform-origin(0% 0%);
+            @include transform(rotate(-90deg));
+            @include transition(all 0.5s ease-out);
+            h3{
+                margin-left: 65px;
+                font-size: 24px;
+                line-height: 60px;
+                opacity: 0;
+                @include transform(rotate(90deg));
+                @include transform-origin(100% 100%);
+                @include transition(all 0.3s ease-in);
+                &.one{
+                    margin-top: 35px;
+                }
+                &:nth-child(1){
+                    @include transition-delay(0.2s);
+                }
+                &:nth-child(3){
+                    @include transition-delay(0.6s);
+                }
+            }
+            .rules-con{
+                margin-bottom: 20px;
+                margin-left: 55px;
+                font-size: 16px;
+                opacity: 0;
+                @include transform(rotate(90deg));
+                @include transform-origin(100% 100%);
+                @include transition(all 0.3s ease-in);
+                &:nth-child(2){
+                    @include transition-delay(0.4s);
+                }
+                &:nth-child(4){
+                    @include transition-delay(0.8s);
+                }
+                a{
+                    padding: 0 10px;
+                    border-right: 1px solid #fff;
+                    display: inline-block;
+                    color: #fff;
+                    &:hover{
+                        color: #79c2ff;
+                        text-decoration: underline;
+                    }
+                    &.last{
+                        border-right: none;
+                    }
+                }
+            }
+        }
+        &:hover{
+            .rules{
+                opacity: 1;
+                @include transform(rotate(0deg));
+                h3, .rules-con{
+                    opacity: 1;
+                    @include transform(rotate(0deg));
+                }
+            }
+        }
+        &.double{
+            float: right;
+            margin-right: 0;
+        }
+    }
+}
+
+/*image-wraper*/
+.image-wraper{
+    margin: 0 auto;
+    position: relative;
+    height: 480px;
+    width: $noPaddingWidth;
+    overflow: hidden;
+    .image-con-wraper{
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .image-con{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        span{
+            float: left;
+            display: block;
+            height: 480px;
+            width: 970px;
+            img{
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+    .image-btn{
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        .image-btn-con{
+            float: left;
+            position: relative;
+            display: block;
+            height: 100%;
+            width: 50%;
+            a{
+                margin-top: -51px;
+                position: absolute;
+                left: 28px;
+                top: 50%;
+                background: url("../images/wallpaper/wp-bigbtn-left.png") no-repeat center;
+                display: none;
+                height: 103px;
+                width: 89px;
+            }
+            &.btn-next{
+                float: right;
+                a{
+                    left: inherit;
+                    right: 28px;
+                    background: url("../images/wallpaper/wp-bigbtn-right.png") no-repeat center;
+                }
+            }
+            &:hover{
+                a{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/*btn-wraper*/
+.btn-position{
+    margin-top: 60px;
+    position: relative;
+    height: 190px;
+    width: 100%;
+}
+.btn-wraper{
+    padding: 0 15px;
+    padding-bottom: 15px;
+    padding-top: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #f9f9f9;
+    height: 190px;
+    width: $noPaddingWidth;
+    .btn-con-wraper{
+        height: 100%;
+        width: 100%;
+        .btn-con{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            .btn-con-main{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                a.btn-ele{
+                    float: left;
+                    margin-bottom: 20px;
+                    margin-right: (970-3*322)/2 + px;
+                    position: relative;
+                    display: block;
+                    height: 190px;
+                    width: 322px;
+                    img{
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                    }
+                    span.btn-mask{
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        //background: url("../images/wallpaper/wp-opacity-bg.png");
+                        background: rgba(0, 0, 0, 0.4);
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        z-index: 0;
+                    }
+                    em.btn-check{
+                        margin: -25px 0 0 -25px;
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        background: url("../images/wallpaper/wp-search.png") no-repeat center;
+                        display: none;
+                        height: 50px;
+                        width: 50px;
+                        z-index: 1;
+                    }
+                    &:hover{
+                        span.btn-mask{
+                            display: block;
+                        }
+                        em{
+                            display: block;
+                        }
+                    }
+                    &.current{
+                        span.btn-mask{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .btn-toggle{
+            margin-top: -22px;
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            background: url("../images/wallpaper/wp-littlebtn-left.png") no-repeat center;
+            display: block;
+            height: 43px;
+            width: 22px;
+            &.btn-next{
+                left: inherit;
+                right: 20px;
+                background: url("../images/wallpaper/wp-littlebtn-right.png") no-repeat center;
+            }
+        }
+    }
+    .open-close-btn{
+        margin-left: -30px;
+        position: absolute;
+        left: 50%;
+        top: (50-31)/2 + px;
+        background: url("../images/wallpaper/wp-more-up.png") no-repeat center;
+        height: 31px;
+        width: 61px;
+        &:hover{
+            @include animation(btnAnimate 1s ease-in-out);
+        }
+        &.current{
+            background: url("../images/wallpaper/wp-more-down.png") no-repeat center;
+        }
+    }
+}
+
+/*con-con*/
+.con-con{
+    margin-bottom: 80px;
+    display: none;
+}

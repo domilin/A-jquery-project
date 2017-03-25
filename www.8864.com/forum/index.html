@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="keywords">
+    <meta name="description" content="description">
+    <meta name="author" content="name, email@gmail.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <title>demo</title>
+
+    <!--publlic-->
+    <script src="public/modernizr.js"></script>
+    <script src="public/jquery-1.12.0.min.js"></script>
+
+    <!--plugin-->
+
+    <!--private-->
+    <link rel="stylesheet" type="text/css" href="css/forum.css">
+    <script src="js/forum.js"></script>
+</head>
+<body>
+
+<div class="forum-main">
+    <div class="header">
+        <div class="header-content">
+            <a class="forum-logo"></a>
+            <div class="right-func">
+                <div class="mobile-version">
+                    <a>手机版</a>
+                    <span>
+                        <img src="images/qr-code.jpg">
+                        <em></em>
+                    </span>
+                </div>
+                <div class="search-con">
+                    <input type="text" placeholder="请输入搜索内容"/>
+                    <div class="pulldown-list" id="headerPullDownList">
+                        <a class="pd-btn">帖子</a>
+                        <div class="pd-con">
+                            <span class="pd-item">帖子</span>
+                            <span class="pd-item">用户</span>
+                            <span class="pd-item">本版</span>
+                        </div>
+                    </div>
+                </div>
+                <a class="search-btn"></a>
+            </div>
+        </div>
+    </div>
+    <div class="forum-content clearfix">
+        <div class="forum-nav clearfix">
+            <ul>
+                <li class="current"><a>首页</a></li>
+                <li><a>火爆活动</a></li>
+                <li><a>社区公告</a></li>
+                <li><a>客服专区</a></li>
+                <li><a>新手上路</a></li>
+                <li><a>论坛发号</a></li>
+                <li class="last"><a>金币兑换</a></li>
+            </ul>
+            <a class="signin"></a>
+        </div>
+        <div class="layout-one clearfix">
+            <div class="part-one">
+                <div class="opacitybg block-login">
+                    <!--<div class="input-text">
+                        <input type="text" placeholder="通行证" />
+                    </div>
+                    <div class="input-text">
+                        <input class="password" type="text" placeholder="密码" />
+                    </div>
+                    <div class="other-btn">
+                        <div class="auto-login">
+                            <input type="checkbox">
+                            <span>自动登录</span>
+                        </div>
+                        <a href="#">立即注册</a>
+                        <a href="#">找回密码</a>
+                    </div>v
+                    <button>登录</button>
+                    <a class="ads"><img src="images/ads.jpg"></a>-->
+                    <div class="logined">
+                        <div class="logined-header">
+                            <h3>排行榜</h3>
+                            <a>退出</a>
+                        </div>
+                        <div class="avatar"><span><img src="images/avatar.jpg"></span></div>
+                        <div class="mine">
+                            <div class="slide-wrap" id="mineWord">
+                                <span>tiaotiao</span>
+                                <a class="slide-button">我的</a>
+                                <div class="slide-down">
+                                    <a>帖子</a>
+                                    <a>收藏</a>
+                                    <a>好友</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-group">
+                            <div class="slide-wrap" id="userGroupCon">
+                                <span>用户组:</span>
+                                <a class="slide-button">超级版主</a>
+                                <div class="slide-down"><a>超级版主</a><a>普通用户</a><a>低级版主</a></div>
+                            </div>
+                        </div>
+                        <ul class="func-logined clearfix">
+                            <li><span class="one">金币:522<em class="emtips">如何获得更多金币，<a>请点击</a></em></span><a class="two msg"><span>消息</span></a></li>
+                            <li><span class="one">信仰值<em class="emtips">如何获得更多信仰值，<a>请点击</a></em></span><a class="two task"><span>任务</span></a></li>
+                            <li class="last"><span class="one setting"><a>设置</a></span>
+                                <div class="slide-wrap" id="tipsMsg">
+                                    <a class="slide-button tips">提醒</a>
+                                    <div class="slide-down">
+                                        <a>消息</a>
+                                        <a>听众</a>
+                                        <a>系统消息<span>(1)</span></a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <h4>您现在有<span>58</span>枚勋章</h4>
+                        <div class="myprice">
+                            <div class="myprice-btn">
+                                <a href=""><span>黄金四天王！人工授予</span></a>
+                                <a href=""><span>黄金四天王！人工授予</span></a>
+                                <a href=""><span>黄金四天王！人工授予</span></a>
+                                <a href=""><span>黄金四天王！人工授予</span></a>
+                                <a class="last" href=""><span>黄金四天王！人工授予</span></a>
+                            </div>
+                            <a href="" class="myprice-word">我的勋章</a>
+                        </div>
+                        <p>想要获得更多勋章，快去多多<a>做任务获取</a>吧！</p>
+                    </div>
+                    <div class="forum-tasks">
+                        <div class="func-title">
+                            <h3>论坛任务</h3>
+                            <a href="#">更多+</a>
+                        </div>
+                        <ul class="tasks-list">
+                            <li><a class="task-title">蜀山战纪论坛任务</a><span>积分/金币50</span><a class="apply">立即申请</a></li>
+                            <li><a class="task-title">蜀山战纪论坛任务</a><span>积分/金币50</span><a class="apply">立即申请</a></li>
+                            <li><a class="task-title">蜀山战纪论坛任务</a><span>积分/金币50</span><a class="apply">立即申请</a></li>
+                            <li><a class="task-title">蜀山战纪论坛任务</a><span>积分/金币50</span><a class="apply">立即申请</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="part-two">
+                <div class="opacitybg block-topics">
+                    <h3>《蜀山战纪之剑侠传奇》御剑二测与您相约</h3>
+                    <a><span>话题</span>&lt;诗诗出品&gt;决战蜀山来袭，跨服帮会战打法</a>
+                    <a><span>爆照</span>&lt;诗诗出品&gt;决战蜀山来袭，跨服帮会战打法</a>
+                    <a><span>攻略</span>&lt;诗诗出品&gt;决战蜀山来袭，跨服帮会战打法</a>
+                    <a><span>话题</span>&lt;诗诗出品&gt;决战蜀山来袭，跨服帮会战打法</a>
+                    <a><span>话题</span>&lt;诗诗出品&gt;决战蜀山来袭，跨服帮会战打法</a>
+                </div>
+                <div class="opacitybg block-link">
+                    <div class="qr-code clearfix">
+                        <span class="qr-code-img">
+                            <img src="images/forum-qr-code.jpg">
+                            <em>更多活动请关注公众号</em>
+                        </span>
+                        <div class="link-btn">
+                            <a class="one"><span>蓝色港湾</span></a>
+                            <a class="two"><span>猎奇八卦</span></a>
+                            <a class="three"><span>玩家故事汇</span></a>
+                        </div>
+                    </div>
+                    <div class="link-other-btn">
+                        <a class="one">版规公告</a>
+                        <a class="two">客服中心</a>
+                    </div>
+                </div>
+            </div>
+            <div class="part-three">
+                <div class="opacitybg block-gift">
+                    <div class="func-title">
+                        <h3>论坛任务</h3>
+                        <a href="#">更多+</a>
+                    </div>
+                    <ul class="gift-list have-got-gift">
+                        <li>
+                            <span class="game-icon"><img src="images/game-icon.png"></span>
+                            <div class="game-title">
+                                <a>《蜀山战纪之剑侠传奇》公测礼包</a>
+                                <span><em class="one">恭喜您获得激活码：6094397294</em></span>
+                            </div>
+                            <a class="get-gift">领取</a>
+                        </li>
+                    </ul>
+                    <ul class="gift-list">
+                        <li>
+                            <span class="game-icon"><img src="images/game-icon.png"></span>
+                            <div class="game-title">
+                                <a>《蜀山战纪之剑侠传奇》公测礼包</a>
+                                <span><em class="one">领取条件：80金币</em><em>剩余：255/300</em></span>
+                            </div>
+                            <a class="get-gift">领取</a>
+                        </li>
+                    </ul>
+                    <ul class="gift-list">
+                        <li>
+                            <span class="game-icon"><img src="images/game-icon.png"></span>
+                            <div class="game-title">
+                                <a>《蜀山战纪之剑侠传奇》公测礼包</a>
+                                <span><em class="one">领取条件：80金币</em><em>剩余：255/300</em></span>
+                            </div>
+                            <a class="get-gift">领取</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="opacitybg block-award">
+                    <div class="func-title">
+                        <h3>玩家晒奖</h3>
+                        <a href="#">更多+</a>
+                    </div>
+                    <div class="award-wrap">
+                        <a><img src="images/img.jpg"><span>月满佳节+卡片支架</span></a>
+                        <a class="double"><img src="images/img.jpg"><span>月满佳节+卡片支架</span></a>
+                        <a><img src="images/img.jpg"><span>月满佳节+卡片支架</span></a>
+                        <a class="double"><img src="images/img.jpg"><span>月满佳节+卡片支架</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layout-two opacitybg">
+            <div class="block-postinfo">
+                <div class="up-con">
+                    <div class="up-left clearfix">
+                        <span class="sort">今日:<em>122</em></span>
+                        <span>主题:<em>3769</em></span>
+                        <span class="sort down">排名:<em>3</em></span>
+                    </div>
+                    <div class="up-right">
+                        <span class="favorite">收藏本版:<em>(826)</em></span>
+                        <span class="subscribe">订阅</span>
+                    </div>
+                </div>
+                <div class="down-con">
+                    <span>版主:<em>风筝</em></span>
+                </div>
+            </div>
+            <div class="block-pageing">
+                <a class="send-post"></a>
+                <div class="pageing-btn">
+                    <a class="prev">返回</a>
+                    <a class="current">1</a>
+                    <a>2</a>
+                    <a>3</a>
+                    <a>4</a>
+                    <a>5</a>
+                    <a>6</a>
+                    <a>7</a>
+                    <div class="gopage">
+                        <input type="text" value="1">
+                        /95页
+                    </div>
+                    <a class="next">下一页</a>
+                </div>
+            </div>
+            <div class="block-category-btn">
+                <a class="current">全部</a>
+                <a>热门活动<span>42</span></a>
+                <a>活动公告<span>42</span></a>
+                <a>获奖感言<span>42</span></a>
+                <a>活动结束<span>42</span></a>
+                <a>获奖公布<span>42</span></a>
+                <a>有奖投票<span>42</span></a>
+            </div>
+            <div class="block-forum-con">
+                <img src="images/img1.jpg">
+            </div>
+            <a class="next-page-btn">下一页<span></span></a>
+            <div class="block-pageing">
+                <a class="send-post"></a>
+                <div class="pageing-btn">
+                    <a class="prev">返回</a>
+                    <a class="current">1</a>
+                    <a>2</a>
+                    <a>3</a>
+                    <a>4</a>
+                    <a>5</a>
+                    <a>6</a>
+                    <a>7</a>
+                    <div class="gopage">
+                        <input type="text" value="1">
+                        /95页
+                    </div>
+                    <a class="next">下一页</a>
+                </div>
+            </div>
+            <div class="block-send-msg">
+                <img src="images/img2.jpg">
+                <a class="send-comment-btn">发表评论</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="block-float-right" id="blockFloatRight">
+    <a><span></span></a>
+    <a><span></span></a>
+    <a><span></span></a>
+    <a><span></span></a>
+    <a id="backToTop"></a>
+</div>
+
+<div class="login-tips">
+    <span></span>
+    <p>请先登录</p>
+    <a>确定</a>
+</div>
+
+</body>
+</html>

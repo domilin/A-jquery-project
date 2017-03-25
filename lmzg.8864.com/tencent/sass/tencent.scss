@@ -1,0 +1,25 @@
+@charset "utf-8";
+/**
+ * 作者：周双龙
+ * 时间：2017/3/7
+ * 描述：当前文件描述
+ */
+@import "../../../_sass/bourbon/bourbon";
+@import "../../../_sass/normalize/normalize";
+@import "../../../_sass/public/public";
+
+.main {
+    position: relative;
+    background: url("../img/bg.jpg") no-repeat top;
+    background-size: 100% auto;
+    height: rem(1136);
+    width: rem(100%);
+    a {
+        position: absolute;
+        left: rem(190);
+        top: rem(810);
+        display: block;
+        height: rem(90);
+        width: rem(256);
+    }
+}
