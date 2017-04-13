@@ -132,11 +132,15 @@ footer {
 }
 
 /*.magic, .hunter, .puppet, .soldier*/
-.magic, .hunter, .puppet, .soldier {
+.sword, .magic, .hunter, .puppet, .soldier {
     background: url("../images/career/magic/magic-bg.png") no-repeat right top;
     background-size: rem(640) rem(1010);
     height: 100%;
     width: 100%;
+}
+
+.sword {
+    background-image: url("../images/career/sword/sword-bg.png");
 }
 
 .hunter {
@@ -387,15 +391,14 @@ footer {
     }
 }
 
-.big-img-wrap{
+.big-img-wrap {
     top: 20%;
     background: rgba(255, 255, 255, 0.85);
-    img.big-img{
+    img.big-img {
         display: block;
         width: 100%;
     }
 }
-
 
 /*animattion*/
 .career-item {

@@ -1,0 +1,1338 @@
+*, *:before, *:after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    font-size: 62.5%;
+}
+
+@media (max-width: 991px) {
+    html, body {
+        font-size: 50%;
+    }
+}
+
+@media (max-width: 768px) {
+    html, body {
+        font-size: 40%;
+    }
+}
+
+body {
+    background: #777;
+}
+
+.slider3d__inner, .slider3d__rotater, .slider3d__handle__inner, .slider3d__handle__rotater {
+    position: relative;
+    height: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.slider3d {
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.slider3d.no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.slider3d__wrapper {
+    z-index: 1;
+    position: relative;
+    height: 100%;
+}
+
+.slider3d__item {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    background-color: #000;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.slider3d__item:nth-child(1) {
+    background-image: url(../../images/zhiyezhan/sword-bg.jpg);
+}
+
+.slider3d__item:nth-child(2) {
+    background-image: url(../../images/zhiyezhan/zhanshibk.jpg);
+}
+
+.slider3d__item:nth-child(3) {
+    background-image: url(../../images/zhiyezhan/shangjinlierenbk.jpg);
+}
+
+.slider3d__item:nth-child(4) {
+    background-image: url(../../images/zhiyezhan/kuileishibk.jpg);
+}
+
+.slider3d__item:nth-child(5) {
+    background-image: url(../../images/zhiyezhan/mofashibk.jpg);
+}
+
+.slider3d__heading {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    margin-top: -6rem;
+    text-align: center;
+    font-size: 12rem;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #ffffff;
+    -webkit-transform: translateZ(3rem) scale(0.5);
+    transform: translateZ(3rem) scale(0.5);
+    opacity: 0;
+    text-shadow: 0.02rem -0.03rem 0 #efefef, 0.04rem -0.06rem 0 #eeeeee, 0.06rem -0.09rem 0 #ededed, 0.08rem -0.12rem 0 #ededed, 0.1rem -0.15rem 0 #ececec, 0.12rem -0.18rem 0 #ebebeb, 0.14rem -0.21rem 0 #eaeaea, 0.16rem -0.24rem 0 #eaeaea, 0.18rem -0.27rem 0 #e9e9e9, 0.2rem -0.3rem 0 #e8e8e8, 0.22rem -0.33rem 0 #e7e7e7, 0.24rem -0.36rem 0 #e7e7e7, 0.26rem -0.39rem 0 #e6e6e6, 0.28rem -0.42rem 0 #e5e5e5, 0.3rem -0.45rem 0 #e4e4e4, 0.32rem -0.48rem 0 #e3e3e3, 0.34rem -0.51rem 0 #e3e3e3, 0.36rem -0.54rem 0 #e2e2e2, 0.38rem -0.57rem 0 #e1e1e1, 0.4rem -0.6rem 0 #e0e0e0, 0.42rem -0.63rem 0 #e0e0e0, 0.44rem -0.66rem 0 #dfdfdf, 0.46rem -0.69rem 0 #dedede, 0.48rem -0.72rem 0 #dddddd, 0.5rem -0.75rem 0 #dddddd, 0.52rem -0.78rem 0 gainsboro, 0.54rem -0.81rem 0 #dbdbdb, 0.56rem -0.84rem 0 #dadada, 0.58rem -0.87rem 0 #dadada, 0.6rem -0.9rem 0 #d9d9d9, 0.62rem -0.93rem 0 #d8d8d8, 0.64rem -0.96rem 0 #d7d7d7, 0.66rem -0.99rem 0 #d6d6d6, 0.68rem -1.02rem 0 #d6d6d6, 0.7rem -1.05rem 0 #d5d5d5, 0.72rem -1.08rem 0 #d4d4d4, 0.74rem -1.11rem 0 lightgray, 0.76rem -1.14rem 0 lightgray;
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
+    -webkit-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+    -webkit-transition-timing-function: cubic-bezier(0.71, 0.59, 0.4, 1.5);
+    transition-timing-function: cubic-bezier(0.71, 0.59, 0.4, 1.5);
+}
+
+.slider-ready .slider3d__heading {
+    -webkit-transform: translateZ(3rem);
+    transform: translateZ(3rem);
+    opacity: 1;
+}
+
+.slider3d__controls {
+    display: none;
+}
+
+.slider3d.with-controls .slider3d__controls {
+    display: block;
+}
+
+.slider3d__handle {
+    z-index: 2;
+    position: absolute;
+    right: -2rem;
+    top: 50%;
+    width: 17rem;
+    height: 7rem;
+    margin-top: -3.5rem;
+    cursor: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyNCAyNCI+PHBhdGggZmlsbD0iI2ZmZiIgZD0iTTkuNCA0LjhsLTIuOS0yLjhoOC41djguNWwtMi44LTIuOHMtMS4yIDEuNC0xLjIgNC4zYzAgMy4xIDEuMiA0LjQgMS4yIDQuNGwyLjgtMi45djguNWgtOC41bDIuOC0yLjhzLTIuMy0yLjItMi4zLTcuMmMwLTQuOSAyLjQtNy4yIDIuNC03LjJ6Ii8+PHBhdGggZD0iTTEyLjIgNi4zcy0yLjIgMS44LTIuMiA1LjdjMCA0LjEgMi4xIDUuOCAyLjEgNS44bDEuOC0xLjh2NWgtNWwxLjgtMS44cy0yLjctMi4xLTIuNy03LjJjMC01IDIuOC03LjEgMi44LTcuMWwtMS45LTEuOWg1LjF2NS4xbC0xLjgtMS44Ii8+PC9zdmc+"), ns-resize;
+}
+
+.slider3d__handle__item {
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*padding-right: 2rem;*/
+    /*background: #000;*/
+    /*text-align: center;*/
+    /*font-size: 1.8rem;*/
+    /*line-height: 7rem;*/
+    /*text-transform: uppercase;*/
+    /*font-weight: bold;*/
+    /*color: #fff;*/
+    /*-webkit-user-select: none;*/
+    /*-moz-user-select: none;*/
+    /*-ms-user-select: none;*/
+    /*user-select: none;*/
+}
+
+.slider3d__handle__item:after {
+    /*content: "";*/
+    /*z-index: -1;*/
+    /*position: absolute;*/
+    /*left: 0;*/
+    /*top: 0;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*background: rgba(255, 255, 255, 0.1);*/
+    /*-webkit-transition: opacity 0.3s;*/
+    /*transition: opacity 0.3s;*/
+}
+
+.slider3d__handle__item.active:after {
+    opacity: 0;
+}
+
+.slider3d__control {
+    z-index: 3;
+    position: absolute;
+
+    cursor: pointer;
+}
+
+.slider3d__control:after {
+    /*content: "";*/
+    /*position: absolute;*/
+    /*left: 50%;*/
+    /*top: 50%;*/
+    /*width: 1rem;*/
+    /*height: 1rem;*/
+    /*margin-left: -0.5rem;*/
+    /*margin-top: -0.5rem;*/
+    /*border: 2px solid #fff;*/
+    /*border-left: none;*/
+    /*border-bottom: none;*/
+}
+
+.slider3d__control.m--up {
+    -webkit-transform: translateY(-6rem);
+    -ms-transform: translateY(-6rem);
+    transform: translateY(-6rem);
+    width: 73px;
+    height: 73px;
+    background: url(../../images/zhiyezhan/up.png) no-repeat;
+    top: 50px;
+    left: 45%;
+    animation: .5s ease 0s infinite alternate aniArrowDown;
+    -moz-animation: .5s ease 0s infinite alternate aniArrowDown;
+    -webkit-animation: .5s ease 0s infinite alternate aniArrowDown;
+}
+
+.slider3d__control.m--up:after {
+    -webkit-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.slider3d__control.m--down {
+    -webkit-transform: translateY(6rem);
+    -ms-transform: translateY(6rem);
+    transform: translateY(6rem);
+    width: 73px;
+    height: 73px;
+    background: url(../../images/zhiyezhan/next.png) no-repeat;
+    bottom: 50px;
+    left: 45%;
+    animation: .5s ease .5s infinite alternate aniArrowDown;
+    -moz-animation: .5s ease .5s infinite alternate aniArrowDown;
+    -webkit-animation: .5s ease .5s infinite alternate aniArrowDown;
+}
+
+@keyframes aniArrowDown {
+    0% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(5px);
+    }
+}
+
+@-moz-keyframes aniArrowDown {
+    0% {
+        -moz-transform: translateY(-5px);
+    }
+    100% {
+        -moz-transform: translateY(5px);
+    }
+}
+
+@-webkit-keyframes aniArrowDown {
+    0% {
+        -webkit-transform: translateY(-5px);
+    }
+    100% {
+        -webkit-transform: translateY(5px);
+    }
+}
+
+.slider3d__control.m--down:after {
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+.pr {
+    position: relative
+}
+
+.onepeo {
+    height: 941px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1960px
+}
+
+.peobox {
+    height: 940px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 1960px;
+    z-index: 2;
+}
+
+/*大剑士*/
+.sword {
+    background: url(../../images/zhiyezhan/sword-big.png) no-repeat;
+    opacity: 0;
+    transform-origin: 0 100%;
+    transition: .5s all ease-in;
+    -moz-transform-origin: 0 100%;
+    -moz-ttransition: .5s all ease-in;
+    -webkit-transform-origin: 0 100%;
+    -webkit-ttransition: .5s all ease-in;
+
+}
+
+.peo.sword {
+    animation: fanzhuan .5s ease forwards;
+    -moz-animation: fanzhuan .5s ease forwards;
+    -webkit-animation: fanzhuan .5s ease forwards;
+}
+
+
+.on.sword {
+    background: url(../../images/zhiyezhan/sword-little.png) no-repeat;
+}
+
+
+/*战士*/
+.zhanshibigpeo {
+    background: url(../../images/zhiyezhan/zhanshi_peo.png) no-repeat;
+    opacity: 0;
+    transform-origin: 0 100%;
+    transition: .5s all ease-in;
+    -moz-transform-origin: 0 100%;
+    -moz-ttransition: .5s all ease-in;
+    -webkit-transform-origin: 0 100%;
+    -webkit-ttransition: .5s all ease-in;
+
+}
+
+.peo.zhanshibigpeo {
+    animation: fanzhuan .5s ease forwards;
+    -moz-animation: fanzhuan .5s ease forwards;
+    -webkit-animation: fanzhuan .5s ease forwards;
+}
+
+
+.on.zhanshibigpeo {
+    background: url(../../images/zhiyezhan/zhanshi_peo_small.png) no-repeat;
+}
+
+
+/*傀儡师*/
+.kuileishibigpeo {
+    background: url(../../images/zhiyezhan/kuileishi_peo.png) no-repeat;
+    opacity: 0;
+    transform-origin: 0 100%;
+    transition: .5s all ease-in;
+    -moz-transform-origin: 0 100%;
+    -moz-ttransition: .5s all ease-in;
+    -webkit-transform-origin: 0 100%;
+    -webkit-ttransition: .5s all ease-in;
+}
+
+.peo.kuileishibigpeo {
+    animation: .5s ease 0s forwards fanzhuan
+    -moz-animation: .5s ease 0s forwards fanzhuan;
+    -webkit-animation: .5s ease 0s forwards fanzhuan;
+
+}
+.on.kuileishibigpeo {
+    background: url(../../images/zhiyezhan/kuileishi_peo_small.png) no-repeat;
+}
+
+
+/*赏金猎人*/
+.sjlrbigpeo {
+    background: url(../../images/zhiyezhan/shangjinlieren_peo.png) no-repeat;
+    transform-origin: 0 100%;
+    transition: .5s all ease-in;
+    opacity: 0;
+    -moz-transform-origin: 0 100%;
+    -moz-ttransition: .5s all ease-in;
+    -webkit-transform-origin: 0 100%;
+    -webkit-ttransition: .5s all ease-in;
+}
+
+.peo.sjlrbigpeo {
+    animation: .5s ease 0s forwards fanzhuan
+    -moz-animation: .5s ease 0s forwards fanzhuan;
+    -webkit-animation: .5s ease 0s forwards fanzhuan;
+}
+
+
+.on.sjlrbigpeo {
+    background: url(../../images/zhiyezhan/shangjinlieren_peo_small.png) no-repeat;
+}
+
+
+/*魔法师*/
+.mofashibigpeo {
+    background: url(../../images/zhiyezhan/last_peo.png) no-repeat;
+    opacity: 0;
+    transform-origin: 0 100%;
+    transition: .5s all ease-in;
+    -moz-transform-origin: 0 100%;
+    -moz-ttransition: .5s all ease-in;
+    -webkit-transform-origin: 0 100%;
+    -webkit-ttransition: .5s all ease-in;
+}
+
+.peo.mofashibigpeo {
+    animation: .5s ease 0s forwards fanzhuan
+    -moz-animation: .5s ease 0s forwards fanzhuan;
+    -webkit-animation: .5s ease 0s forwards fanzhuan;
+}
+
+.on.mofashibigpeo {
+    background: url(../../images/zhiyezhan/last_peo_small.png) no-repeat;
+}
+
+
+@keyframes fanzhuan {
+    0% {
+        opacity: 0;
+        transform: rotateX(-180deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotateX(0deg);
+    }
+}
+
+@-moz-keyframes fanzhuan {
+    0% {
+        opacity: 0;
+        -moz-transform: rotateX(-180deg);
+    }
+    100% {
+        opacity: 1;
+        -moz-transform: rotateX(0deg);
+    }
+}
+
+@-webkit-keyframes fanzhuan {
+    0% {
+        opacity: 0;
+        -webkit-transform: rotateX(-180deg);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: rotateX(0deg);
+    }
+}
+
+.jingzi {
+    display: block;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}
+
+.suoxiao {
+    top: 584px;
+    left: 868px;
+    background: url(../../images/zhiyezhan/p1.png) no-repeat;
+}
+
+.on.suoxiao {
+    top: 584px;
+    left: 868px;
+    background: url(../../images/zhiyezhan/p2.png) no-repeat;
+}
+
+.scale {
+    transition: all 1s ease;
+    transform: scale(1)
+}
+
+.wd1000 {
+    height: 940px;
+    margin: auto;
+    width: 1000px;
+}
+
+.index_game {
+    display: block;
+    height: 36px;
+    position: absolute;
+    width: 104px;
+    top: 18px;
+    right: -29px;
+    z-index: 90
+}
+
+.qipao {
+    width: 340px;
+    height: 135px;
+    position: absolute;
+    top: 110px;
+    left: 143px;
+    opacity: 0;
+    z-index: 3;
+    transition: 1s all linear;
+
+}
+
+.float.qipao {
+    animation: .5s ease 1s forwards opacity;
+}
+
+@keyframes opacity {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.wd456 {
+    width: 456px;
+    height: 940px;
+    position: absolute;
+    top: 38px;
+    right: -79px;
+    z-index: 5
+}
+
+.spbox {
+    width: 132px;
+    height: 135px;
+    float: left;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+.spbox img {
+    left: 0;
+    position: absolute;
+    top: 0
+}
+
+.peo_tl {
+    float: left;
+    height: 118px;
+    width: 260px
+}
+
+.quanbox {
+    height: 269px;
+}
+
+.zabox {
+    height: 139px;
+}
+
+.quancon {
+    position: absolute;
+}
+
+.peo_p {
+    height: 139px;
+    width: 406px;
+}
+
+.sword-title {
+    background: url(../../images/zhiyezhan/sword-intro.png) no-repeat;
+    height: 139px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 406px
+}
+
+.zhanshi_p {
+    background: url(../../images/zhiyezhan/zhanshi_p.png) no-repeat;
+    height: 139px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 406px
+}
+
+.jinengbox {
+    height: 320px;
+    left: 8px;
+    position: absolute;
+    top: 100px;
+    width: 402px
+}
+
+.jinengcon_box {
+    height: 320px;
+    overflow: hidden;
+    position: relative;
+    width: 402px
+}
+
+.jinengbox h2 {
+    height: 30px;
+    position: absolute;
+    right: 0;
+    top: 180px;
+    width: 195px
+}
+
+
+
+
+
+.sword-skill {
+    left: 0;
+    position: absolute;
+    top: 220px;
+    width: 1385px
+}
+
+.sword-skill li {
+    float: left;
+    height: 80px;
+    margin-right: 6px;
+    width: 75px;
+    list-style: none
+}
+
+.sword-skill li a {
+    background: url(../../images/zhiyezhan/sword-skill.png) no-repeat;
+    display: block;
+    height: 80px;
+    position: relative;
+    width: 75px
+}
+
+.sword-skill li .one {
+    background-position: left 0
+}
+
+.sword-skill li .two {
+    background-position: -82px 0
+}
+
+.sword-skill li .three {
+    background-position: -166px 0
+}
+
+.sword-skill li .four {
+    background-position: -251px 0
+}
+
+.sword-skill li .five {
+    background-position: -326px 0
+}
+
+.sword-skill li .six {
+    background-position: -415px 0
+}
+
+.sword-skillli .seven {
+    background-position: -498px 0
+}
+
+.sword-skill li .eight {
+    background-position: -573px 0
+}
+
+.sword-skill li .nine {
+    background-position: -657px 0
+}
+
+.sword-skill li .ten {
+    background-position: -736px 0
+}
+
+.sword-skill li .eleven {
+    background-position: -823px 0
+}
+
+.sword-skill li .twelve {
+    background-position: -903px 0
+}
+
+.sword-skill li .thirteen {
+    background-position: -990px 0
+}
+
+.sword-skill li .fourteen {
+    background-position: -1072px 0
+}
+
+.sword-skill li .fifteen {
+    background-position: -1230px 0
+}
+.sword-skill li .sixteen {
+    background-position: -1310px 0
+}
+
+
+
+.zhanshijn {
+    left: 0;
+    position: absolute;
+    top: 220px;
+    width: 1149px
+}
+
+.zhanshijn li {
+    float: left;
+    height: 80px;
+    margin-right: 6px;
+    width: 75px;
+    list-style: none
+}
+
+.zhanshijn li a {
+    background: url(../../images/zhiyezhan/zs.png) no-repeat;
+    display: block;
+    height: 80px;
+    position: relative;
+    width: 75px
+}
+
+.zhanshijn li .one {
+    background-position: left 0
+}
+
+.zhanshijn li .two {
+    background-position: -82px 0
+}
+
+.zhanshijn li .three {
+    background-position: -166px 0
+}
+
+.zhanshijn li .four {
+    background-position: -251px 0
+}
+
+.zhanshijn li .five {
+    background-position: -326px 0
+}
+
+.zhanshijn li .six {
+    background-position: -415px 0
+}
+
+.zhanshijnli .seven {
+    background-position: -498px 0
+}
+
+.zhanshijn li .eight {
+    background-position: -573px 0
+}
+
+.zhanshijn li .nine {
+    background-position: -657px 0
+}
+
+.zhanshijn li .ten {
+    background-position: -736px 0
+}
+
+.zhanshijn li .eleven {
+    background-position: -823px 0
+}
+
+.zhanshijn li .twelve {
+    background-position: -903px 0
+}
+
+.zhanshijn li .thirteen {
+    background-position: -990px 0
+}
+
+.zhanshijn li .fourteen {
+    background-position: -1072px 0
+}
+
+.fontbk {
+    background: #fff;
+    color: #333;
+    height: 100px;
+    left: -50px;
+    padding: 5px;
+    position: absolute;
+    top: -90px;
+    width: 170px;
+    display: none
+}
+
+.fontbk h5 {
+    font-size: 14px
+}
+
+.fontbk p {
+    font-size: 12px;
+    line-height: 18px
+}
+
+.fontbk span {
+    background: url(../../images/zhiyezhan/sanjiao.png) no-repeat;
+    bottom: -13px;
+    display: block;
+    height: 13px;
+    left: 70px;
+    position: absolute;
+    width: 25px
+}
+
+.conbox ul li:nth-child(1) .fontbk span {
+    left: 20px;
+}
+
+.conbox ul li:nth-child(6) .fontbk span {
+    left: 20px;
+}
+
+.conbox ul li:nth-child(11) .fontbk span {
+    left: 20px;
+}
+
+.conbox ul li:nth-child(5) .fontbk span {
+    left: 120px;
+}
+
+.conbox ul li:nth-child(10) .fontbk span {
+    left: 120px;
+}
+
+.conbox ul li:nth-child(15) .fontbk span {
+    left: 120px;
+}
+
+.conbox ul li:nth-child(1) .fontbk {
+    left: 0px;
+}
+
+.conbox ul li:nth-child(6) .fontbk {
+    left: 0px;
+}
+
+.conbox ul li:nth-child(11) .fontbk {
+    left: 0px;
+}
+
+.conbox ul li:nth-child(5) .fontbk {
+    left: -90px;
+}
+
+.conbox ul li:nth-child(10) .fontbk {
+    left: -90px;
+}
+
+.conbox ul li:nth-child(15) .fontbk {
+    left: -90px;
+}
+
+.lbtn {
+    width: 16px;
+    height: 28px;
+    display: block;
+    background: url(../../images/zhiyezhan/lbtn.png) no-repeat;
+    position: absolute;
+    left: -20px;
+    top: 250px;
+}
+
+.rbtn {
+    width: 16px;
+    height: 28px;
+    display: block;
+    background: url(../../images/zhiyezhan/rbtn.png) no-repeat;
+    position: absolute;
+    right: -20px;
+    top: 250px;
+}
+
+.wuqibox {
+    width: 402px;
+    height: 219px;
+    top: 140px;
+}
+
+.wuqibox h2 {
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 195px
+}
+
+.wuqiconbox {
+    height: 176px;
+    width: 399px;
+    top: 40px;
+    overflow: hidden;
+    border: #333 solid 2px;
+    background: url(../../images/zhiyezhan/p13.png) no-repeat;
+}
+
+.wuqiconbox ul {
+    width: 2000px;
+    position: absolute;
+    left: 0px;
+}
+
+.wuqiconbox ul li {
+    height: 176px;
+    width: 399px;
+    float: left;
+    list-style: none
+}
+
+.wuqiconbox ul li a {
+    display: block;
+    height: 176px;
+    width: 399px;
+}
+
+.wuqilbtn {
+    width: 16px;
+    height: 28px;
+    display: block;
+    background: url(../../images/zhiyezhan/lbtn.png) no-repeat;
+    position: absolute;
+    left: -20px;
+    top: 120px;
+}
+
+.wuqirbtn {
+    width: 16px;
+    height: 28px;
+    display: block;
+    background: url(../../images/zhiyezhan/rbtn.png) no-repeat;
+    position: absolute;
+    right: -20px;
+    top: 120px;
+}
+
+.yuanhuabox {
+    width: 402px;
+    height: 168px;
+    top: 160px;
+}
+
+.yuanhuabox h2 {
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    width: 195px
+}
+
+.yuanhuaconbox {
+    width: 403px;
+    height: 130px;
+    top: 40px;
+    overflow: hidden;
+}
+
+.yuanhuaconbox ul {
+    position: absolute;
+    left: 0px;
+}
+
+.yuanhuaconbox ul li {
+    width: 200px;
+    height: 130px;
+    float: left;
+}
+
+.yuanhuaconbox ul li a {
+    display: block;
+    width: 200px;
+    height: 130px;
+}
+
+.yuanhuaconbox ul li a img {
+    width: 200px;
+    height: 130px;
+}
+
+.yuanhuaconbox ul li {
+    margin-right: 3px;
+}
+
+.yhlbtn {
+    width: 16px;
+    height: 28px;
+    display: block;
+    background: url(../../images/zhiyezhan/lbtn.png) no-repeat;
+    position: absolute;
+    left: -20px;
+    top: 90px;
+}
+
+.yhrbtn {
+    width: 16px;
+    height: 28px;
+    display: block;
+    background: url(../../images/zhiyezhan/rbtn.png) no-repeat;
+    position: absolute;
+    right: -20px;
+    top: 90px;
+}
+
+.kuileisijn {
+    left: 0;
+    position: absolute;
+    top: 220px;
+    width: 1149px
+}
+
+.kuileisijn li {
+    float: left;
+    height: 80px;
+    margin-right: 6px;
+    width: 75px;
+    list-style: none
+}
+
+.kuileishi_p {
+    background: url(../../images/zhiyezhan/kuileishi_p.png) no-repeat;
+    height: 139px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 406px
+}
+
+.kuileisijn li a {
+    background: url(../../images/zhiyezhan/wwa.png) no-repeat;
+    display: block;
+    height: 80px;
+    position: relative;
+    width: 75px
+}
+
+.kuileisijn li .one {
+    background-position: left 0
+}
+
+.kuileisijn li .two {
+    background-position: -82px 0
+}
+
+.kuileisijn li .three {
+    background-position: -166px 0
+}
+
+.kuileisijn li .four {
+    background-position: -251px 0
+}
+
+.kuileisijn li .five {
+    background-position: -326px 0
+}
+
+.kuileisijn li .six {
+    background-position: -415px 0
+}
+
+.kuileisijn li .seven {
+    background-position: -498px 0
+}
+
+.kuileisijn li .eight {
+    background-position: -573px 0
+}
+
+.kuileisijn li .nine {
+    background-position: -657px 0
+}
+
+.kuileisijn li .ten {
+    background-position: -736px 0
+}
+
+.kuileisijn li .eleven {
+    background-position: -823px 0
+}
+
+.kuileisijn li .twelve {
+    background-position: -903px 0
+}
+
+.kuileisijn li .thirteen {
+    background-position: -990px 0
+}
+
+.kuileisijn li .fourteen {
+    background-position: -1072px 0
+}
+
+.sjlr_p {
+    background: url(../../images/zhiyezhan/sjlr_p.png) no-repeat;
+    height: 139px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 406px
+}
+
+.sjlrjn {
+    left: 0;
+    position: absolute;
+    top: 220px;
+    width: 1149px
+}
+
+.sjlrjn li {
+    float: left;
+    height: 80px;
+    margin-right: 6px;
+    width: 75px;
+    list-style: none
+}
+
+.sjlrjn li a {
+    background: url(../../images/zhiyezhan/lr.png) no-repeat;
+    display: block;
+    height: 80px;
+    position: relative;
+    width: 75px
+}
+
+.sjlrjn li .one {
+    background-position: left 0
+}
+
+.sjlrjn li .two {
+    background-position: -82px 0
+}
+
+.sjlrjn li .three {
+    background-position: -166px 0
+}
+
+.sjlrjn li .four {
+    background-position: -251px 0
+}
+
+.sjlrjn li .five {
+    background-position: -326px 0
+}
+
+.sjlrjn li .six {
+    background-position: -415px 0
+}
+
+.sjlrjn li .seven {
+    background-position: -498px 0
+}
+
+.sjlrjn li .eight {
+    background-position: -573px 0
+}
+
+.sjlrjn li .nine {
+    background-position: -657px 0
+}
+
+.sjlrjn li .ten {
+    background-position: -736px 0
+}
+
+.sjlrjn li .eleven {
+    background-position: -823px 0
+}
+
+.sjlrjn li .twelve {
+    background-position: -903px 0
+}
+
+.sjlrjn li .thirteen {
+    background-position: -990px 0
+}
+
+.sjlrjn li .fourteen {
+    background-position: -1072px 0
+}
+
+.mofashi_p {
+    background: url(../../images/zhiyezhan/mofashi_p.png) no-repeat;
+    height: 139px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 406px
+}
+
+.mfsjn {
+    left: 0;
+    position: absolute;
+    top: 220px;
+    width: 1549px
+}
+
+.mfsjn li {
+    float: left;
+    height: 80px;
+    margin-right: 6px;
+    width: 75px;
+    list-style: none
+}
+
+.mfsjn li a {
+    background: url(../../images/zhiyezhan/mofa_d.png) no-repeat;
+    display: block;
+    height: 80px;
+    position: relative;
+    width: 75px
+}
+
+.mfsjn li .one {
+    background-position: left 0
+}
+
+.mfsjn li .two {
+    background-position: -82px 0
+}
+
+.mfsjn li .three {
+    background-position: -166px 0
+}
+
+.mfsjn li .four {
+    background-position: -251px 0
+}
+
+.mfsjn li .five {
+    background-position: -326px 0
+}
+
+.mfsjn li .six {
+    background-position: -415px 0
+}
+
+.mfsjn li .seven {
+    background-position: -498px 0
+}
+
+.mfsjn li .eight {
+    background-position: -573px 0
+}
+
+.mfsjn li .nine {
+    background-position: -657px 0
+}
+
+.mfsjn li .ten {
+    background-position: -736px 0
+}
+
+.mfsjn li .eleven {
+    background-position: -823px 0
+}
+
+.mfsjn li .twelve {
+    background-position: -903px 0
+}
+
+.mfsjn li .thirteen {
+    background-position: -990px 0
+}
+
+.mfsjn li .fourteen {
+    background-position: -1072px 0
+}
+
+.g-animEle1, .g-animEle2, .g-animEle3, .g-animEle4, .g-animEle5 {
+    -webkit-transform: translate3d(0, 60px, 0);
+    -moz-transform: translate3d(0, 60px, 0);
+    transform: translate3d(0, 60px, 0);
+    opacity: 0;
+}
+
+.unanimate {
+
+    -webkit-transform: translate3d(0, 0px, 0);
+    -moz-transform: translate3d(0, 0px, 0);
+    transform: translate3d(0, 0px, 0);
+    opacity: 1
+}
+
+.g-animEle1 {
+    -webkit-transition: all .6s ease-out 0s;
+    -moz-transition: all .6s ease-out 0s;
+    transition: all .6s ease-out 0s
+}
+
+.g-animEle2 {
+    -webkit-transition: all .6s ease-out .2s;
+    -moz-transition: all .6s ease-out .2s;
+    transition: all .6s ease-out .2s;
+}
+
+.g-animEle3 {
+    -webkit-transition: all .6s ease-out .6s;
+    -moz-transition: all .6s ease-out .6s;
+    transition: all .6s ease-out .6s;
+}
+
+.g-animEle4 {
+    -webkit-transition: all .6s ease-out 1.2s;
+    -moz-transition: all .6s ease-out 1.2s;
+    transition: all .6s ease-out 1.2s;
+}
+
+#mark {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    display: none;
+}
+
+.win_wuqi {
+    width: 1000px;
+    height: 600px;
+    position: absolute;
+    z-index: 1000;
+    display: none;
+}
+
+.pageImgBox_img img {
+    height: auto;
+    width: auto;
+    display: block;
+    margin: auto;
+}
+
+.close {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    right: -40px;
+    top: 0;
+    cursor: pointer;
+}
+
+.videoBox1 {
+    width: 800px;
+    height: 450px;
+    background: #fff;
+    position: absolute;
+    z-index: 1001;
+    display: none;
+}
+
+.Vclose {
+    position: absolute;
+    right: -50px;
+    top: 0;
+    cursor: pointer;
+}

@@ -3,6 +3,57 @@ var fontRem = parseInt($('html').css('font-size'));
 
 //skill swiper
 var skillData = {
+    sword: [
+        {
+            title: '闪避',
+            intro: '大剑士快速前冲，闪避敌人的一切攻击。'
+        }, {
+            title: '崖突',
+            intro: '大剑士迅速向目标发动一次飞踢，对敌人造成物理伤害并产生战意值，在战意冲天状态下可造成额外伤害。'
+        }, {
+            title: '摧山斩',
+            intro: '大剑士用力挥动大剑发动一次横砍，对敌人造成物理伤害并产生战意值，在战意冲天状态下可造成额外伤害。'
+        }, {
+            title: '断岳斩',
+            intro: '释放摧山斩之后可以释放，大剑士用力挥动大剑发动一次横砍，对敌人造成物理伤害并产生战意值，在战意冲天状态下可造成额外伤害'
+        }, {
+            title: '裂地斩',
+            intro: '大剑士挥动大剑用力向前劈砍，对敌人造成物理伤害并产生战意值，在战意冲天状态下可造成额外伤害。'
+        }, {
+            title: '碎岩天剑',
+            intro: '大剑士向前方发动猛烈的跳劈，对敌人造成物理伤害并产生战意值，在战意冲天状态下可造成额外伤害。'
+        }, {
+            title: '削峰逆刃',
+            intro: '大剑士向前方发动猛烈的横斩，对敌人造成物理伤害并产生战意值，在战意冲天状态下可造成额外伤害。'
+        }, {
+            title: '战意冲撞',
+            intro: '大剑士横举武器快速冲锋，推开碰到敌人并对敌人造成物理伤害并产生战意值，在战意冲天状态下会提高移动速度。'
+        }, {
+            title: '幽谷',
+            intro: '大剑士用大剑快速刺向敌人下盘，对敌人造成物理伤害并产生战意值。'
+        }, {
+            title: '苍崖',
+            intro: '大剑士推动剑柄，向敌人发出狠狠一击，对敌人造成物理伤害并产生战意值。'
+        }, {
+            title: '摧山斩',
+            intro: '大剑士用力挥动大剑发动一次横砍，对敌人造成物理伤害，造成伤害同时额外增加大量仇恨，还可快速削减怪物头目硬直条。'
+        }, {
+            title: '断岳斩',
+            intro: '释放摧山斩后可释放。大剑士用力挥动大剑发动一次横砍，对敌人造成物理伤害，造成伤害同时额外增加大量仇恨，还可快速削减怪物头目硬直条。'
+        }, {
+            title: '战吼',
+            intro: '大剑士向敌人发出挑衅，使身周50米半径范围内的敌人对自己瞬间提升仇恨，吸引敌人的火力，并强制锁定目标攻击自己，并在20s内使自己受到的伤害降低。'
+        }, {
+            title: '战意冲撞',
+            intro: '大剑士横举武器快速冲锋，推开碰到敌人并对敌人造成物理伤害。同时在10s内降低目标的硬直回复速度（仅对电脑目标生效）。'
+        }, {//重复
+            title: '战吼',
+            intro: '大剑士向敌人发出挑衅，使身周50米半径范围内的敌人对自己瞬间提升仇恨，吸引敌人的火力，并强制锁定目标攻击自己，并在20s内使自己受到的伤害降低。'
+        }, {
+            title: '战意冲撞',
+            intro: '大剑士横举武器快速冲锋，推开碰到敌人并对敌人造成物理伤害。同时在10s内降低目标的硬直回复速度（仅对电脑目标生效）。'
+        }
+    ],
     magic: [
         {
             title: '烈风斩',
@@ -191,10 +242,13 @@ var skillData = {
 var weaponsArr = {},
     originalArr = {};
 
-var numArr = [0, 1, 2, 3],
-    weaponsrlArr = ['/enchanter_weap', '/nicole_weap', '/puppeteer_weap', '/muladi_weap'],
-    originalUrlArr = ['/enchanter_original', '/nicole_original', '/puppeteer_original', '/muladi_original'],
-    careerArr = ['magic', 'hunter', 'puppet', 'soldier'];
+var numArr = [-1, 0, 1, 2, 3],
+    weaponsrlArr = ['/bsword_weap', '/enchanter_weap', '/nicole_weap', '/puppeteer_weap', '/muladi_weap'],
+    originalUrlArr = ['/bsword_original', '/enchanter_original', '/nicole_original', '/puppeteer_original', '/muladi_original'],
+    careerArr = ['sword', 'magic', 'hunter', 'puppet', 'soldier'];
+
+/*var httpUrl = 'http://192.168.84.43:3000',
+    imgUrl = 'http://img.linekong.com';*/
 
 var httpUrl = 'http://lmzg.8864.com',
     imgUrl = 'http://img.linekong.com';
