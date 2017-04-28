@@ -1,17 +1,19 @@
 /**
  * Created by Administrator on 2016/11/2.
  */
+//var nodeHost = 'http://192.168.84.43:3000';
 var nodeHost = 'http://lmzg.8864.com';
 
 $(function () {
 
 
     $('#dowebok').fullpage({
-        anchors: ['page0', 'page1', 'page2', 'page3', 'page4'],
+        anchors: ['page00', 'page0', 'page1', 'page2', 'page3', 'page4'],
         menu: '#menu',
         onLeave: function (index, nextIndex, direction) {
 
-            if (index == 0 || index == 1 || index == 2 || index == 3 || index == 4) {
+            if (index == 00 || index == 0 || index == 1 || index == 2 || index == 3 || index == 4) {
+                $('.videoBox00').hide();
                 $('.videoBox0').hide();
                 $('.videoBox1').hide();
                 $('.videoBox2').hide();
@@ -22,6 +24,7 @@ $(function () {
                 $('.pageImgBox_img').empty();
             }
             if (direction == 'up') {
+                $('.videoBox00').hide();
                 $('.videoBox0').hide();
                 $('.videoBox1').hide();
                 $('.videoBox2').hide();
@@ -42,13 +45,13 @@ $(function () {
         if (name == 'true') {
             console.log(1)
             $this.attr('data-name', false);
-            $this.siblings('.small_img' + i).fadeIn();
-            $this.siblings('.big_img' + i).fadeOut();
+            $this.siblings('.small_img' + (i - 1)).fadeIn();
+            $this.siblings('.big_img' + (i - 1)).fadeOut();
         } else if (name == 'false') {
             console.log(2)
             $this.attr('data-name', true);
-            $this.siblings('.small_img' + i).fadeOut();
-            $this.siblings('.big_img' + i).fadeIn();
+            $this.siblings('.small_img' + (i - 1)).fadeOut();
+            $this.siblings('.big_img' + (i - 1)).fadeIn();
         }
         if ($(this).hasClass('on')) {
             $(this).removeClass('on');
@@ -97,6 +100,7 @@ $(function () {
         })
     }
 
+    roll('.gun_jinengL', '.gun_jinengR', '.gunC_img', 1, 410);
     roll('.sword_jinengL', '.sword_jinengR', '.swordC_img', 2, 410);
     roll('.zhanshi_jinengL', '.zhanshi_jinengR', '.inengC_img', 2, 410);
     roll('.lieren_jinengL', '.lieren_jinengR', '.LrinengC_img', 2, 410);
@@ -108,6 +112,52 @@ $(function () {
     $('.shade').css('height', $(window).height());
 
     //图片
+    //大剑士武器
+    $.ajax({
+        type: "GET",
+        url: nodeHost + '/rider_weap',
+        dataType: "json",
+        success: function (data) {
+            console.log(data)
+            var zsWq_01 = '';
+            var zsArr = [];
+            $.each(data, function (i, v) {
+                zsWq_01 += '<li><img src="http://img.linekong.com/' + v.filePath2 + '"></li>';
+                zsArr.push('<img src="http://img.linekong.com/' + v.filePath + '">');
+                // console.log(zsArr)
+            });
+            $('.gun_wqBox').append(zsWq_01);
+            $('.gun_wqBox').outerWidth($('.gun_wqBox li').length * $('.gun_wqBox li').width());
+            $('.gun_wqBox li').on('click', function () {
+                $('.pageImgBox_img').html(zsArr[$(this).index()]);
+                oWin('pageImgBox');
+            })
+            roll('.gun_wuqiL', '.gun_wuqiR', '.gun_wqBox', data.length - 1, 399);
+        }
+    });
+    //大剑士原画
+    $.ajax({
+        type: "GET",
+        url: nodeHost + '/rider_original',
+        dataType: "json",
+        success: function (data) {//console.log(data)
+            var zsWq_02 = '';
+            var zsArr2 = [];
+            $.each(data, function (i, v) {
+                zsWq_02 += '<li><img src="http://img.linekong.com/' + v.filePath2 + '"></li>';
+                zsArr2.push('<img src="http://img.linekong.com/' + v.filePath + '">');
+            });
+            $('.gun_yuanhua').append(zsWq_02);
+            $('.gun_yuanhua').outerWidth($('.gun_yuanhua li').length * ($('.gun_yuanhua li').width() + 3));
+            $('.gun_yuanhua li').on('click', function () {
+                $('.pageImgBox_img').html(zsArr2[$(this).index()]);
+                oWin('pageImgBox');
+            });
+            roll('.gun_yuanhuaL', '.gun_yuanhuaR', '.gun_yuanhua', data.length - 2, 203);
+        }
+    });
+
+
     //大剑士武器
     $.ajax({
         type: "GET",
@@ -349,6 +399,8 @@ $(function () {
         })
     }
 
+    Avideo('.Vclose', '.video00', '.videoBox00', '.gun_img01')
+    Avideo('.Vclose', '.video0', '.videoBox0', '.sword_img01')
     Avideo('.Vclose', '.video1', '.videoBox1', '.zhanshi_img01')
     Avideo('.Vclose', '.video2', '.videoBox2', '.lieren_v1')
     Avideo('.Vclose', '.video3', '.videoBox3', '.kuileishi_v1')

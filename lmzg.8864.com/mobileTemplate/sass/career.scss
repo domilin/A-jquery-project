@@ -132,11 +132,15 @@ footer {
 }
 
 /*.magic, .hunter, .puppet, .soldier*/
-.sword, .magic, .hunter, .puppet, .soldier {
+.gun, .sword, .magic, .hunter, .puppet, .soldier {
     background: url("../images/career/magic/magic-bg.png") no-repeat right top;
     background-size: rem(640) rem(1010);
     height: 100%;
     width: 100%;
+}
+
+.gun {
+    background-image: url("../images/career/gun/gun-bg.png");
 }
 
 .sword {

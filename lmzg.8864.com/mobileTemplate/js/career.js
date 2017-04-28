@@ -3,6 +3,36 @@ var fontRem = parseInt($('html').css('font-size'));
 
 //skill swiper
 var skillData = {
+    gun: [
+        {
+            title: '裂骨之盾',
+            intro: '轻攻击。枪骑士向目标发动盾击，对敌人造成伤害。'
+        }, {
+            title: '碎颅之盾',
+            intro: '轻攻击。枪骑士向目标发动盾击，对敌人造成伤害。'
+        }, {
+            title: '狂狮之击',
+            intro: '轻攻击。枪骑士迅速转身踢击敌人，时敌人浮空同时造成伤害。'
+        }, {
+            title: '龙牙突',
+            intro: '重攻击。枪骑士向前方发动枪刺攻击，对敌人造成伤害。'
+        }, {
+            title: '灭龙刺',
+            intro: '重攻击。枪骑士向前方再次发动强力的枪刺攻击，对敌人造成伤害。'
+        }, {
+            title: '真龙破',
+            intro: '重攻击。枪骑士向前方发动猛烈的枪刺攻击，将敌人击飞同时造成伤害。'
+        }, {
+            title: '天马冲锋',
+            intro: '先手技。枪骑士召唤自己的爱马贝奇向前方发动冲锋，对敌人造成伤害。'
+        }, {
+            title: '狮王之击',
+            intro: '反击技。枪骑士浮空或硬直后迅速调整身姿后转身挥盾攻击，造成伤害。能对所有施放技能中的人物造成硬直并浮空。'
+        }, {
+            title: '龙鸣之击',
+            intro: '反击技。枪骑士倒地或硬直后迅速调整身姿持枪向前刺击，造成伤害，对所有施放技能中的人物造成硬直。'
+        }
+    ],
     sword: [
         {
             title: '闪避',
@@ -242,13 +272,13 @@ var skillData = {
 var weaponsArr = {},
     originalArr = {};
 
-var numArr = [-1, 0, 1, 2, 3],
-    weaponsrlArr = ['/bsword_weap', '/enchanter_weap', '/nicole_weap', '/puppeteer_weap', '/muladi_weap'],
-    originalUrlArr = ['/bsword_original', '/enchanter_original', '/nicole_original', '/puppeteer_original', '/muladi_original'],
-    careerArr = ['sword', 'magic', 'hunter', 'puppet', 'soldier'];
+var numArr = [-2, -1, 0, 1, 2, 3],
+    weaponsrlArr = ['/rider_weap', '/bsword_weap', '/enchanter_weap', '/nicole_weap', '/puppeteer_weap', '/muladi_weap'],
+    originalUrlArr = ['/rider_original', '/bsword_original', '/enchanter_original', '/nicole_original', '/puppeteer_original', '/muladi_original'],
+    careerArr = ['gun', 'sword', 'magic', 'hunter', 'puppet', 'soldier'];
 
 /*var httpUrl = 'http://192.168.84.43:3000',
-    imgUrl = 'http://img.linekong.com';*/
+ imgUrl = 'http://img.linekong.com';*/
 
 var httpUrl = 'http://lmzg.8864.com',
     imgUrl = 'http://img.linekong.com';

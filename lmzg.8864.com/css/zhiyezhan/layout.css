@@ -23,7 +23,7 @@
 #menu {
     margin: 0;
     padding: 0;
-    top: 160px;
+    top: 110px;
     list-style-type: none;
     z-index: 70;
     width: 157px;
@@ -38,64 +38,77 @@
     height: 100px;
 }
 
-#menu .list0 {
+
+#menu .list00 {
     width: 157px;
     height: 100px;
     background: url(../../images/zhiye_ie/right_2.png) no-repeat 0 0;
 }
 
-#menu .list1 {
+#menu .list0 {
     width: 157px;
     height: 100px;
     background: url(../../images/zhiye_ie/right_2.png) no-repeat 0 -100px;
 }
 
+#menu .list1 {
+    width: 157px;
+    height: 100px;
+    background: url(../../images/zhiye_ie/right_2.png) no-repeat 0 -200px;
+}
+
 #menu .list2 {
     width: 157px;
     heig: 100px;
-    background: url(../../images/zhiye_ie/right_2.png) no-repeat 0 -200px;
+    background: url(../../images/zhiye_ie/right_2.png) no-repeat 0 -300px;
 }
 
 #menu .list3 {
     width: 157px;
     height: 100px;
-    background: url(../../images/zhiye_ie/right_2.png) no-repeat 0 -300px;
+    background: url(../../images/zhiye_ie/right_2.png) no-repeat 0 -400px;
 }
 
 #menu .list4 {
     width: 157px;
     height: 100px;
-    background: url(../../images/zhiye_ie/right_2.png) no-repeat 0 -400px;
+    background: url(../../images/zhiye_ie/right_2.png) no-repeat 0 -500px;
 }
 
-#menu .list0.active a {
+#menu .list00.active a {
     width: 157px;
     height: 100px;
     background: url(../../images/zhiye_ie/right.png) no-repeat 0 1px;
 }
 
-#menu .list1.active a {
+#menu .list0.active a {
     width: 157px;
     height: 100px;
     background: url(../../images/zhiye_ie/right.png) no-repeat 0 -100px;
 }
 
-#menu .list2.active a {
+#menu .list1.active a {
     width: 157px;
     height: 100px;
     background: url(../../images/zhiye_ie/right.png) no-repeat 0 -200px;
 }
 
-#menu .list3.active a {
+#menu .list2.active a {
     width: 157px;
     height: 100px;
     background: url(../../images/zhiye_ie/right.png) no-repeat 0 -300px;
 }
 
-#menu .list4.active a {
+#menu .list3.active a {
     width: 157px;
     height: 100px;
     background: url(../../images/zhiye_ie/right.png) no-repeat 0 -400px;
+}
+
+#menu .list4.active a {
+    width: 157px;
+    height: 100px;
+    background: url(../../images/zhiye_ie/right.png) no-repeat 0 -500px;
 }
 
 #menu a {
@@ -117,10 +130,16 @@
 }
 
 /*page1*/
+.pa00 {
+    width: 100%;
+    height: 100%;
+    background: url(../../images/zhiye_ie/gun-bg.jpg) no-repeat center 40px;
+}
+
 .pa0 {
     width: 100%;
     height: 100%;
-    background: url(../../images/zhiye_ie/sword-bg.jpg) no-repeat center;
+    background: url(../../images/zhiye_ie/sword-bg.jpg) no-repeat center 40px;
 }
 
 .pa1 {
@@ -163,7 +182,7 @@
     z-index: 10
 }
 
-.pa0Tab, .pa1Tab, .pa2Tab, .pa3Tab, .pa4Tab {
+.pa00Tab, .pa0Tab, .pa1Tab, .pa2Tab, .pa3Tab, .pa4Tab {
     width: 1440px;
     margin: 0 auto;
     height: 100%;
@@ -183,7 +202,7 @@
     display: none;
 }
 
-.btnBig0, .btnBig1, .btnBig2, .btnBig3, .btnBig4 {
+.btnBig00, .btnBig0, .btnBig1, .btnBig2, .btnBig3, .btnBig4 {
     width: 73px;
     height: 83px;
     position: absolute;
@@ -194,7 +213,7 @@
     z-index: 600
 }
 
-.btnBig0.on, .btnBig1.on, .btnBig2.on, .btnBig3.on, .btnBig4.on {
+.btnBig00.on, .btnBig0.on, .btnBig1.on, .btnBig2.on, .btnBig3.on, .btnBig4.on {
     width: 73px;
     height: 83px;
     position: absolute;
@@ -213,7 +232,7 @@
     cursor: pointer
 }
 
-.kty0, .kty1, .kty2, .kty3, .kty4 {
+.kty00, .kty0, .kty1, .kty2, .kty3, .kty4 {
     width: 340px;
     height: 135px;
     position: absolute;
@@ -222,7 +241,7 @@
     z-index: 10
 }
 
-.pa0_right {
+.pa00_right, .pa0_right {
     width: 460px;
     height: 100%;
     position: absolute;
@@ -247,7 +266,7 @@
     z-index: 100
 }
 
-.zhanshi_img01 {
+.zhanshi_img01, .sword_img01, .gun_img01 {
     position: absolute;
     width: 132px;
     height: 135px;
@@ -315,6 +334,12 @@
 }
 
 
+.gun_jineng {
+    width: 460px;
+    height: 275px;
+    position: absolute;
+    top: 150px;
+}
 
 .sword_jineng {
     width: 460px;
@@ -322,11 +347,30 @@
     position: absolute;
     top: 150px;
 }
+
+.gun_jinengL {
+    width: 16px;
+    height: 28px;
+    position: absolute;
+    left: 0;
+    bottom: 20px;
+    cursor: pointer
+}
+
 .sword_jinengL {
     width: 16px;
     height: 28px;
     position: absolute;
     left: 0;
+    bottom: 20px;
+    cursor: pointer
+}
+
+.gun_jinengR {
+    width: 16px;
+    height: 28px;
+    position: absolute;
+    right: 0;
     bottom: 20px;
     cursor: pointer
 }
@@ -338,6 +382,15 @@
     right: 0;
     bottom: 20px;
     cursor: pointer
+}
+
+.gun_jinengC {
+    width: 400px;
+    height: 275px;
+    position: absolute;
+    bottom: 0px;
+    left: 30px;
+    overflow: hidden;
 }
 
 .sword_jinengC {
@@ -352,13 +405,19 @@
 
 
 
-.swordC_img, .inengC_img, .LrinengC_img, .KlinengC_img, .MfsinengC_img {
+.gunC_img, .swordC_img, .inengC_img, .LrinengC_img, .KlinengC_img, .MfsinengC_img {
     width: 1149px;
     height: 76px;
     background: url(../../images/zhiye_ie/zs.png) no-repeat;
     position: absolute;
     bottom: 0;
     left: 0px;
+}
+
+.gunC_img {
+    width: 730px;
+    height: 80px;
+    background: url(../../images/zhiye_ie/gun-skill.png) no-repeat;
 }
 
 .swordC_img {
@@ -385,7 +444,7 @@
     background: url(../../images/zhiye_ie/mofa_d.png) no-repeat;
 }
 
-.swordC_img ul li, .inengC_img ul li, .LrinengC_img ul li, .KlinengC_img ul li, .MfsinengC_img ul li {
+.gunC_img ul li, .swordC_img ul li, .inengC_img ul li, .LrinengC_img ul li, .KlinengC_img ul li, .MfsinengC_img ul li {
     width: 75px;
     height: 88px;
     float: left;
@@ -459,7 +518,7 @@
     top: 470px;
 }
 
-.sword_wuqiL, .zhanshi_wuqiL, .lieren_wuqiL, .kuilei_wuqiL, .mofashi_wuqiL {
+.gun_wuqiL, .sword_wuqiL, .zhanshi_wuqiL, .lieren_wuqiL, .kuilei_wuqiL, .mofashi_wuqiL {
     width: 16px;
     height: 28px;
     position: absolute;
@@ -468,7 +527,7 @@
     cursor: pointer
 }
 
-.sword_wuqiR, .zhanshi_wuqiR, .lieren_wuqiR, .kuilei_wuqiR, .mofashi_wuqiR {
+.gun_wuqiR, .sword_wuqiR, .zhanshi_wuqiR, .lieren_wuqiR, .kuilei_wuqiR, .mofashi_wuqiR {
     width: 16px;
     height: 28px;
     position: absolute;
@@ -477,7 +536,7 @@
     cursor: pointer
 }
 
-.sword_wuqiC, .zhanshi_wuqiC, .lieren_wuqiC, .kuilei_wuqiC, .mofashi_wuqiC {
+.gun_wuqiC, .sword_wuqiC, .zhanshi_wuqiC, .lieren_wuqiC, .kuilei_wuqiC, .mofashi_wuqiC {
     width: 399px;
     height: 176px;
     position: absolute;
@@ -488,14 +547,14 @@
     overflow: hidden
 }
 
-.sword_wqBox, .zs_wqBox, .lr_wqBox, .kl_wqBox, .mf_wqBox {
+.gun_wqBox, .sword_wqBox, .zs_wqBox, .lr_wqBox, .kl_wqBox, .mf_wqBox {
     height: 176px;
     position: absolute;
     left: 0px;
     top: 0;
 }
 
-.sword_wqBox li, .zs_wqBox li, .lr_wqBox li, .kl_wqBox li, .mf_wqBox li, .zs_wqBox li img, .lr_wqBox li img, .kl_wqBox li img, .mf_wqBox li img {
+.gun_wqBox li, .sword_wqBox li, .zs_wqBox li, .lr_wqBox li, .kl_wqBox li, .mf_wqBox li, .zs_wqBox li img, .lr_wqBox li img, .kl_wqBox li img, .mf_wqBox li img {
     width: 399px;
     height: 176px;
     float: left;
@@ -517,7 +576,7 @@
     top: 694px;
 }
 
-.sword_yuanhuaL, .zhanshi_yuanhuaL, .lieren_yuanhuaL, .kuilei_yuanhuaL, .mofashi_yuanhuaL {
+.gun_yuanhuaL, .sword_yuanhuaL, .zhanshi_yuanhuaL, .lieren_yuanhuaL, .kuilei_yuanhuaL, .mofashi_yuanhuaL {
     width: 16px;
     height: 28px;
     position: absolute;
@@ -526,7 +585,7 @@
     cursor: pointer
 }
 
-.sword_yuanhuaR, .zhanshi_yuanhuaR, .lieren_yuanhuaR, .kuilei_yuanhuaR, .mofashi_yuanhuaR {
+.gun_yuanhuaR, .sword_yuanhuaR, .zhanshi_yuanhuaR, .lieren_yuanhuaR, .kuilei_yuanhuaR, .mofashi_yuanhuaR {
     width: 16px;
     height: 28px;
     position: absolute;
@@ -535,7 +594,7 @@
     cursor: pointer
 }
 
-.sword_yuanhuaC, .zhanshi_yuanhuaC, .lieren_yuanhuaC, .kuilei_yuanhuaC, .mofashi_yuanhuaC {
+.gun_yuanhuaC, .sword_yuanhuaC, .zhanshi_yuanhuaC, .lieren_yuanhuaC, .kuilei_yuanhuaC, .mofashi_yuanhuaC {
     width: 405px;
     height: 130px;
     position: absolute;
@@ -544,14 +603,14 @@
     overflow: hidden
 }
 
-.sword_yuanhua, .zs_yuanhua, .lr_yuanhua, .kl_yuanhua, .mf_yuanhua {
+.gun_yuanhua, .sword_yuanhua, .zs_yuanhua, .lr_yuanhua, .kl_yuanhua, .mf_yuanhua {
     height: 130px;
     position: absolute;
     left: 0;
     top: 0;
 }
 
-.sword_yuanhua li, .zs_yuanhua li, .lr_yuanhua li, .kl_yuanhua li, .mf_yuanhua li, .zs_yuanhua li img, .lr_yuanhua li img, .kl_yuanhua li img, .mf_yuanhua li img {
+.gun_yuanhua li, .sword_yuanhua li, .zs_yuanhua li, .lr_yuanhua li, .kl_yuanhua li, .mf_yuanhua li, .zs_yuanhua li img, .lr_yuanhua li img, .kl_yuanhua li img, .mf_yuanhua li img {
     float: left;
     width: 200px;
     height: 130px;
@@ -598,7 +657,7 @@
     display: none;
 }
 
-.videoBox0, .videoBox1, .videoBox2, .videoBox3, .videoBox4 {
+.videoBox00, .videoBox0, .videoBox1, .videoBox2, .videoBox3, .videoBox4 {
     width: 800px;
     height: 450px;
     background: #fff;
@@ -617,8 +676,29 @@
     cursor: pointer;
 }
 
-/*page0*/
+/*page00*/
+.pa00_left {
+    width: 936px;
+    position: absolute;
+    top: 60px;
+    left: 0;
+}
 
+.big_img-1 {
+    position: absolute;
+    left: -150px;
+    display: block
+}
+
+.small_img-1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+}
+
+
+/*page0*/
 .pa0_left {
     width: 936px;
     position: absolute;
