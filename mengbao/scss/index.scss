@@ -1,0 +1,21 @@
+@charset "utf-8";
+/**
+ * Author：zhoushuanglong
+ * Time：5/16/2017
+ * Description：meng bao
+ */
+@import "../../_sass/bourbon/bourbon";
+@import "../../_sass/normalize/normalize";
+@import "../../_sass/public/public";
+
+html, body {
+    height: 100%;
+}
+
+#particlesBg {
+    background: url("../img/snow-bg.jpg") no-repeat top;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
