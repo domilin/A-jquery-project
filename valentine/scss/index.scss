@@ -34,6 +34,8 @@ html, body, .swiper-container {
         bottom: 0;
         left: 0;
         z-index: 0;
+        background: url("../img/snow-bg.jpg") no-repeat bottom center;
+        background-size: 100% auto;
         height: 100%;
         width: 100%;
         overflow: hidden;
@@ -54,7 +56,7 @@ html, body, .swiper-container {
 
     .name-zhou {
         left: rem(75);
-        top: rem(520);
+        top: rem(505);
         height: rem(129);
         width: rem(45);
         animation: fadeInDown 3s ease-out 14s both;
@@ -62,7 +64,7 @@ html, body, .swiper-container {
 
     .name-li {
         right: rem(75);
-        top: rem(340);
+        top: rem(325);
         height: rem(88);
         width: rem(55);
         animation: fadeInDown 3s ease-out 17s both;
@@ -70,7 +72,7 @@ html, body, .swiper-container {
 
     .slogan {
         left: rem(120);
-        top: rem(80);
+        top: rem(65);
         height: rem(132);
         width: rem(350);
         animation: fadeInDown 3s ease-out 20s both;
