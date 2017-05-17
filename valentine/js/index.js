@@ -6,6 +6,12 @@
 
 $(function () {
     particles();
+
+    $('#windAudio').get(0).volume = 0.3;
+
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination'
+    });
 });
 
 function particles() {
