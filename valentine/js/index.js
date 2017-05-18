@@ -5,6 +5,31 @@
  */
 
 $(function () {
+
+    //Ios微信audio自动播放
+    wx.config({
+        debug: false,
+        appId: '',
+        timestamp: 1,
+        nonceStr: '',
+        signature: '',
+        jsApiList: []
+    });
+    wx.ready(function () {
+        $('#windAudio').get(0).play();
+        $('#musicAudio').get(0).play();
+    });
+    //ios自动播放
+    var firsttaped = 0;
+    $('html').on('touchstart', function () {
+        if (firsttaped === 0) {
+            $('#windAudio').get(0).play();
+            $('#musicAudio').get(0).play();
+            firsttaped = 1;
+        }
+    });
+
+
     particles();
 
     $('#windAudio').get(0).volume = 0.3;
@@ -127,6 +152,5 @@ function particles() {
             },
             "retina_detect": true
         }
-
     );
 }

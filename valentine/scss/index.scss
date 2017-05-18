@@ -39,7 +39,7 @@ html, body, .swiper-container {
         height: 100%;
         width: 100%;
         overflow: hidden;
-        animation: fadeIn 12s ease-out 0s;
+        @include animation(fadeIn 12s ease-out 0s);
         img {
             width: 100%;
         }
@@ -56,26 +56,30 @@ html, body, .swiper-container {
 
     .name-zhou {
         left: rem(75);
-        top: rem(505);
+        //全屏top: rem(505);
+        top: rem(450);
         height: rem(129);
         width: rem(45);
-        animation: fadeInDown 3s ease-out 14s both;
+        @include animation(fadeInDown 3s ease-out 14s both);
     }
 
     .name-li {
         right: rem(75);
-        top: rem(325);
+        //全屏top: rem(325);
+        top: rem(260);
         height: rem(88);
         width: rem(55);
-        animation: fadeInDown 3s ease-out 17s both;
+        @include animation(fadeInDown 3s ease-out 17s both);
     }
 
     .slogan {
-        left: rem(120);
-        top: rem(65);
+        //全屏left: rem(120);
+        //全屏top: rem(65);
+        left: rem(100);
+        top: rem(35);
         height: rem(132);
         width: rem(350);
-        animation: fadeInDown 3s ease-out 20s both;
+        @include animation(fadeInDown 3s ease-out 20s both);
     }
 }
 
