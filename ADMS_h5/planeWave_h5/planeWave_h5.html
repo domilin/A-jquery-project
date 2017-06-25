@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name='HandheldFriendly' content='True'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>echarts</title>
+
+    <!-- public -->
+    <link rel="stylesheet" href="../common/normalize.css">
+    <script src="../common/zepto.min.js"></script>
+    <script src="../common/touch.js"></script>
+    <script src="../common/adms.js"></script>
+
+    <!-- private -->
+    <link rel="stylesheet" href="css/echarts.css">
+    <script src="js/echarts.min.js"></script>
+    <script src="js/echarts-bak.js"></script>
+
+</head>
+<body class="echarts_body">
+
+<div class="echartsWrap" id="echartsWrap">
+    <div id="echartsMaskWrap">
+        <div id="echartsMask"></div>
+        <div class="maskline"></div>
+    </div>
+    <div id="echartsCon"></div>
+    <div id="timeVal"></div>
+    <div id="clickVal"></div>
+    <div id="circlePoint">
+        <span class="green"><em></em></span>
+        <span class="blue"><em></em></span>
+    </div>
+</div>
+<div class="charts_eg">
+    <div class="ce_item">
+        <span id="outFlight"></span>
+        <em>出港航班总量</em>
+    </div>
+    <div class="ce_item">
+        <span id="inFlight"></span>
+        <em>进港航班总量</em>
+    </div>
+</div>
+</body>
+</html>

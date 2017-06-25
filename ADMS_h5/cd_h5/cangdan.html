@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <title>仓单</title>
+
+    <!-- public -->
+    <link rel="stylesheet" href="../common/normalize.css">
+    <script src="../common/adms.js"></script>
+
+    <!-- only this page -->
+    <link rel="stylesheet" href="css/calendar.css">
+    <script src="js/zepto.calendar.js"></script>
+    <script src="js/calendar.js"></script>
+    <!-- private -->
+    <link rel="stylesheet" href="css/cangdan.css">
+    <script src="js/cd_search.js"></script>
+
+</head>
+<body>
+<div class="calendar">
+    <div class="calendar_con clearfix">
+        <div class="calendar_item" id="datebtn">
+            <span><img src="images/calendar.gif"></span>
+            <em>日期</em>
+        </div>
+        <div class="date_wrap clearfix">
+            <div class="calendar_item">
+                <span><i id="ayear">2014</i></span>
+                <em>年</em>
+            </div>
+            <div class="calendar_item">
+                <span><i id="amonth">12</i></span>
+                <em>月</em>
+            </div>
+            <div class="calendar_item">
+                <span><i id="adate">24</i></span>
+                <em>日</em>
+            </div>
+        </div>
+        <a class="next_day"><img src="images/img3.gif"></a>
+        <input type="text" class="dateshow" id="dateshow" readonly="readonly" disabled="disabled" value="">
+    </div>
+</div>
+<div class="search_flight">
+    <span>航班号：</span>
+    <input type="text" id="flightNumber" placeholder="请输入航班号">
+    <a></a>
+</div>
+
+<a class="search_btn" id="searchBtn"><span>查询</span></a>
+</body>
+</html>
