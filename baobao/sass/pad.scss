@@ -1,0 +1,121 @@
+@charset "utf-8";
+/**
+ * Author：zhoushuanglong
+ * Time：2017/6/29
+ * Description：Description
+ */
+/*----------import module----------*/
+@import "../../_sass/bourbon/bourbon";
+@import "../../_sass/normalize/normalize";
+@import "../../_sass/public/public";
+
+/*----------my style----------*/
+$fontSize: 'Microsoft YaHei';
+
+.main {
+    background: #fefefe;
+    .main-title {
+        padding: 0 rem(24);
+        border-bottom: 1px solid #e6e6e6;
+        height: rem(34);
+        color: #444a4a;
+        font-size: rem(16);
+        line-height: rem(34);
+        a {
+            float: right;
+        }
+    }
+    .main-con {
+        padding: rem(24) rem(24) 0;
+    }
+}
+
+.content {
+    a {
+        float: left;
+        margin-bottom: rem(24);
+        display: block;
+        width: 33.33%;
+        text-align: center;
+        span {
+            border-radius: 100%;
+            border: 1px solid #cacaca;
+            display: inline-block;
+            height: rem(64);
+            width: rem(64);
+            font-size: rem(16);
+            font-weight: bold;
+            line-height: rem(64);
+        }
+        em {
+            display: block;
+            color: #5f6062;
+            font-size: rem(14);
+            line-height: rem(32);
+        }
+        &:nth-child(1) span {
+            border-color: #e19742;
+            color: #e19742;
+        }
+        &:nth-child(2) span {
+            border-color: #3a9eb6;
+            color: #3a9eb6;
+        }
+        &:nth-child(3) span {
+            border-color: #59aa41;
+            color: #59aa41;
+        }
+    }
+}
+
+.content-two {
+    h3 {
+        color: #5f6062;
+        font-size: rem(14);
+        line-height: rem(32);
+        text-align: center;
+        span {
+            font-weight: bold;
+        }
+    }
+    .left {
+        float: left;
+        width: 40%;
+        h3 {
+            line-height: rem(70);
+        }
+        .left-con {
+            .circle {
+                position: relative;
+                height: rem(150);
+                width: rem(150);
+                overflow: hidden;
+                .blue {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background: #359ade;
+                    border-radius: 100%;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 0;
+                    overflow: hidden;
+                    .green {
+                        position: absolute;
+                        left: rem(80);
+                        top: rem(-150);
+                        background: #55b635;
+                        height: 100%;
+                        width: 100%;
+                        z-index: 1;
+                        @include transform(rotate(100deg) skew(60deg));
+                    }
+                }
+            }
+        }
+    }
+    .right {
+        float: right;
+        width: 60%;
+    }
+}
