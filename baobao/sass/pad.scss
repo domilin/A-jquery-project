@@ -86,9 +86,10 @@ $fontSize: 'Microsoft YaHei';
         }
         .left-con {
             .circle {
+                float: left;
                 position: relative;
-                height: rem(150);
-                width: rem(150);
+                height: rem(130);
+                width: rem(130);
                 overflow: hidden;
                 .blue {
                     position: absolute;
@@ -102,13 +103,71 @@ $fontSize: 'Microsoft YaHei';
                     overflow: hidden;
                     .green {
                         position: absolute;
-                        left: rem(80);
-                        top: rem(-150);
+                        left: rem(105);
+                        top: rem(-175);
                         background: #55b635;
                         height: 100%;
                         width: 100%;
                         z-index: 1;
                         @include transform(rotate(100deg) skew(60deg));
+                    }
+                }
+                .word {
+                    position: absolute;
+                    left: rem(10);
+                    top: rem(10);
+                    background: #fff;
+                    border-radius: 100%;
+                    height: rem(110);
+                    width: rem(110);
+                    z-index: 2;
+                    color: #5c6063;
+                    font-size: rem(16);
+                    text-align: center;
+                    span {
+                        margin-top: rem(38);
+                        display: block;
+                    }
+                    em {
+                        margin-top: rem(5);
+                        display: block;
+                        font-weight: bold;
+                    }
+                }
+            }
+            .mark {
+                float: left;
+                margin: rem(25) 0 0 rem(20);
+                font-size: rem(14);
+                span {
+                    margin: rem(8) 0;
+                    display: block;
+                    height: rem(14);
+                    em {
+                        float: left;
+                        margin: rem(2) rem(5) 0 0;
+                        background: #4294f0;
+                        display: inline-block;
+                        height: rem(12);
+                        width: 25px;
+                    }
+                    &:nth-child(1) {
+                        color: #fb5957;
+                        em {
+                            background: #fb5957;
+                        }
+                    }
+                    &:nth-child(2) {
+                        color: #54bc31;
+                        em {
+                            background: #54bc31;
+                        }
+                    }
+                    &:nth-child(3) {
+                        color: #2893d9;
+                        em {
+                            background: #2893d9;
+                        }
                     }
                 }
             }
@@ -117,5 +176,46 @@ $fontSize: 'Microsoft YaHei';
     .right {
         float: right;
         width: 60%;
+        .con {
+            &:first-child {
+                margin-bottom: rem(24);
+            }
+            h3 {
+                margin-bottom: rem(25);
+            }
+            ul {
+                margin: 0 auto;
+                width: rem((62+8)*5);
+                li {
+                    float: left;
+                    margin: 0 rem(4);
+                    border: 1px solid #cfcfcf;
+                    border-bottom: 2px solid #cfcfcf;
+                    height: rem(40);
+                    width: rem(60);
+                    font-size: rem(14);
+                    text-align: center;
+                    &:nth-child(2){
+                        border-bottom-color: #6bb74b;
+                    }
+                    &:nth-child(3){
+                        border-bottom-color: #c63844;
+                    }
+                    &:nth-child(4){
+                        border-bottom-color: #80babb;
+                    }
+                    &:nth-child(5){
+                        border-bottom-color: #e69a38;
+                    }
+                    span {
+                        margin-top: rem(4);
+                        display: block;
+                    }
+                    em {
+                        display: block;
+                    }
+                }
+            }
+        }
     }
 }
