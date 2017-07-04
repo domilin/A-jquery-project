@@ -15,6 +15,19 @@ div.point {
     width: rem(29*$rule);
 }
 
+a.download-btn {
+    margin-left: rem(-240*$rule/2);
+    position: absolute;
+    bottom: rem(120*$rule);
+    left: 50%;
+    background: url("../img/img7.png") no-repeat center;
+    background-size: 100% 100%;
+    display: block;
+    height: rem(76*$rule);
+    width: rem(240*$rule);
+    z-index: 10;
+}
+
 a.video-play-btn {
     margin: rem(-121/2*$rule) 0 0 rem(-121/2*$rule);
     position: absolute;
@@ -73,18 +86,6 @@ a.audio-btn {
                 height: 100%;
                 width: 100%;
             }
-        }
-        a.download-btn {
-            margin-left: rem(-240*$rule/2);
-            position: absolute;
-            bottom: rem(120*$rule);
-            left: 50%;
-            background: url("../img/img7.png") no-repeat center;
-            background-size: 100% 100%;
-            display: block;
-            height: rem(76*$rule);
-            width: rem(240*$rule);
-            z-index: 10;
         }
         a.logo {
             left: rem(130*$rule);
@@ -360,6 +361,10 @@ a.audio-btn {
     height: rem(987*$rule);
     width: 100%;
     overflow: hidden;
+    a.download-btn{
+        bottom: inherit;
+        top: rem(40);
+    }
     img {
         display: block;
         height: 100%;

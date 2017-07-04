@@ -61,6 +61,7 @@
     <div class="stone" id="stone">
         <img src="./img/stone.png"/>
     </div>
+    <a class="download-btn" id="downloadBtn"></a>
 </div>
 <div class="intro-detail">
     <img id="heroIntro" src=""/>

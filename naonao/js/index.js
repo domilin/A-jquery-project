@@ -53,6 +53,7 @@ $(function () {
 
     $('.qq-group').click(function () {
         $(this).find('.qq-pop').toggle();
+        return false;
     });
     $('html').click(function () {
         $('.qq-pop').hide();
