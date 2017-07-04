@@ -54,6 +54,9 @@ $(function () {
     $('.qq-group').click(function () {
         $(this).find('.qq-pop').toggle();
     });
+    $('html').click(function () {
+        $('.qq-pop').hide();
+    });
 
     //音乐播放
     wx.config({
@@ -194,6 +197,9 @@ $(function () {
                 if (i === 0) {
                     $cardImg.find('img').attr('src', imgUrl + d.filePath2);
                     $detailLink.attr('data-id', d.id);
+
+                    $('#heroVideo').attr('src', imgUrl + d.filePath5);
+                    $('#videoPlayBtn').data('src', d.url);
                 }
 
                 if (d.id === parseInt(getQueryString('id'))) {
@@ -217,16 +223,20 @@ $(function () {
             }
             $heroBtn.html(str);
 
-            $heroBtn.find('a').eq(0).addClass('active');
+            if (!getQueryString('id')) {
+                $heroBtn.find('a').eq(0).addClass('active');
+            }
         }
     });
-
 
     $(document).on('tap', '#heroBtn a:not([class="hero-null"])', function () {
         var $this = $(this);
 
-        $('#heroBtn a').removeClass('active');
-        $this.addClass('active');
+        if (!getQueryString('id')) {
+            $('#heroBtn a').removeClass('active');
+            $this.addClass('active');
+        }
+
 
         $cardImg.find('img').attr('src', imgUrl + $(this).data('card'));
         $detailLink.attr('data-id', $this.data('id'));
@@ -235,6 +245,9 @@ $(function () {
             if (d.id === parseInt($this.data('id'))) {
                 $heroBanner.attr('src', imgUrl + d.filePath3);
                 $heroIntro.attr('src', imgUrl + d.filePath4);
+
+                $('#heroVideo').attr('src', imgUrl + d.filePath5);
+                $('#videoPlayBtn').data('src', d.url);
             }
         });
 
@@ -330,11 +343,6 @@ $(function () {
             $li = $skillCon.find('li');
         $.each(skillArr, function (i, d) {
             if (d.location === id) {
-                console.log(d.url);
-                console.log(d.filePath5);
-                $('#heroVideo').attr('src', imgUrl + d.filePath5);
-                $('#videoPlayBtn').data('src', d.url);
-
                 $a.eq(0).children('img').attr('src', imgUrl + d.filePath);
                 $a.eq(1).children('img').attr('src', imgUrl + d.filePath2);
                 $a.eq(2).children('img').attr('src', imgUrl + d.filePath3);
