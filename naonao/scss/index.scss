@@ -4,6 +4,17 @@
 
 $rule: 640/750;
 
+div.point {
+    margin-left: rem(-29/2*$rule);
+    position: absolute;
+    bottom: rem(-14*$rule);
+    left: 50%;
+    background: url("../img/point.png") no-repeat top;
+    background-size: 100% 100%;
+    height: rem(102*$rule);
+    width: rem(29*$rule);
+}
+
 a.video-play-btn {
     margin: rem(-121/2*$rule) 0 0 rem(-121/2*$rule);
     position: absolute;
@@ -15,39 +26,109 @@ a.video-play-btn {
     width: rem(121);
 }
 
+span.video-con-mask {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
 a.audio-btn {
     position: fixed;
     right: rem(30*$rule);
     top: rem(30*$rule);
-    background: url("../img/img6.png") no-repeat center;
+    background: url("../img/img6-close.png") no-repeat center;
     background-size: 100% 100%;
     height: rem(46*$rule);
     width: rem(46*$rule);
     display: block;
     z-index: 9999;
+    &.active {
+        background: url("../img/img6.png") no-repeat center;
+        background-size: 100% 100%;
+    }
 }
 
 .banner {
     position: relative;
-    img {
-        display: block;
-        width: 100%;
-    }
-    a.download-btn {
-        margin-left: rem(-240*$rule/2);
-        position: absolute;
-        bottom: rem(120*$rule);
-        left: 50%;
-        background: url("../img/img7.png") no-repeat center;
-        background-size: 100% 100%;
-        display: block;
-        height: rem(76*$rule);
-        width: rem(240*$rule);
+    z-index: 1;
+    background: url("../img/banner-bg.jpg") no-repeat;
+    background-size: 100% 100%;
+    height: rem(951);
+    .banner-con {
+        position: relative;
+        height: rem(940);
+        overflow: hidden;
+        div.point {
+            bottom: rem(-10*$rule);
+        }
+        a {
+            display: block;
+            position: absolute;
+            img {
+                display: block;
+                height: 100%;
+                width: 100%;
+            }
+        }
+        a.download-btn {
+            margin-left: rem(-240*$rule/2);
+            position: absolute;
+            bottom: rem(120*$rule);
+            left: 50%;
+            background: url("../img/img7.png") no-repeat center;
+            background-size: 100% 100%;
+            display: block;
+            height: rem(76*$rule);
+            width: rem(240*$rule);
+            z-index: 10;
+        }
+        a.logo {
+            left: rem(130*$rule);
+            top: rem(116*$rule);
+            height: rem(268*$rule);
+            width: rem(546*$rule);
+        }
+        a.cloud {
+            margin-left: rem(-(750-640)/2);
+            bottom: rem(-80);
+            left: 0;
+            height: rem(502);
+            width: rem(750);
+        }
+        a.home {
+            left: rem(335*$rule);
+            top: rem(440*$rule);
+            height: rem(319*$rule);
+            width: rem(74*$rule);
+            &.two {
+                left: rem(440*$rule);
+                top: rem(545*$rule);
+                height: rem(124*$rule);
+                width: rem(29*$rule);
+            }
+            &.three {
+                left: rem(520*$rule);
+                top: rem(580*$rule);
+                height: rem(60*$rule);
+                width: rem(14*$rule);
+            }
+            &.four {
+                left: rem(580*$rule);
+                top: rem(540*$rule);
+                height: rem(30*$rule);
+                width: rem(7*$rule);
+            }
+        }
     }
 }
 
 .video-wraper {
     position: relative;
+    z-index: 0;
     background: url("../img/bg1.jpg") no-repeat top center;
     background-size: 100% 100%;
     height: rem(695);
@@ -101,11 +182,11 @@ a.audio-btn {
     height: rem(911);
     width: 100%;
     &.detail {
-        background: url("../img/bg-detail-1.png") no-repeat top;
+        background: url("../img/bg-detail-1.jpg") no-repeat top;
         background-size: 100% 100%;
-        height: rem(790*$rule);
+        height: rem(820*$rule);
         .hero-btn {
-            padding-top: rem(140*$rule);
+            padding-top: rem(180*$rule);
         }
     }
     .hero-con-img {
@@ -122,6 +203,12 @@ a.audio-btn {
                 height: 100%;
                 width: 100%;
             }
+            &.detail-link {
+                position: absolute;
+                left: 0;
+                top: 0;
+                z-index: 2;
+            }
         }
         .fire-star {
             position: absolute;
@@ -129,6 +216,7 @@ a.audio-btn {
             left: 0;
             height: rem(309*$rule);
             width: rem(683*$rule);
+            z-index: 1;
             img {
                 height: 100%;
                 width: 100%;
@@ -141,9 +229,20 @@ a.audio-btn {
         width: rem((90+40)*4*$rule);
         a {
             float: left;
+            position: relative;
             margin: 0 rem(20*$rule) rem(56*$rule);
             height: rem(90*$rule);
             width: rem(90*$rule);
+            &.active span {
+                position: absolute;
+                left: rem(26*$rule);
+                top: rem(-26*$rule);
+                background: url("../img/hero-btn-bg.png") no-repeat top;
+                background-size: 100% 100%;
+                display: block;
+                height: rem(142*$rule);
+                width: rem(41*$rule);
+            }
             img {
                 display: block;
                 height: 100%;
@@ -208,9 +307,38 @@ a.audio-btn {
 }
 
 .qq-group {
+    position: relative;
     background: #000000;
     padding-bottom: rem(40*$rule);
     text-align: center;
+    .qq-pop {
+        margin-left: rem(-230/2*$rule);
+        position: absolute;
+        bottom: rem(100*$rule);
+        left: 50%;
+        background: #fff;
+        border-radius: rem(10);
+        display: none;
+        width: rem(230*$rule);
+        img {
+            margin: rem(24*$rule) auto;
+            display: block;
+            height: rem(155*$rule);
+            width: rem(156*$rule);
+        }
+        p {
+            margin: rem(-16) 0 0 rem(-30);
+            width: rem(260);
+            color: #7f6a43;
+            font-size: rem(14*$rule);
+            line-height: rem(26);
+            text-align: center;
+            transform: scale(0.7);
+            span {
+                display: block;
+            }
+        }
+    }
     &.detail {
         padding-top: rem(48*$rule);
     }
@@ -231,6 +359,7 @@ a.audio-btn {
     position: relative;
     height: rem(987*$rule);
     width: 100%;
+    overflow: hidden;
     img {
         display: block;
         height: 100%;
@@ -258,10 +387,11 @@ a.audio-btn {
 }
 
 .skill {
-    padding-top: rem(230*$rule);
+    padding: rem(230*$rule) 0 rem(160*$rule) 0;
+    position: relative;
+    z-index: 1;
     background: url("../img/bg-detail-0.jpg") no-repeat top;
-    background-size: 100% 100%;
-    height: rem((1305-230)*$rule);
+    background-size: 100% auto;
     width: 100%;
     .video-play {
         margin: 0 auto;
@@ -317,6 +447,18 @@ a.audio-btn {
                 font-size: rem(26*$rule);
                 line-height: rem(56*$rule);
                 text-align: center;
+                span {
+                    margin: 0 auto;
+                    background: url("../img/intro-bg.png") no-repeat top;
+                    background-size: 100% 100%;
+                    display: block;
+                    height: rem(13*$rule);
+                    width: rem(497*$rule);
+                }
+                em {
+                    margin: rem(20) 0;
+                    display: block;
+                }
             }
         }
     }

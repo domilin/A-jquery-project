@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="keywords" content="keywords">
-    <meta name="description" content="description">
+    <meta name="keywords" content="闹闹天宫,闹闹天宫手游,闹闹天宫下载,闹闹天宫礼包,闹闹天宫官网,大闹天宫,大闹天宫手游,moba,国风,国风moba,国风手游,孙悟空,孙悟空手游,西游手游">
+    <meta name="description" content="蓝港互动2017首款自主研发横版国风空战MOBA手游《闹闹天宫》，黑盒测试现已开启！以经典神话为原型打造跨时代巨作，动画级的精美人设，横版空战的激烈角逐，经典神话人物热血参战，针对战局调整天赋策略，快节奏的对抗团战瞬息万变，你会成为天宫之战的盖世英雄！">
     <meta name="author" content="name, email@gmail.com">
     <!-- 优先使用 IE 最新版本和 Chrome -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
@@ -24,8 +24,7 @@
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Cache-Control" content="no-cache">
     <meta http-equiv="Expires" content="0">
-    <title>demo</title>
-
+    <title>国风MOBA_《闹闹天宫》手游官方网站_蓝港互动</title>
     <!--publlic-->
     <script src="https://common.8864.com/web/js/remset.js"></script>
     <script src="https://common.8864.com/web/js/zepto/zepto.min.js"></script>
@@ -44,7 +43,7 @@
 <body>
 <!--音乐-->
 <audio id="bgMusic" loop autoplay src="http://gdl1602.8864.com/nntg/market/nn_op.mp3"></audio>
-<a class="audio-btn" id="playMusic"></a>
+<a class="audio-btn active" id="playMusic"></a>
 <!--微信-->
 <div class="undown-bg" id='shadow'>
     <div class="undown-text"></div>
@@ -58,43 +57,61 @@
 
 <!--cutline-->
 <div class="banner-detail">
-    <img src="./img/server/hero0.jpg"/>
-    <div class="stone">
+    <img id="heroBanner" src=""/>
+    <div class="stone" id="stone">
         <img src="./img/stone.png"/>
     </div>
 </div>
 <div class="intro-detail">
-    <img src="./img/server/hero1.jpg"/>
+    <img id="heroIntro" src=""/>
 </div>
 <div class="skill">
     <div class="video-play">
-        <img src="./img/server/videobg0.jpg"/>
-        <a class="video-play-btn"></a>
+        <img id="heroVideo" src=""/>
+        <span class="video-con-mask"></span>
+        <a class="video-play-btn" id="videoPlayBtn" data-src=""></a>
     </div>
-    <div class="skill-btn clearfix">
-        <a><img src="./img/server/icon1.png"/></a>
-        <a class="active"><img src="./img/server/icon1.png"/></a>
-        <a><img src="./img/server/icon1.png"/></a>
-        <a><img src="./img/server/icon1.png"/></a>
+    <div class="skill-btn clearfix" id="skillBtn">
+        <a class="active"><img src=""/></a>
+        <a><img src=""/></a>
+        <a><img src=""/></a>
+        <a><img src=""/></a>
     </div>
-    <ul class="skill-con">
+    <ul class="skill-con" id="skillCon">
         <li>
-            <h4>大圣冲击</h4>
-            <p>旋转金箍棒朝指定方sd造成伤害，同时在原地留下大圣幻象造成范围伤害并减速敌人，幻象存在3.5后飞向本体，对路径上的敌人再次造成伤害。如在幻象存在期间，再次点击技能释放，大圣本体会回到幻象位置。</p>
+            <h4></h4>
+            <p>
+                <span></span>
+                <em></em>
+                <span></span>
+            </p>
         </li>
         <li>
-            <h4>大圣冲击</h4>
-            <p>旋转金箍棒朝指定方向冲刺，对直线范围敌人造圣幻象造成范围伤害并减速敌人，幻象存在3.5后飞向本体，对路径上的敌人再次造成伤害。如在幻象存在期间，再次点击技能释放，大圣本体会回到幻象位置。</p>
+            <h4></h4>
+            <p>
+                <span></span>
+                <em></em>
+                <span></span>
+            </p>
         </li>
         <li>
-            <h4>大圣冲击</h4>
-            <p>造成伤害，同时在原地留下大圣幻象造成范围伤害并减速敌人，幻象存在3.5后飞向本体，对路径上的敌人再次造成伤害。如在幻象存在期间，再次点击技能释放，大圣本体会回到幻象位置。</p>
+            <h4></h4>
+            <p>
+                <span></span>
+                <em></em>
+                <span></span>
+            </p>
         </li>
         <li>
-            <h4>大圣冲击</h4>
-            <p>旋转金箍棒朝指定方向冲刺，对直线范围敌人造成伤害，同时在原地害并减速敌人，幻象存在3.5后飞向本体，对路径上的敌人再次造成伤害。如在幻象存在期间，再次点击技能释放，大圣本体会回到幻象位置。</p>
+            <h4></h4>
+            <p>
+                <span></span>
+                <em></em>
+                <span></span>
+            </p>
         </li>
     </ul>
+    <div class="point"></div>
 </div>
 <div class="hero-con detail">
     <div class="hero-btn" id="heroBtn"></div>
@@ -103,12 +120,19 @@
 
 <div class="qq-group detail">
     <a>官网QQ群</a>
+    <div class="qq-pop">
+        <img src="./img/ercode.jpg"/>
+        <p>
+            <span>群名称：闹闹天宫手游玩家群</span>
+            <span>群号：474403634</span>
+        </p>
+    </div>
 </div>
 
 <footer>
     <span><img src="./img/footer-logo.jpg"></span>
     <p>蓝港在线（北京）科技有限公司 京ICP备09017018号-3 文网游备字[2016]M-RPG2263号</p>
-    <em>Copyright © 2007-2015 linekong.com, All Rights Reserved</em>
+    <em>Copyright © 2007-2017 linekong.com, All Rights Reserved</em>
     <p>电话：010-84170099 地址：北京市朝阳区望京北路启明国际大厦8层 </p>
 </footer>
 

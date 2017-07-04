@@ -5,9 +5,55 @@
  * Description:Description
  */
 
+
 $(function () {
+    function rem(num) {
+        return num / 24 * parseInt($('html').css('font-size'))
+    }
+
+    window.addEventListener("deviceorientation", function (event) {
+        // 处理event.alpha、event.beta及event.gamma
+
+        $('#stone').css({
+            'left': event.gamma * 0.3 + rem(40),
+            'bottom': event.beta * 0.3 + rem(140)
+        });
+
+        $('.logo').css({
+            'left': event.gamma * 0.6 + rem(100)
+        });
+
+        $('.cloud').css({
+            'left': event.gamma * 0.5,
+            'bottom': event.beta * 0.2 + rem(-50)
+        });
+
+        $('.home.one').css({
+            'left': event.gamma * 0.3 + rem(300)
+        });
+        $('.home.two').css({
+            'left': event.gamma * 0.2 + rem(400)
+        });
+        $('.home.three').css({
+            'left': event.gamma * 0.1 + rem(450)
+        });
+        $('.home.four').css({
+            'left': event.gamma * 0.05 + rem(500)
+        });
+
+        $('.download-btn').css({
+            'margin-left': event.gamma * 0.2 + rem(-240 * 640 / 750 / 2),
+            'bottom': event.beta * 0.2 + rem(120 * 640 / 750)
+        });
+
+    }, true);
+
 
     var imgUrl = 'http://img.linekong.com';
+
+    $('.qq-group').click(function () {
+        $(this).find('.qq-pop').toggle();
+    });
 
     //音乐播放
     wx.config({
@@ -27,11 +73,11 @@ $(function () {
     $pm.tap(function () {
         var $this = $(this);
         if ($this.hasClass('active')) {
-            $bm[0].pause();
             $this.removeClass('active');
+            $bm[0].pause();
         } else {
-            $bm[0].play();
             $this.addClass('active');
+            $bm[0].play();
         }
     });
 
@@ -84,7 +130,11 @@ $(function () {
             var video = JSON.parse(data).data;
             var str = '';
             $.each(video, function (i, d) {
-                str += '<div class="swiper-slide"><img src="' + d.icon + '"><a class="video-play-btn" id="videoPlay' + i + '" data-src="' + imgUrl + d.url + '"></a></div>'
+                str += '<div class="swiper-slide">' +
+                    '<img src="' + imgUrl + d.filePath + '">' +
+                    '<span class="video-con-mask"></span>' +
+                    '<a class="video-play-btn" id="videoPlay' + i + '" data-src="' + d.url + '"></a>' +
+                    '</div>';
             });
             $videoSwiper.html(str);
 
@@ -124,8 +174,13 @@ $(function () {
 
 
     //英雄
+    var $cardImg = $('#cardImg'),
+        $detailLink = $('#detailLink');
+
     var heroArr = [];
-    var $cardImg = $('#cardImg');
+    var $heroBanner = $('#heroBanner'),
+        $heroIntro = $('#heroIntro');//此处详情页
+
     $.ajax({
         type: 'GET',
         url: '/api_hero',
@@ -134,27 +189,63 @@ $(function () {
             var hero = JSON.parse(data).data;
             heroArr = hero;
 
-
             var str = '';
             $.each(hero, function (i, d) {
                 if (i === 0) {
                     $cardImg.find('img').attr('src', imgUrl + d.filePath2);
-                    $cardImg.attr('data-id', d.id);
-
-
+                    $detailLink.attr('data-id', d.id);
                 }
-                str += '<a data-id="' + d.id + '" data-card="' + d.filePath2 + '"><img src="' + imgUrl + d.filePath + '"></a>'
+
+                if (d.id === parseInt(getQueryString('id'))) {
+                    $heroBanner.attr('src', imgUrl + d.filePath3);
+                    $heroIntro.attr('src', imgUrl + d.filePath4);
+                }
+
+
+                str += '<a data-id="' + d.id + '" data-card="' + d.filePath2 + '">' +
+                    '<img src="' + imgUrl + d.filePath + '">' +
+                    '<span></span>' +
+                    '</a>'
             });
+
+            if (hero.length % 4 !== 0) {
+                for (var n = 0; n < 4 - hero.length % 4; n++) {
+                    str += '<a class="hero-null">' +
+                        '<img src="./img/hero-null.png">' +
+                        '</a>'
+                }
+            }
             $heroBtn.html(str);
+
+            $heroBtn.find('a').eq(0).addClass('active');
         }
     });
-    $(document).on('tap', '#heroBtn a', function () {
+
+
+    $(document).on('tap', '#heroBtn a:not([class="hero-null"])', function () {
+        var $this = $(this);
+
+        $('#heroBtn a').removeClass('active');
+        $this.addClass('active');
+
         $cardImg.find('img').attr('src', imgUrl + $(this).data('card'));
-        $cardImg.attr('data-id', $(this).data('id'));
+        $detailLink.attr('data-id', $this.data('id'));
+
+        $.each(heroArr, function (i, d) {
+            if (d.id === parseInt($this.data('id'))) {
+                $heroBanner.attr('src', imgUrl + d.filePath3);
+                $heroIntro.attr('src', imgUrl + d.filePath4);
+            }
+        });
+
+        skillShow(skillArr, parseInt($this.data('id')));
+        if (getQueryString('id')) {
+            $(window).scrollTop(0);
+        }
     });
 
-    $cardImg.click(function () {
-        window.location.href = '/naonao/detail.html?id=' + $(this).data('id');
+    $detailLink.click(function () {
+        window.location.href = '/mobile/detail.html?id=' + $(this).data('id');
     });
 
 
@@ -176,7 +267,7 @@ $(function () {
                     $wallpaperDownload.eq(2).attr('href', imgUrl + d.filePath3);
                 }
 
-                str += '<div class="swiper-slide"><img src="' + d.filePath4 + '"/></div>';
+                str += '<div class="swiper-slide"><img src="' + imgUrl + d.filePath4 + '"/></div>';
                 wallpaperArr.push({
                     pageOne: d.filePath,
                     pageTwo: d.filePath2,
@@ -211,4 +302,62 @@ $(function () {
         }
     });
 
+
+    //技能
+    var $skillBtn = $('#skillBtn'),
+        $skillCon = $('#skillCon');
+    $skillBtn.find('a').click(function () {
+        var i = $(this).index();
+        $skillBtn.find('a').removeClass('active');
+        $(this).addClass('active');
+
+        $skillCon.find('li').hide();
+        $skillCon.find('li').eq(i).show();
+    });
+
+    var skillArr = [];
+    $.ajax({
+        type: 'GET',
+        url: '/api_skill',
+        success: function (data) {
+            skillArr = JSON.parse(data).data;
+            skillShow(skillArr, parseInt(getQueryString('id')));
+        }
+    });
+    videoPlay('#videoPlayBtn');
+    function skillShow(skillArr, id) {
+        var $a = $skillBtn.find('a'),
+            $li = $skillCon.find('li');
+        $.each(skillArr, function (i, d) {
+            if (d.location === id) {
+                console.log(d.url);
+                console.log(d.filePath5);
+                $('#heroVideo').attr('src', imgUrl + d.filePath5);
+                $('#videoPlayBtn').data('src', d.url);
+
+                $a.eq(0).children('img').attr('src', imgUrl + d.filePath);
+                $a.eq(1).children('img').attr('src', imgUrl + d.filePath2);
+                $a.eq(2).children('img').attr('src', imgUrl + d.filePath3);
+                $a.eq(3).children('img').attr('src', imgUrl + d.filePath4);
+
+                $li.eq(0).children('h4').text(d.roleName);
+                $li.eq(1).children('h4').text(d.roleServer);
+                $li.eq(2).children('h4').text(d.roleSchool);
+                $li.eq(3).children('h4').text(d.types);
+
+                $li.eq(0).children('p').children('em').text(d.standby1);
+                $li.eq(1).children('p').children('em').text(d.standby2);
+                $li.eq(2).children('p').children('em').text(d.standby3);
+                $li.eq(3).children('p').children('em').text(d.standby4);
+            }
+        });
+    }
+
 });
+
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+    var r = window.location.search.substr(1).match(reg);
+    if (r != null)return unescape(r[2]);
+    return null;
+}
