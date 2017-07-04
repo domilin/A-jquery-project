@@ -259,7 +259,7 @@ $(function () {
     });
 
     $detailLink.click(function () {
-        window.location.href = '/mobile/detail.html?id=' + $(this).data('id');
+        window.location.href = '/mobile_nn/detail.html?id=' + $(this).data('id');
     });
 
 

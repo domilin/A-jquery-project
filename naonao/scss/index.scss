@@ -361,7 +361,7 @@ a.audio-btn {
     height: rem(987*$rule);
     width: 100%;
     overflow: hidden;
-    a.download-btn{
+    a.download-btn {
         bottom: inherit;
         top: rem(40);
     }
@@ -466,6 +466,16 @@ a.audio-btn {
                 }
             }
         }
+    }
+}
+
+.back-index {
+    background: #000000;
+    font-size: rem(24*$rule);
+    line-height: rem(80*$rule);
+    text-align: center;
+    a {
+        color: #ffffff;
     }
 }
 
