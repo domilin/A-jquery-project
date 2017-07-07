@@ -7,6 +7,7 @@
 
 
 $(function () {
+
     function rem(num) {
         return num / 24 * parseInt($('html').css('font-size'))
     }
@@ -153,29 +154,6 @@ $(function () {
         }
     });
 
-    function videoPlay(ele) {
-        var $popmask = $('div.popmask'),
-            $videoWrap = $('div.video-wrap'),
-            $close = $('a.close-video'),
-            $videoCon = $videoWrap.children('video');
-
-        $(document).on('tap', ele, function () {
-            var src = $(this).attr('data-src');
-
-            $videoCon.attr('src', src);
-            $popmask.show();
-            $videoWrap.show();
-
-            $videoCon[0].play();
-        });
-
-        $close.off('tap');
-        $(document).on('tap', 'a.close-video', function () {
-            $popmask.hide();
-            $videoWrap.hide();
-        });
-    }
-
 
     //英雄
     var $cardImg = $('#cardImg'),
@@ -218,7 +196,7 @@ $(function () {
             if (hero.length % 4 !== 0) {
                 for (var n = 0; n < 4 - hero.length % 4; n++) {
                     str += '<a class="hero-null">' +
-                        '<img src="./img/hero-null.png">' +
+                        '<img src="http://nn.8864.com/mobile_nn/img/hero-null.png">' +
                         '</a>'
                 }
             }
@@ -237,6 +215,11 @@ $(function () {
             $('#heroBtn a').removeClass('active');
             $this.addClass('active');
         }
+
+        $skillBtn.find('a').removeClass('active');
+        $skillBtn.find('a').eq(0).addClass('active');
+        $skillCon.find('li').hide();
+        $skillCon.find('li').eq(0).show();
 
 
         $cardImg.find('img').attr('src', imgUrl + $(this).data('card'));
@@ -259,7 +242,7 @@ $(function () {
     });
 
     $detailLink.click(function () {
-        window.location.href = '/mobile_nn/detail.html?id=' + $(this).data('id');
+        window.location.href = '/naonao/detail-mobile.html?id=' + $(this).data('id');
     });
 
 
@@ -363,10 +346,3 @@ $(function () {
     }
 
 });
-
-function getQueryString(name) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
-    var r = window.location.search.substr(1).match(reg);
-    if (r != null)return unescape(r[2]);
-    return null;
-}
