@@ -87,24 +87,35 @@ a.audio-btn {
                 width: 100%;
             }
         }
+        a.slogan {
+            left: rem(30);
+            top: rem(310);
+            height: rem(129);
+            width: rem(578);
+        }
         a.logo {
-            left: rem(130*$rule);
-            top: rem(116*$rule);
-            height: rem(268*$rule);
-            width: rem(546*$rule);
+            left: rem(144);
+            top: rem(174);
+            height: rem(151);
+            width: rem(350);
         }
         a.cloud {
-            margin-left: rem(-(750-640)/2);
-            bottom: rem(-80);
+            bottom: 0;
             left: 0;
-            height: rem(502);
-            width: rem(750);
+            height: rem(500);
+            width: rem(1292*2);
+            @include animation(cloud 30s linear 0s infinite);
+            img {
+                float: left;
+                width: rem(1292);
+            }
         }
         a.home {
             left: rem(335*$rule);
             top: rem(440*$rule);
             height: rem(319*$rule);
             width: rem(74*$rule);
+            opacity: 0.5;
             &.two {
                 left: rem(440*$rule);
                 top: rem(545*$rule);
@@ -124,6 +135,15 @@ a.audio-btn {
                 width: rem(7*$rule);
             }
         }
+    }
+}
+
+@include keyframes(cloud) {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: rem(-1292);
     }
 }
 
@@ -334,7 +354,7 @@ a.audio-btn {
             font-size: rem(14*$rule);
             line-height: rem(26);
             text-align: center;
-            transform: scale(0.7);
+            @include transform(scale(0.7));
             span {
                 display: block;
             }

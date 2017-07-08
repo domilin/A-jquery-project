@@ -21,12 +21,11 @@ $(function () {
         });
 
         $('.logo').css({
-            'left': event.gamma * 0.6 + rem(100)
+            'left': event.gamma * 0.6 + rem(144)
         });
 
-        $('.cloud').css({
-            'left': event.gamma * 0.5,
-            'bottom': event.beta * 0.2 + rem(-50)
+        $('.slogan').css({
+            'left': event.gamma * 0.3 + rem(30)
         });
 
         $('.home.one').css({
@@ -49,6 +48,8 @@ $(function () {
 
     }, true);
 
+
+    videoPlay('#slogan');
 
     var imgUrl = 'http://img.linekong.com';
 
