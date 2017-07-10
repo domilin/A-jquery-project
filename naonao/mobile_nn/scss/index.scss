@@ -9,7 +9,7 @@ div.point {
     position: absolute;
     bottom: rem(-14*$rule);
     left: 50%;
-    background: url("../img/mobile/point.png") no-repeat top;
+    background: url("../img/point.png") no-repeat top;
     background-size: 100% 100%;
     height: rem(102*$rule);
     width: rem(29*$rule);
@@ -20,7 +20,7 @@ a.download-btn {
     position: absolute;
     bottom: rem(120*$rule);
     left: 50%;
-    background: url("../img/mobile/img7.png") no-repeat center;
+    background: url("../img/img7.png") no-repeat center;
     background-size: 100% 100%;
     display: block;
     height: rem(76*$rule);
@@ -33,7 +33,7 @@ a.video-play-btn {
     position: absolute;
     left: 50%;
     top: 50%;
-    background: url("../img/mobile/img8.png") no-repeat center;
+    background: url("../img/img8.png") no-repeat center;
     background-size: 100% 100%;
     height: rem(121);
     width: rem(121);
@@ -53,14 +53,14 @@ a.audio-btn {
     position: fixed;
     right: rem(30*$rule);
     top: rem(30*$rule);
-    background: url("../img/mobile/img6-close.png") no-repeat center;
+    background: url("../img/img6-close.png") no-repeat center;
     background-size: 100% 100%;
     height: rem(46*$rule);
     width: rem(46*$rule);
     display: block;
     z-index: 9999;
     &.active {
-        background: url("../img/mobile/img6.png") no-repeat center;
+        background: url("../img/img6.png") no-repeat center;
         background-size: 100% 100%;
     }
 }
@@ -68,7 +68,7 @@ a.audio-btn {
 .banner {
     position: relative;
     z-index: 1;
-    background: url("../img/mobile/banner-bg.jpg") no-repeat;
+    background: url("../img/banner-bg.jpg") no-repeat;
     background-size: 100% 100%;
     height: rem(951);
     .banner-con {
@@ -150,7 +150,7 @@ a.audio-btn {
 .video-wraper {
     position: relative;
     z-index: 0;
-    background: url("../img/mobile/bg1.jpg") no-repeat top center;
+    background: url("../img/bg1.jpg") no-repeat top center;
     background-size: 100% 100%;
     height: rem(695);
     width: 100%;
@@ -191,12 +191,12 @@ a.audio-btn {
         height: rem(80*$rule);
         width: rem(39*$rule);
         &.swiper-button-prev {
-            background: url("../img/mobile/img2.png") no-repeat center;
+            background: url("../img/img2.png") no-repeat center;
             background-size: 100% 100%;
             left: rem(50*$rule);
         }
         &.swiper-button-next {
-            background: url("../img/mobile/img3.png") no-repeat center;
+            background: url("../img/img3.png") no-repeat center;
             background-size: 100% 100%;
             right: rem(50*$rule);
         }
@@ -212,12 +212,12 @@ a.audio-btn {
 
 .hero-con {
     position: relative;
-    background: url("../img/mobile/bg3.jpg") no-repeat top;
+    background: url("../img/bg3.jpg") no-repeat top;
     background-size: 100% 100%;
     height: rem(911);
     width: 100%;
     &.detail {
-        background: url("../img/mobile/bg-detail-1.jpg") no-repeat top;
+        background: url("../img/bg-detail-1.jpg") no-repeat top;
         background-size: 100% 100%;
         height: rem(820*$rule);
         .hero-btn {
@@ -272,7 +272,7 @@ a.audio-btn {
                 position: absolute;
                 left: rem(26*$rule);
                 top: rem(-26*$rule);
-                background: url("../img/mobile/hero-btn-bg.png") no-repeat top;
+                background: url("../img/hero-btn-bg.png") no-repeat top;
                 background-size: 100% 100%;
                 display: block;
                 height: rem(142*$rule);
@@ -289,7 +289,7 @@ a.audio-btn {
 
 .wallpaper {
     position: relative;
-    background: url("../img/mobile/bg4.jpg") no-repeat top center;
+    background: url("../img/bg4.jpg") no-repeat top center;
     background-size: 100% 100%;
     height: rem(1028);
     width: 100%;
@@ -312,12 +312,12 @@ a.audio-btn {
         height: rem(76*$rule);
         width: rem(38*$rule);
         &.swiper-button-prev {
-            background: url("../img/mobile/img1.png") no-repeat center;
+            background: url("../img/img1.png") no-repeat center;
             background-size: 100% 100%;
             left: rem(110*$rule);
         }
         &.swiper-button-next {
-            background: url("../img/mobile/img0.png") no-repeat center;
+            background: url("../img/img0.png") no-repeat center;
             background-size: 100% 100%;
             right: rem(110*$rule);
         }
@@ -329,7 +329,7 @@ a.audio-btn {
             float: left;
             margin: 0 rem(8*$rule);
             display: block;
-            background: url("../img/mobile/img5.png") no-repeat center;
+            background: url("../img/img5.png") no-repeat center;
             background-size: 100% 100%;
             height: rem(35*$rule);
             width: rem(120*$rule);
@@ -429,7 +429,7 @@ a.audio-btn {
     padding: rem(230*$rule) 0 rem(160*$rule) 0;
     position: relative;
     z-index: 1;
-    background: url("../img/mobile/bg-detail-0.jpg") no-repeat top;
+    background: url("../img/bg-detail-0.jpg") no-repeat top;
     background-size: 100% auto;
     width: 100%;
     .video-play {
@@ -453,7 +453,7 @@ a.audio-btn {
             height: rem(130*$rule);
             width: rem(89*$rule);
             &.active {
-                background: url("../img/mobile/img11.png") no-repeat bottom;
+                background: url("../img/img11.png") no-repeat bottom;
                 background-size: rem(47*$rule) auto;
             }
             img {
@@ -488,7 +488,7 @@ a.audio-btn {
                 text-align: center;
                 span {
                     margin: 0 auto;
-                    background: url("../img/mobile/intro-bg.png") no-repeat top;
+                    background: url("../img/intro-bg.png") no-repeat top;
                     background-size: 100% 100%;
                     display: block;
                     height: rem(13*$rule);
@@ -561,7 +561,7 @@ footer {
     position: absolute;
     right: 0;
     top: 0;
-    background: url("../img/mobile/msg_weixin.png") no-repeat;
+    background: url("../img/msg_weixin.png") no-repeat;
     background-size: 100% auto;
     height: 100%;
     width: 100%;

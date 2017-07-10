@@ -244,7 +244,7 @@ $(function () {
     });
 
     $detailLink.click(function () {
-        window.location.href = '/naonao/detail-mobile.html?id=' + $(this).data('id');
+        window.location.href = '/mobile/detail.html?id=' + $(this).data('id');
     });
 
 

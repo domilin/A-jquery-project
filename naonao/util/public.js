@@ -48,6 +48,7 @@ function videoPlay(ele) {
     });
 }
 
+/*
 if(!isPc()){
     window.location.href = 'http://nn.8864.com/mobile'
-}
+}*/
