@@ -5,7 +5,9 @@
  * Description:Description
  */
 
-
+if(!isPc()){
+    window.location.href = 'http://nn.8864.com/mobile'
+}
 $(function () {
     $('#bannerCon').parallax({
         alibrateX: false,
