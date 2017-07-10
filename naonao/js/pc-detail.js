@@ -31,7 +31,7 @@ $(function () {
 
     $.ajax({
         type: 'GET',
-        url: '/api_hero',
+        url: '/api_web_hero',
         success: function (data) {
             var hero = JSON.parse(data).data;
             heroArr = hero;
@@ -41,7 +41,7 @@ $(function () {
             $.each(hero, function (i, d) {
                 if (i === 0) {
                     $('#heroVideo').attr('src', imgUrl + d.filePath5);
-                    $('#videoPlayBtn').data('src', d.url);
+                    $('#videoPlayBtn').attr('data-src', d.url);
                 }
 
                 if (d.id === parseInt(getQueryString('id'))) {
@@ -86,7 +86,7 @@ $(function () {
                 $heroIntro.attr('src', imgUrl + d.filePath4);
 
                 $('#heroVideo').attr('src', imgUrl + d.filePath5);
-                $('#videoPlayBtn').data('src', d.url);
+                $('#videoPlayBtn').attr('data-src', d.url);
             }
         });
 
@@ -110,7 +110,7 @@ $(function () {
     var skillArr = [];
     $.ajax({
         type: 'GET',
-        url: '/api_skill',
+        url: '/api_web_skill',
         success: function (data) {
             skillArr = JSON.parse(data).data;
             skillShow(skillArr, parseInt(getQueryString('id')));
@@ -141,4 +141,30 @@ $(function () {
             }
         });
     }
+
+
+
+    //分享
+    $('.share').on('click', function (e) {
+        e.stopPropagation();
+        $('.share-box').toggle();
+    });
+
+    $('.weixin').on('click', function () {
+        $('.wx-wemImg').toggle();
+    });
+
+    //音乐点击播放
+    var $pm = $('#playMusic'),
+        $bm = $('#bgMusic');
+    $pm.on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('active')) {
+            $this.removeClass('active');
+            $bm[0].pause();
+        } else {
+            $this.addClass('active');
+            $bm[0].play();
+        }
+    });
 });

@@ -169,6 +169,20 @@ a.audio-btn {
                     height: 100%;
                     width: 100%;
                 }
+                em {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    background: rgba(0, 0, 0, 0.8);
+                    display: block;
+                    height: rem(36);
+                    width: 100%;
+                    opacity: 0.8;
+                    color: #fff;
+                    font-size: rem(14);
+                    line-height: rem(36);
+                    text-align: center;
+                }
             }
         }
     }
@@ -333,10 +347,9 @@ a.audio-btn {
     padding-bottom: rem(40*$rule);
     text-align: center;
     .qq-pop {
-        margin-left: rem(-230/2*$rule);
         position: absolute;
         bottom: rem(100*$rule);
-        left: 50%;
+        left: rem(150);
         background: #fff;
         border-radius: rem(10);
         display: none;
@@ -364,6 +377,7 @@ a.audio-btn {
         padding-top: rem(48*$rule);
     }
     a {
+        margin: 0 rem(4);
         border: 1px solid #fce8c4;
         border-radius: rem(24*$rule);
         display: inline-block;

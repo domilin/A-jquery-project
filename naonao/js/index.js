@@ -53,8 +53,8 @@ $(function () {
 
     var imgUrl = 'http://img.linekong.com';
 
-    $('.qq-group').click(function () {
-        $(this).find('.qq-pop').toggle();
+    $('.qq-group .qq-group-btn').click(function () {
+        $('.qq-pop').toggle();
         return false;
     });
     $('html').click(function () {
@@ -139,6 +139,7 @@ $(function () {
                 str += '<div class="swiper-slide">' +
                     '<img src="' + imgUrl + d.filePath + '">' +
                     '<span class="video-con-mask"></span>' +
+                    '<em>' + d.title + '</em>' +
                     '<a class="video-play-btn" id="videoPlay' + i + '" data-src="' + d.url + '"></a>' +
                     '</div>';
             });

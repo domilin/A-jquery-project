@@ -20,7 +20,7 @@
     <script src="http://common.8864.com/web/plugins/swiper2/idangerous.swiper.min.js"></script>
 
     <!--private-->
-    <link href="./css/pc.css" rel="stylesheet">
+    <link href="./css/pc-detail.css" rel="stylesheet">
     <script src="./js/public.js"></script>
     <script src="./js/pc-detail.js"></script>
 
@@ -29,7 +29,7 @@
 <script type="text/javascript" src="http://www.8864.com/web_header.html"></script>
 <!--音乐-->
 <audio id="bgMusic" loop autoplay src="http://gdl1602.8864.com/nntg/market/nn_op.mp3"></audio>
-<a class="audio-btn active" id="playMusic"></a>
+<a class="audio-btn active"></a>
 <!--视频-->
 <div class="video-wrap">
     <video src="" controls="controls" autoplay="autoplay">您的浏览器不支持该视频</video>
@@ -43,12 +43,31 @@
     <img id="heroBanner" class="banner-bg" src="./img/server-pc/detail-img0.jpg">
     <ul class="banner-con" id="bannerCon">
         <li data-depth="0.20" class="layer stone"><img src="./img/pc/detail-img0.png"></li>
-        <li class="logo"><img src="./img/pc/detail-logo.png"/></li>
+        <li class="logo"><a href="http://nn.8864.com"><img src="./img/pc/detail-logo.png"/></a></li>
+
+
+        <!--主页复制-->
+        <div class="nav">
+            <ul>
+                <li class="music" style="margin-top: 15px;"><a class="audio-btn active" id="playMusic"></a></li>
+                <li class="share" style="margin-top: 15px; background: none"><a class="share"></a></li>
+            </ul>
+        </div>
+        <div class="share-box">
+            <section>
+                <a class="sina_weibo" title="新浪微博" rel="nofollow" href="javascript:void((function(s,d,e){try{}catch(e){}var%20f='http://v.t.sina.com.cn/share/share.php?',u=d.location.href,p=['url=',e(u),'&title=',e(d.title),'&appkey=1392530042'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"></a>
+                <a class="tentcent_weibo" title="腾讯微博" href="javascript:void(0)" onclick="{ var _t = encodeURI(document.title);  var _url = encodeURI(window.location); var _appkey = '333cf198acc94876a684d043a6b48e14'; var _site = encodeURI; var _pic = ''; var _u = 'http://v.t.qq.com/share/share.php?title='+_t+'&url='+_url+'&appkey='+_appkey+'&site='+_site+'&pic='+_pic; window.open( _u,'转播到腾讯微博', 'width=700, height=580, top=180, left=320, toolbar=no, menubar=no, scrollbars=no, location=yes, resizable=no, status=no' );  };" ></a>
+                <a class="jiathis_button_weixin weixin"></a>
+                <p class="wx-wemImg"><img src="./img/pc/wx-ewm.png" alt=""></p>
+            </section>
+        </div>
     </ul>
 </div>
 <div class="intro-detail">
-    <img id="heroIntro" src="./img/server-pc/detail-img1.jpg">
-    <div class="scroll-down"></div>
+    <img class="intro-detail-img" id="heroIntro" src="./img/server-pc/detail-img1.jpg">
+    <div class="scroll-down">
+        <p><img src="./img/pc/mouse.png" alt=""></p>
+    </div>
 </div>
 <div class="skill">
     <div class="skill-con">
@@ -99,7 +118,9 @@
                 </p>
             </li>
         </ul>
-        <div class="scroll-down"></div>
+        <div class="scroll-down">
+            <p><img src="./img/pc/mouse.png" alt=""></p>
+        </div>
     </div>
 </div>
 <div class="hero-con detail">
