@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="./js/jquery.js"></script>
+    <script src="../pc/js/jquery.js"></script>
 
-    <link href="./css/index.css" rel="stylesheet">
+    <link href="../pc/css/index.css" rel="stylesheet">
     <style>
         .wrapper{
             width: 804px;
@@ -49,7 +49,7 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="./js/roundabout.js"></script>
+<script type="text/javascript" src="../pc/js/roundabout.js"></script>
 <script type="text/javascript">
         $(function () {
             var imgUrl = 'http://img.linekong.com';
@@ -62,7 +62,7 @@
                 url: '/api_web_pic',
                 success: function (data) {
 
-                    var video = JSON.parse(data).data;console.log(video)
+                    var video = JSON.parse(data).data;
                     var str = '';
                     $.each(video, function (i, d) {
                         if (i === 0) {
@@ -88,7 +88,7 @@
                         duration: 500,
                         minScale: 0.5,
                         btnNext: '#bt-next',
-                        btnPrev: '#bt-previous',
+                        btnPrev: '#bt-previous'
 
 
                     });

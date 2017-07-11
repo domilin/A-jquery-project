@@ -25,12 +25,15 @@ function isPc() {
     return flag;
 }
 
+
 function videoPlay(ele) {
     var $popmask = $('div.popmask'),
         $videoWrap = $('div.video-wrap'),
         $close = $('a.close-video'),
         $videoCon = $videoWrap.children('video');
 
+    var $bgMusic = $('#bgMusic'),
+        $playMusic = $('#playMusic');
     $(document).on('click', ele, function () {
         var src = $(this).attr('data-src');
 
@@ -39,11 +42,17 @@ function videoPlay(ele) {
         $videoWrap.show();
 
         $videoCon[0].play();
+        $bgMusic[0].pause();
     });
 
     $close.off('click');
     $(document).on('click', 'a.close-video', function () {
         $popmask.hide();
         $videoWrap.hide();
+        $videoCon[0].pause();
+
+        if ($playMusic.hasClass('active')) {
+            $bgMusic[0].play();
+        }
     });
 }

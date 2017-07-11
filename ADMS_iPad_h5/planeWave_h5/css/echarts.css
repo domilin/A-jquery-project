@@ -1,0 +1,400 @@
+html, body.echarts_body {
+    height: 100%;
+    overflow: hidden;
+}
+
+.echartsWrap {
+    position: relative;
+    background: #fff;
+    height: 100%;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+#echartsCon {
+    height: 100%;
+    cursor: pointer;
+}
+
+#echartsMaskWrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background: #fff;
+    height: 92%;
+    width: 40px;
+    z-index: 11;
+    overflow: hidden;
+}
+
+#echartsMask {
+    height: 100%;
+}
+
+.maskline {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #dbdbdb;
+    height: 100%;
+    width: 1px;
+    font-size: 0;
+}
+
+.echarts_body {
+    background: #f6f7f9;
+}
+
+.charts_eg {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #f6f7f9;
+    height: 25%;
+    width: 100%;
+}
+
+.charts_eg:after {
+    content: '';
+    position: absolute;
+    left: 11rem;
+    top: -1.7rem;
+    width: 0;
+    height: 0;
+    border-left: 1.2rem solid transparent;
+    border-right: 1.2rem solid transparent;
+    border-bottom: 1.8rem solid #f6f7f9;
+}
+
+.charts_eg .ce_item {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
+.charts_eg .ce_item span {
+    margin-top: 2rem;
+    background: #add419;
+    border: 0.25rem solid #fff;
+    border-radius: 100%;
+    display: inline-block;
+    height: 4rem;
+    width: 4rem;
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 4rem;
+}
+
+.charts_eg .ce_item:last-child span {
+    background: #62baea;
+}
+
+.charts_eg .ce_item em {
+    margin-top: 0.55rem;
+    display: block;
+    color: #6f6f71;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.4rem;
+}
+
+#clickVal {
+    position: absolute;
+    left: -1px;
+    top: 0;
+    border-left: 40px solid #fff;
+    height: 84%;
+    width: 100%;
+    z-index: 10;
+}
+
+#clickVal a {
+    float: left;
+    display: block;
+    height: 100%;
+    background: rgba(0, 0, 0, 0);
+    text-align: left;
+    transition: all 1s ease 0s;
+    -webkit-transition: all 1s ease 0s;
+}
+
+#clickVal a span {
+    background: #f48993;
+    display: none;
+    height: 100%;
+    width: 1px;
+    font-size: 0;
+}
+
+#clickVal a.focus {
+    background: rgba(0, 0, 0, 0);
+}
+
+#clickVal a.focus span {
+    display: inline-block;
+}
+
+#timeVal {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #fff;
+    border-left: 40px solid #fff;
+    border-top: 1px solid #dbdbdb;
+    height: 40px;
+    width: 100%;
+    z-index: 12;
+}
+
+#timeVal span {
+    float: left;
+    display: block;
+    height: 100%;
+    color: #6f6f6f;
+    font-family: "微软雅黑 Light";
+    font-size: 1rem;
+    transform: rotate(-45deg) translate(-1.6rem, -0.4rem);
+}
+
+#timeVal span.focus {
+    color: #f48993;
+}
+
+#circlePoint {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 100;
+}
+
+#circlePoint span {
+    margin-left: -0.475rem;
+    padding: 0.15rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: rgba(175, 213, 18, 0.5);
+    border-radius: 100%;
+    display: block;
+    height: 0.8rem;
+    width: 0.8rem;
+}
+
+#circlePoint span em {
+    background: #afd512;
+    border: 0.1rem solid #fff;
+    border-radius: 100%;
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+#circlePoint span.blue {
+    background: rgba(97, 185, 233, 0.5);
+}
+
+#circlePoint span.blue em {
+    background: #61b9e9;
+}
+
+@media screen and (min-width: 710px) {
+    .echartsWrap {
+        position: relative;
+        background: #fff;
+        height: 100%;
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+
+    #echartsCon {
+        height: 100%;
+        cursor: pointer;
+    }
+
+    #echartsMaskWrap {
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: #fff;
+        height: 92%;
+        width: 40px;
+        z-index: 11;
+        overflow: hidden;
+    }
+
+    #echartsMask {
+        height: 100%;
+    }
+
+    .maskline {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background: #dbdbdb;
+        height: 100%;
+        width: 1px;
+        font-size: 0;
+    }
+
+    .echarts_body {
+        background: #f6f7f9;
+    }
+
+    .charts_eg {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        background: #f6f7f9;
+        height: 25%;
+        width: 100%;
+    }
+
+    .charts_eg:after {
+        content: '';
+        position: absolute;
+        left: 12rem;
+        top: -0.75rem;
+        width: 0;
+        height: 0;
+        border-left: 0.6rem solid transparent;
+        border-right: 0.6rem solid transparent;
+        border-bottom: 0.9rem solid #f6f7f9;
+    }
+
+    .charts_eg .ce_item {
+        float: left;
+        width: 50%;
+        text-align: center;
+    }
+
+    .charts_eg .ce_item span {
+        margin-top: 1rem;
+        background: #add419;
+        border: 0.125rem solid #fff;
+        border-radius: 100%;
+        display: inline-block;
+        height: 2rem;
+        width: 2rem;
+        color: #fff;
+        font-size: 0.7rem;
+        line-height: 2rem;
+    }
+
+    .charts_eg .ce_item:last-child span {
+        background: #62baea;
+    }
+
+    .charts_eg .ce_item em {
+        margin-top: 0.3rem;
+        display: block;
+        color: #6f6f71;
+        font-size: 0.5rem;
+        font-style: normal;
+        line-height: 0.6rem;
+    }
+
+    #clickVal {
+        position: absolute;
+        left: -1px;
+        top: 0;
+        border-left: 40px solid #fff;
+        height: 84%;
+        width: 100%;
+        z-index: 10;
+    }
+
+    #clickVal a {
+        float: left;
+        display: block;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        text-align: left;
+        transition: all 1s ease 0s;
+        -webkit-transition: all 1s ease 0s;
+    }
+
+    #clickVal a span {
+        background: #f48993;
+        display: none;
+        height: 100%;
+        width: 1px;
+        font-size: 0;
+    }
+
+    #clickVal a.focus {
+        background: rgba(0, 0, 0, 0);
+    }
+
+    #clickVal a.focus span {
+        display: inline-block;
+    }
+
+    #timeVal {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #fff;
+        border-left: 40px solid #fff;
+        border-top: 1px solid #dbdbdb;
+        height: 40px;
+        width: 100%;
+        z-index: 12;
+    }
+
+    #timeVal span {
+        float: left;
+        display: block;
+        height: 100%;
+        color: #6f6f6f;
+        font-family: "微软雅黑 Light";
+        font-size: 0.5rem;
+        transform: rotate(-45deg) translate(-0.6rem, -0.35rem);
+    }
+
+    #timeVal span.focus {
+        color: #f48993;
+    }
+
+    #circlePoint {
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: none;
+        z-index: 100;
+    }
+
+    #circlePoint span {
+        margin-left: -0.25rem;
+        padding: 0.07rem;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background: rgba(175, 213, 18, 0.5);
+        border-radius: 100%;
+        display: block;
+        height: 0.4rem;
+        width: 0.4rem;
+    }
+
+    #circlePoint span em {
+        background: #afd512;
+        border: 0.1rem solid #fff;
+        border-radius: 100%;
+        box-sizing: border-box;
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    #circlePoint span.blue {
+        background: rgba(97, 185, 233, 0.5);
+    }
+
+    #circlePoint span.blue em {
+        background: #61b9e9;
+    }
+}

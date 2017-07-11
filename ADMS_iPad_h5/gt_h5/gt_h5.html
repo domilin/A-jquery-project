@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <title>柜台状态</title>
+
+    <!-- public -->
+    <link rel="stylesheet" href="normalize.css">
+    <script src="zepto.min.js"></script>
+    <script src="touch.js"></script>
+    <script src="adms.js"></script>
+
+    <!-- private -->
+    <link rel="stylesheet" href="gt_h5.css">
+    <script src="gt_h5.js"></script>
+
+</head>
+<body>
+<ul class="cd_flight_con" id="cdFlightBtn">
+    <li><span>航站楼：<em id="flightFloor">T1</em></span><a></a></li>
+    <li><span>工作区：<em id="workArea" data-type="cki">值机</em></span><a></a></li>
+</ul>
+<a class="search_btn" id="searchBtn"><span>查询</span></a>
+<ul class="cdl_popup" id="cdlPopup0">
+    <li>T1</li>
+    <li>T2</li>
+    <li>T3</li>
+</ul>
+<ul class="cdl_popup" id="cdlPopup1">
+    <li data-type="cki">值机</li>
+    <li data-type="sec">安检</li>
+    <li data-type="board">登机</li>
+</ul>
+</body>
+</html>

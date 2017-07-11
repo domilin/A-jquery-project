@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name='HandheldFriendly' content='True'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+    <title>echarts</title>
+
+    <!-- public -->
+    <link rel="stylesheet" href="normalize.css">
+    <script src="zepto.min.js"></script>
+    <!--<script src="../common/touch.js"></script>-->
+    <script src="adms.js"></script>
+
+    <!-- private -->
+    <link rel="stylesheet" href="cON_echarts.css">
+    <script src="echarts.common.min.js"></script>
+    <script src="cON_echarts.js"></script>
+
+</head>
+<body class="echarts_body">
+
+
+    <div class="chats-item">
+            <div class="chats-item-con">
+                <div class="chats-hd clearfix">
+                    <h2 class="fn fl">今日出港旅客实时及汇总信息</h2>
+                </div>
+                <div class="chats-num-con"> <!--里面放你的表-->
+                    <div class="echartsWrap" id="echartsWrap">
+                    <div id="echartsCon"></div>
+                    </div>
+                </div>
+                
+            </div>
+    </div>
+
+
+
+<!--只在默认时显示需要
+<div class="charts_eg">
+    <div class="ce_item">
+        <span id="outFlight"></span>
+        <em>出港航班总量</em>
+    </div>
+    <div class="ce_item">
+        <span id="inFlight"></span>
+        <em>进港航班总量</em>
+    </div>
+</div>-->
+</body>
+</html>
+

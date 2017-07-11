@@ -1,0 +1,195 @@
+
+header {
+    padding: 2rem 4.28rem;
+    background: #546077;
+    height: 3.24rem;
+}
+
+header .station {
+    width: 4.0rem;
+    height: 100%;
+    float: left;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+header .station h3 {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 1.51rem;
+}
+
+header .station span {
+    color: #65BBE9;
+    font-size: 0.76rem;
+    display: block;
+    margin-top: 1.1rem;
+}
+
+header .state_date {
+    float: left;
+    width: 8rem;
+    height: 100%;
+    margin-left: 1rem;
+    
+}
+
+header .station:last-child {
+    float: right;
+}
+
+header .state_date .flight {
+    width: 100%;
+    height: 1rem;
+}
+
+header .state_date .flight img {
+    width: 100%;
+    height: 100%;
+}
+
+header .state_date p {
+    margin: 0.62rem 0 0 0;
+    padding: 0;
+    color: #8C8D92;
+    font-size: 0.76rem;
+    text-align: center;
+}
+
+header .state_date p:last-child {
+    margin-top: 0.34rem;
+}
+
+.content {
+    margin: 1rem auto 0;
+    width: 23.5rem;
+    border: 1px solid #EDECED;
+    border-radius: 5px;
+    overflow: hidden;
+    text-align: center;
+}
+
+.content .white_bg {
+    background: white;
+    height: 2rem;
+    line-height: 2rem;
+    color: orange;
+}
+
+.content .white_bg h5 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.content .grey_bg {
+    background: #F5F7F8;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    color: #353535;
+}
+
+.content .grey_bg h5 {
+    margin: 0;
+    font-weight: normal;
+    font-size: 0.9rem;
+}
+
+.left {
+    float: left;
+    width: 50%;
+}
+
+.right {
+    float: right;
+    width: 50%;
+}
+
+.green .white_bg {
+    color: #D2E69C;
+}
+
+.blue .white_bg {
+    color: #57B8E8;
+}
+
+.separateline {
+    padding: 0 0 0 0.2rem;
+    margin: 1.1rem auto 0;
+    background: url("separate_img.png") no-repeat center;
+    background-size: 100% 100%;
+    height: 1.1rem;
+    width: 99%;
+}
+
+
+@media screen and (min-width: 710px) {
+    .content {
+        margin: 1rem auto 0;
+        width: 23.5rem;
+        border: 1px solid #EDECED;
+        border-radius: 5px;
+        overflow: hidden;
+        text-align: center;
+    }
+    
+    .content .white_bg {
+        background: white;
+        height: 1rem;
+        line-height: 1rem;
+        color: orange;
+    }
+    
+    .content .white_bg h5 {
+        margin: 0;
+        font-size: 0.8rem;
+    }
+    
+    .content .grey_bg {
+        background: #F5F7F8;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        color: #353535;
+    }
+    
+    .content .grey_bg h5 {
+        margin: 0;
+        font-weight: normal;
+        font-size: 0.5rem;
+    }
+    
+    .left {
+        float: left;
+        width: 50%;
+    }
+    
+    .right {
+        float: right;
+        width: 50%;
+    }
+    
+    .green .white_bg {
+        color: #D2E69C;
+    }
+    
+    .blue .white_bg {
+        color: #57B8E8;
+    }
+    
+    .separateline {
+        padding: 0 0 0 0.2rem;
+        margin: 1.1rem auto 0;
+        background: url("separate_img-pad.png") no-repeat center;
+        background-size: 100% 100%;
+        height: 0.7rem;
+        width: 99%;
+    }
+}
+
+
+
+
+
+
+
+

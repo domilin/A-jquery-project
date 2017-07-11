@@ -115,7 +115,7 @@ $(function () {
                 $shadow.show();
             } else {
                 var u = window.navigator.userAgent.toLowerCase();
-                if (u.indexOf('iphone') > 0 || u.indexOf("iPad") > 0) {
+                if (u.indexOf('iphone') > 0 || u.indexOf("ipad") > 0) {
                     window.location.href = iosUrl;
                 } else if (u.indexOf('android') > 0) {
                     window.location.href = andUrl;
@@ -178,14 +178,14 @@ $(function () {
                 if (i === 0) {
                     $cardImg.find('img').attr('src', imgUrl + d.filePath2);
                     $detailLink.attr('data-id', d.id);
-
-                    $('#heroVideo').attr('src', imgUrl + d.filePath5);
-                    $('#videoPlayBtn').data('src', d.url);
                 }
 
                 if (d.id === parseInt(getQueryString('id'))) {
                     $heroBanner.attr('src', imgUrl + d.filePath3);
                     $heroIntro.attr('src', imgUrl + d.filePath4);
+
+                    $('#heroVideo').attr('src', imgUrl + d.filePath5);
+                    $('#videoPlayBtn').data('src', d.url);
                 }
 
 
@@ -244,7 +244,8 @@ $(function () {
     });
 
     $detailLink.click(function () {
-        window.location.href = '/mobile/detail.html?id=' + $(this).data('id');
+    //    window.location.href = '/mobile/detail.html?id=' + $(this).data('id');
+        window.location.href = '/mobile/detail?id=' + $(this).data('id');
     });
 
 

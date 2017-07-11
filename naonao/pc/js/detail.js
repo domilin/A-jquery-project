@@ -5,25 +5,11 @@
  * Description:Description
  */
 
-if(!isPc()){
+if (!isPc()) {
     window.location.href = 'http://nn.8864.com/mobile'
 }
+
 $(function () {
-    $('#bannerCon').parallax({
-        alibrateX: false,
-        calibrateY: true,
-        invertX: false,
-        invertY: true,
-        limitX: false,
-        limitY: 10,
-        scalarX: 2,
-        scalarY: 8,
-        frictionX: 0.2,
-        frictionY: 0.8
-    });
-    $('.stone').css('top', '400px');
-
-
     var imgUrl = 'http://img.linekong.com';
 
     //英雄
@@ -41,14 +27,13 @@ $(function () {
             var $heroBtn = $('#heroBtn');
             var str = '';
             $.each(hero, function (i, d) {
-                if (i === 0) {
-                    $('#heroVideo').attr('src', imgUrl + d.filePath5);
-                    $('#videoPlayBtn').attr('data-src', d.url);
-                }
-
+                
                 if (d.id === parseInt(getQueryString('id'))) {
                     $heroBanner.attr('src', imgUrl + d.filePath3);
                     $heroIntro.attr('src', imgUrl + d.filePath4);
+
+                    $('#heroVideo').attr('src', imgUrl + d.filePath5);
+                    $('#videoPlayBtn').attr('data-src', d.url);
                 }
 
 
@@ -169,4 +154,19 @@ $(function () {
             $bm[0].play();
         }
     });
+
+    //石头运动
+    $('#bannerCon').parallax({
+        alibrateX: false,
+        calibrateY: true,
+        invertX: false,
+        invertY: true,
+        limitX: false,
+        limitY: 10,
+        scalarX: 2,
+        scalarY: 8,
+        frictionX: 0.2,
+        frictionY: 0.8
+    });
+    $('.stone').css('top', '400px');
 });

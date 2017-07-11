@@ -1,0 +1,661 @@
+/*! normalize.css v3.0.0 | MIT License | git.io/normalize */
+/*! normalize.css v3.0.0 | HTML5 Display Definitions | MIT License | git.io/normalize */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+[hidden],
+template {
+    display: none;
+}
+
+/*! normalize.css v3.0.0 | Base | MIT License | git.io/normalize */
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+/*! normalize.css v3.0.0 | Links | MIT License | git.io/normalize */
+a, a:hover {
+    background: transparent;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/*! normalize.css v3.0.0 | Typography | MIT License | git.io/normalize */
+abbr[title] {
+    border-bottom: 1px dotted;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+dfn {
+    font-style: italic;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+mark {
+    background: #ff0;
+    color: #000;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/*! normalize.css v3.0.0 | Embedded Content | MIT License | git.io/normalize */
+img {
+    border: 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+/*! normalize.css v3.0.0 | Figures | MIT License | git.io/normalize */
+figure {
+    margin: 1em 40px;
+}
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+}
+
+pre {
+    overflow: auto;
+}
+
+code,
+kbd,
+pre,
+samp {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+/*! normalize.css v3.0.0 | Forms | MIT License | git.io/normalize */
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+button {
+    overflow: visible;
+}
+
+button,
+select {
+    text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    height: auto;
+}
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+legend {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    overflow: auto;
+}
+
+optgroup {
+    font-weight: bold;
+}
+
+/*! normalize.css v3.0.0 | Tables | MIT License | git.io/normalize */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td,
+th {
+    padding: 0;
+}
+
+/*!base style*/
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td, th {
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, p, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+li {
+    list-style: none;
+}
+
+a, a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+em, i {
+    font-style: normal;
+}
+
+input, textarea {
+    resize: none;
+    outline: none;
+}
+
+.clearfix:before, .clearfix:after {
+    content: "\20";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/*!my style*/
+.body {
+    background: #f5f7f8;
+    font-size: 16px;
+}
+
+.calendar {
+    padding: 1rem 3.625rem;
+    background: #546077;
+    height: 4.5rem;
+}
+
+.calendar .calendar_con {
+    padding: 0.1875rem;
+    position: relative;
+    background: #8790a0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+
+.calendar .calendar_con .calendar_item {
+    float: left;
+    position: relative;
+    background: #ffffff;
+    border-radius: 5px;
+    height: 100%;
+    overflow: hidden;
+}
+
+.calendar .calendar_con .calendar_item em {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: #f48c95;
+    display: block;
+    height: 1.4rem;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    text-align: center;
+}
+
+.calendar .calendar_con .calendar_item span {
+    display: block;
+    height: 2.5rem;
+    color: #424241;
+    font-size: 1.3rem;
+    line-height: 2.5rem;
+    text-align: center;
+}
+
+.calendar .calendar_con input.dateshow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: none;
+    border: none;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    outline: none;
+}
+
+.calendar .calendar_con input.dateshow:focus {
+    color: rgba(0, 0, 0, 0);
+}
+
+.calendar .calendar_con .calendar_item span img {
+    margin-top: 0.5rem;
+    width: 40%;
+}
+
+.calendar .calendar_con .calendar_item:first-child {
+    width: 25%;
+}
+
+.calendar .calendar_con .date_wrap {
+    float: right;
+    background: #e8e9e9;
+    border-radius: 5px;
+    box-sizing: border-box;
+    height: 100%;
+    width: 74.5%;
+    overflow: hidden;
+}
+
+.calendar .calendar_con a.next_day {
+    position: absolute;
+    right: -1.2rem;
+    top: 1.75rem;
+    display: block;
+    height: 0.875rem;
+    width: 0.625rem;
+    z-index: 10;
+}
+
+.calendar .calendar_con a.next_day img {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.calendar .calendar_con .date_wrap .calendar_item {
+    border-radius: 0;
+    width: 33%;
+}
+
+.calendar .calendar_con .date_wrap .calendar_item:first-child em {
+    background: #f4b13f;
+}
+
+.calendar .calendar_con .date_wrap .calendar_item:nth-child(2) {
+    margin-left: 0.5%;
+}
+
+.calendar .calendar_con .date_wrap .calendar_item:nth-child(2) em {
+    background: #61baeb;
+}
+
+.calendar .calendar_con .date_wrap .calendar_item:last-child {
+    float: right;
+}
+
+.calendar .calendar_con .date_wrap .calendar_item:last-child em {
+    background: #add515;
+}
+
+.search_flight {
+    margin: 0.9375rem auto 0;
+    background: #fff;
+    border: 1px solid #edeeee;
+    border-radius: 5px;
+    height: 2.5rem;
+    width: 21.25rem;
+    line-height: 2.5rem;
+    overflow: hidden;
+}
+
+.search_flight span {
+    float: left;
+    margin-left: 0.5rem;
+    padding-left: 1.8rem;
+    background: url("img1.gif") no-repeat left;
+    background-size: auto 1.5rem;
+    height: 100%;
+    color: #586e83;
+    font-size: 1.2rem;
+}
+
+.search_flight input {
+    float: left;
+    margin: 0 0 0 0.2rem;
+    padding: 0;
+    background: none;
+    border: none;
+    height: 100%;
+    color: #c6c6cb;
+    line-height: 2.5rem;
+}
+
+.search_flight a {
+    float: right;
+    margin-right: 0.8rem;
+    background: url("img2.gif") no-repeat center;
+    background-size: 1rem 1rem;
+    display: block;
+    height: 100%;
+    width: 1rem;
+}
+
+a.search_btn {
+    margin-left: -2.65rem;
+    position: fixed;
+    left: 50%;
+    bottom: -2.65rem;
+    background: #f4b13f;
+    border: 0.3125rem solid #f4e3c4;
+    border-radius: 100%;
+    height: 5rem;
+    width: 5rem;
+}
+
+a.search_btn span {
+    display: block;
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 710px) {
+    .calendar {
+        padding: 0.5rem 2rem;
+        background: #546077;
+        height: 2rem;
+    }
+
+    .calendar .calendar_con {
+        padding: 0.09rem;
+        position: relative;
+        background: #8790a0;
+        border-radius: 4px;
+        box-sizing: border-box;
+        height: 100%;
+    }
+
+    .calendar .calendar_con .calendar_item {
+        float: left;
+        position: relative;
+        background: #ffffff;
+        border-radius: 4px;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .calendar .calendar_con .calendar_item em {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #f48c95;
+        display: block;
+        height: 0.7rem;
+        width: 100%;
+        color: #fff;
+        font-size: 0.5rem;
+        line-height: 0.7rem;
+        text-align: center;
+    }
+
+    .calendar .calendar_con .calendar_item span {
+        display: block;
+        height: 1.2rem;
+        color: #424241;
+        font-size: 0.6rem;
+        line-height: 1.2rem;
+        text-align: center;
+    }
+
+    .calendar .calendar_con input.dateshow {
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: none;
+        border: none;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        outline: none;
+    }
+
+    .calendar .calendar_con input.dateshow:focus {
+        color: rgba(0, 0, 0, 0);
+    }
+
+    .calendar .calendar_con .calendar_item span img {
+        margin-top: 0.2rem;
+        height: 60%;
+        width: auto;
+    }
+
+    .calendar .calendar_con .calendar_item:first-child {
+        width: 25%;
+    }
+
+    .calendar .calendar_con .date_wrap {
+        float: right;
+        background: #e8e9e9;
+        border-radius: 5px;
+        box-sizing: border-box;
+        height: 100%;
+        width: 74.5%;
+        overflow: hidden;
+    }
+
+    .calendar .calendar_con a.next_day {
+        position: absolute;
+        right: -0.6rem;
+        top: 0.8rem;
+        display: block;
+        height: 0.4rem;
+        width: 0.3rem;
+        z-index: 10;
+    }
+
+    .calendar .calendar_con a.next_day img {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    .calendar .calendar_con .date_wrap .calendar_item {
+        border-radius: 0;
+        width: 33%;
+    }
+
+    .calendar .calendar_con .date_wrap .calendar_item:first-child em {
+        background: #f4b13f;
+    }
+
+    .calendar .calendar_con .date_wrap .calendar_item:nth-child(2) {
+        margin-left: 0.5%;
+    }
+
+    .calendar .calendar_con .date_wrap .calendar_item:nth-child(2) em {
+        background: #61baeb;
+    }
+
+    .calendar .calendar_con .date_wrap .calendar_item:last-child {
+        float: right;
+    }
+
+    .calendar .calendar_con .date_wrap .calendar_item:last-child em {
+        background: #add515;
+    }
+
+    .search_flight {
+        margin: 0.5rem auto 0;
+        background: #fff;
+        border: 1px solid #edeeee;
+        border-radius: 5px;
+        height: 1.2rem;
+        width: 21.5rem;
+        line-height: 1.2rem;
+        overflow: hidden;
+    }
+
+    .search_flight span {
+        float: left;
+        margin-left: 0.4rem;
+        padding-left: 0.9rem;
+        background: url("img1.gif") no-repeat left;
+        background-size: auto 0.7rem;
+        height: 100%;
+        color: #586e83;
+        font-size: 0.6rem;
+    }
+
+    .search_flight input {
+        float: left;
+        margin: 0 0 0 0.2rem;
+        padding: 0;
+        background: none;
+        border: none;
+        height: 100%;
+        color: #c6c6cb;
+        font-size: 0.6rem;
+        line-height: 1.2rem;
+    }
+
+    .search_flight a {
+        float: right;
+        margin-right: 0.4rem;
+        background: url("img2.gif") no-repeat center;
+        background-size: 0.6rem 0.6rem;
+        display: block;
+        height: 100%;
+        width: 0.6rem;
+    }
+
+    a.search_btn {
+        margin-left: -1.25rem;
+        position: fixed;
+        left: 50%;
+        bottom: -1.3rem;
+        background: #f4b13f;
+        border: 0.15rem solid #f4e3c4;
+        border-radius: 100%;
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    a.search_btn span {
+        display: block;
+        color: #fff;
+        font-size: 0.7rem;
+        line-height: 1.5rem;
+        text-align: center;
+    }
+}
+
+
