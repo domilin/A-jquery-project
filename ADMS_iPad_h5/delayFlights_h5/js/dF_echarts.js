@@ -63,7 +63,10 @@ $(function () {
     option = {
         tooltip: null,
         toolbox: null,
-        legend: null,
+        legend: {
+//            left:40,
+//            data:['航班一','航班二']
+        },
         color: ['#add415', '#62baec'],
         calculable: false,
         grid: {
@@ -109,6 +112,18 @@ $(function () {
                 type: 'value',
                 splitLine: false,
                 axisLine: {
+                    lineStyle: {
+                    color: '#dbdbdb'
+                    }
+                },
+                axisLabel: {
+                
+                    textStyle: {
+                    color: '#6f6f6f',
+                    fontSize: 14
+                    }
+                },
+                axisTick: {
                     lineStyle: {
                     color: '#dbdbdb'
                     }

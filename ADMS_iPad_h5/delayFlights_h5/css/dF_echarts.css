@@ -32,7 +32,7 @@ html, body.echarts_body {
 }
 
 .chats-num-con {
-    height: 100%;
+    position: relative;
     padding: 10px;
     height: 278px;
 }
@@ -50,6 +50,87 @@ html, body.echarts_body {
     height: 100%;
     cursor: pointer;
 }
+
+/*ul {
+    position: absolute;
+    left:50px;
+    top:20px;
+    width: 200px;
+    height: 20px;
+    z-index:10;
+}
+
+li {
+    float: left;
+    width: 100px;
+    height: 20px;
+    z-index:10;
+}
+
+.out {
+    background: #add419;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    z-index:10;
+}
+
+.in {
+    background: #62baea;
+    display: inline-block;
+    left:40px;
+    width: 10px;
+    height: 10px;
+    z-index:40;
+}
+em {
+    margin-left: 15px;
+    font-size: 8px;
+    color: #dbdbdb;
+}*/
+
+
+/*修正*/
+.chats-item-con{
+    position: relative;
+    border: 1px solid #e3e3e3;
+    border-radius: 6px;
+    box-sizing: border-box;
+    height: 100%;
+}
+.chats-item-con ul{
+    position: absolute;
+    left:50px;
+    top:40px;
+    width: 200px;
+    height: 20px;
+}
+
+.chats-item-con ul li{
+    float: left;
+    width: 100px;
+    height: 20px;
+}
+
+.chats-item-con ul li span{
+    background: #add419;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+}
+
+.chats-item-con ul li span.in{
+    background: #62baea;
+}
+
+.chats-item-con ul li em{
+    margin-left: 15px;
+    font-style: normal;
+    font-size: 8px;
+    color: #dbdbdb;
+}
+
+
 
 /*.echarts_body {*/
 /*    background: #f6f7f9;*/
@@ -128,7 +209,7 @@ html, body.echarts_body {
     float: left;
     display: block;
     height: 90%;
-    background: #000;
+/*    background: #000;*/
     opacity: 0;
     transition: all 1s ease 0s;
     -webkit-transition: all 1s ease 0s;
