@@ -1,0 +1,460 @@
+/*----------import module----------*/
+@import "../../../_sass/bourbon/bourbon";
+@import "../../../_sass/normalize/normalize";
+@import "../../../_sass/public/public";
+@import "animate/animate";
+
+/*----------my style----------*/
+body {
+    background: #e1e3e4;
+    color: #333333;
+}
+
+/*career-stage*/
+.career-stage {
+    position: relative;
+    height: rem(1922);
+    width: 100%;
+    overflow: hidden;
+    z-index: 0;
+    //@include perspective(0);
+    //@include perspective-origin(25% 75%);
+    .career-container {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        @include transform-style(preserve-3d);
+        @include backface-visibility(hidden);
+        .career-item {
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: url("../images/career/bg.jpg") no-repeat top;
+            background-size: 100% 100%;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            @include perspective(500px);
+            @include transform-style(preserve-3d);
+        }
+    }
+}
+
+/*header*/
+header {
+    padding-top: rem(30);
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: rem(100);
+    width: 100%;
+    z-index: 999;
+    a {
+        position: absolute;
+        left: rem(60);
+        display: block;
+        height: rem(100);
+        img {
+            display: block;
+            height: 100%;
+        }
+        &:first-child {
+            @include animation(slideInDown 0.5s both);
+        }
+        &:last-child {
+            @include animation(slideInRight 0.5s both);
+            @include animation-delay(0.5s);
+            left: rem(320);
+        }
+    }
+}
+
+/*footer*/
+footer {
+    padding: rem(20) 0;
+    background: #000000;
+    width: 100%;
+    color: #626262;
+    font-size: 1rem;
+    text-align: center;
+    overflow: hidden;
+    z-index: 999;
+    span {
+        margin-bottom: rem(20);
+        display: block;
+        height: rem(42);
+        img {
+            height: 100%;
+        }
+    }
+    p {
+        margin-left: - rem(150);
+        display: block;
+        width: 150%;
+        @include transform(scale(0.6));
+    }
+    em {
+        margin: rem(5) 0 rem(5) (- rem(160));
+        display: block;
+        width: 150%;
+        @include transform(scale(0.5));
+    }
+}
+
+/*switch-page*/
+.switch-page {
+    margin-top: - rem(117/2);
+    position: fixed;
+    left: 0;
+    top: 50%;
+    height: rem(117);
+    width: 100%;
+    z-index: 1000;
+    a {
+        margin-left: rem(10);
+        background: url("../images/career/page-prev.png") no-repeat center;
+        background-size: 100% 100%;
+        display: block;
+        height: 100%;
+        width: rem(119);
+        &:first-child {
+            float: left;
+        }
+        &:last-child {
+            float: right;
+            margin-left: inherit;
+            margin-right: rem(10);
+            background-image: url("../images/career/page-next.png");
+        }
+    }
+}
+
+/*.magic, .hunter, .puppet, .soldier*/
+.gun, .sword, .magic, .hunter, .puppet, .soldier {
+    background: url("../images/career/magic/magic-bg.png") no-repeat right top;
+    background-size: rem(640) rem(1010);
+    height: 100%;
+    width: 100%;
+}
+
+.gun {
+    background-image: url("../images/career/gun/gun-bg.png");
+}
+
+.sword {
+    background-image: url("../images/career/sword/sword-bg.png");
+}
+
+.hunter {
+    background-image: url("../images/career/hunter/hunter-bg.png");
+}
+
+.puppet {
+    background-image: url("../images/career/puppet/puppet-bg.png");
+}
+
+.soldier {
+    background-image: url("../images/career/soldier/soldier-bg.png");
+}
+
+/*career-item*/
+.career-item {
+    .person {
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: rem(1400);
+        width: rem(941);
+        z-index: 0;
+        img {
+            width: 100%;
+        }
+    }
+    .word {
+        position: absolute;
+        left: rem(20);
+        top: rem(140);
+        height: rem(150);
+        width: rem(350);
+        z-index: 9;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    a.playvideo {
+        position: absolute;
+        left: rem(45);
+        top: rem(290);
+        background: url("../images/career/play-video.png") no-repeat center;
+        background-size: 100% 100%;
+        height: rem(112);
+        width: rem(112);
+        z-index: 10;
+    }
+    h3.career-name {
+        position: absolute;
+        left: rem(40);
+        top: rem(415);
+        display: block;
+        height: rem(130);
+        width: rem(280);
+        z-index: 8;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+    h4.career-title {
+        padding: rem(560) 0 0 rem(40);
+        color: #333333;
+        font-size: rem(30);
+        z-index: 7;
+        span {
+            margin-bottom: rem(5);
+            display: block;
+        }
+    }
+    p.carrer-intro {
+        margin: rem(25) 0 0 rem(40);
+        display: block;
+        width: rem(340);
+        color: #333333;
+        font-size: rem(21);
+        line-height: rem(36);
+        z-index: 6;
+    }
+}
+
+/*other-con*/
+.other-con {
+    margin-top: rem(138);
+    position: relative;
+    z-index: 888;
+    h3.block-title {
+        margin: rem(40) 0 rem(25) 0;
+        background: url("../images/career/title-bg.png") no-repeat center;
+        background-size: auto 100%;
+        height: rem(50);
+        color: #fefefe;
+        font-size: rem(27);
+        line-height: rem(50);
+        text-align: center;
+    }
+    .btn-prev, .btn-next {
+        margin-top: - rem(38/2);
+        position: absolute;
+        top: 50%;
+        display: block;
+        height: rem(38);
+        width: rem(22);
+    }
+    .btn-prev {
+        background: url("../images/career/block-prev.png") no-repeat center;
+        background-size: 100% 100%;
+        left: - rem(30);
+    }
+    .btn-next {
+        background: url("../images/career/block-next.png") no-repeat center;
+        background-size: 100% 100%;
+        right: - rem(30);
+    }
+}
+
+/*career-skill*/
+.career-skill {
+    margin: 0 auto;
+    position: relative;
+    height: rem(110);
+    width: rem(564);
+    .swiper-container {
+        height: 100%;
+        width: 100%;
+    }
+    .swiper-slide {
+        height: 100%;
+        width: rem(110);
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+/*skill-intro*/
+.skill-intro {
+    padding: rem(15);
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(255, 255, 255, 0.8);
+    visibility: hidden;
+    width: rem(160);
+    color: #262626;
+    font-size: rem(15);
+    line-height: 1.2rem;
+    z-index: 1999;
+    &:after, &:before {
+        content: '';
+        margin-left: - rem(16/2);
+        position: absolute;
+        bottom: - rem(15);
+        left: 50%;
+        width: 0;
+        height: 0;
+        border-left: rem(16) solid transparent;
+        border-right: rem(16) solid transparent;
+        border-top: rem(16) solid rgba(255, 255, 255, 0.6);
+    }
+    h3 {
+        font-weight: bold;
+    }
+}
+
+/*carrer-weapons*/
+.carrer-weapons {
+    margin: 0 auto;
+    position: relative;
+    height: rem(252);
+    width: rem(564);
+    .swiper-container {
+        border: rem(2) solid #333333;
+        box-sizing: border-box;
+        height: rem(252-2*2);
+        width: rem(564-2*2);
+    }
+    .swiper-slide {
+        background: url("../images/career/weapons-bg.jpg") no-repeat center;
+        background-position: 100% 100%;
+        height: 100%;
+        width: 100%;
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+/*carrer-original*/
+.carrer-original {
+    margin: 0 auto;
+    position: relative;
+    height: rem(182);
+    width: rem(564);
+    .swiper-container {
+        height: 100%;
+        width: 100%;
+    }
+    .swiper-slide {
+        height: 100%;
+        width: rem(280);
+        img {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+/*video-wrap big-img-wrap*/
+.popmask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 9998;
+}
+
+.video-wrap, .big-img-wrap {
+    position: fixed;
+    left: 0;
+    top: 30%;
+    display: none;
+    width: 100%;
+    z-index: 9999;
+    video {
+        width: 100%;
+    }
+    a {
+        position: absolute;
+        right: rem(5);
+        top: rem(-35);
+        background: rgba(255, 255, 255, 0.8);
+        display: block;
+        height: rem(32);
+        width: rem(32);
+        img {
+            display: block;
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
+
+.big-img-wrap {
+    top: 20%;
+    background: rgba(255, 255, 255, 0.85);
+    img.big-img {
+        display: block;
+        width: 100%;
+    }
+}
+
+/*animattion*/
+.career-item {
+    .person {
+        opacity: 0;
+        @include transform(rotateY(180deg));
+        @include transform-origin(100% 50%);
+        @include transition(all 0.8s ease-in 0s);
+    }
+    .word {
+        opacity: 0;
+        @include transform-origin(100% 95%);
+    }
+    .playvideo {
+        opacity: 0;
+    }
+    .career-name {
+        opacity: 0;
+    }
+    .career-title {
+        opacity: 0;
+    }
+    .carrer-intro {
+        opacity: 0;
+    }
+    .other-con {
+        opacity: 0;
+    }
+}
+
+.career-item.current {
+    .person {
+        opacity: 1;
+        @include transform(rotateY(0deg));
+    }
+    .word {
+        @include animation(wordAnimation 0.4s 0.8s both);
+    }
+    .playvideo {
+        @include animation(slideInRight 0.3s 1.2s both);
+    }
+    .career-name {
+        @include animation(slideInRight 0.3s 1.4s both);
+    }
+    .career-title {
+        @include animation(slideInRight 0.3s 1.6s both);
+    }
+    .carrer-intro {
+        @include animation(slideInRight 0.3s 1.8s both);
+    }
+    .other-con {
+        @include animation(slideInUp 0.5s 2.1s both);
+    }
+}
+
