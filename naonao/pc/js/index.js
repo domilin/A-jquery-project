@@ -40,6 +40,13 @@ $(function () {
         $bm[0].pause();
     })
 
+    //音频只播放一次
+    var audio = document.getElementById("bgMusic");
+    audio.loop = false;
+    audio.addEventListener('ended', function () {
+        $('.music a').removeClass('active');
+    }, false);
+
 
     //下载
     var iosUrl = '',
@@ -52,7 +59,7 @@ $(function () {
             iosUrl = url[0].url;
             andUrl = url[1].url;
             //$('.ios a').attr('href', iosUrl);
-            $('.and a').attr('href', andUrl);
+            //$('.and a').attr('href', andUrl);
         }
     });
     $.ajax({
@@ -217,7 +224,7 @@ $(function () {
 
     $('.down .ewm,.down .ios').on('click', function (e) {
         e.stopPropagation();
-        $('.down-ewm').show()
+        //$('.down-ewm').show()
     });
     $(document).on('click', function () {
         $('.down-ewm').hide();

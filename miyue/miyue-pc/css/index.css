@@ -1,0 +1,2022 @@
+@charset "UTF-8";
+/**
+ * Author：zhoushuanglong
+ * Time：2017/8/24
+ * Description：index
+ */
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Change the default font family in all browsers (opinionated).
+ * 2. Correct the line height in all browsers.
+ * 3. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+/* Document
+   ========================================================================== */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  line-height: 1.15;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 3 */
+  -webkit-text-size-adjust: 100%;
+  /* 3 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block;
+}
+
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a, a:hover {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+}
+
+/**
+ * Remove the outline on focused links when they are also active or hovered
+ * in all browsers (opinionated).
+ */
+a:active,
+a:hover {
+  outline-width: 0;
+}
+
+/**
+ * 1. Remove the bottom border in Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit;
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none;
+}
+
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Change the border, margin, and padding in all browsers (opinionated).
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block;
+}
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none;
+}
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none;
+}
+
+/*style reset*/
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, ol, dl, dt, dd, input, textarea, button {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+
+input[type=text], input[type=number] {
+  -webkit-appearance: none;
+  outline: none;
+  border: 1px solid #d8d8d8;
+  border-radius: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a, a:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+em, i {
+  font-style: normal;
+}
+
+/*clearfix*/
+.clearfix:before, .clearfix:after {
+  content: "\20";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1;
+}
+
+body {
+  background: #fff;
+}
+
+.part-one {
+  position: relative;
+  background: url("../img/bg-part-0.jpg") no-repeat top;
+  height: 968px;
+  z-index: 10;
+}
+.part-one .content {
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+  width: 1200px;
+}
+.part-one .content .btn-main {
+  position: absolute;
+  right: 100px;
+  z-index: 30;
+  top: 50px;
+}
+.part-one .content .btn-main a {
+  display: block;
+  width: 172px;
+  height: 64px;
+  background: url("../img/btn-main.png") no-repeat;
+}
+.part-one .content .btn-main a:hover {
+  background-position: 0 -68px;
+}
+.part-one .content a.logo {
+  position: absolute;
+  left: 140px;
+  top: 15px;
+  display: block;
+  -webkit-animation: flash 0.25s ease-in 1s both;
+  -moz-animation: flash 0.25s ease-in 1s both;
+  animation: flash 0.25s ease-in 1s both;
+}
+.part-one .content .person {
+  margin-left: -550px;
+  position: absolute;
+  left: 50%;
+  top: 110px;
+  width: 1100px;
+  z-index: 0;
+}
+.part-one .content .person span {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.part-one .content .person span.one {
+  top: 30px;
+  z-index: 0;
+  -webkit-animation: person_p1 0.3s ease-in-out 0.5s both;
+  -moz-animation: person_p1 0.3s ease-in-out 0.5s both;
+  animation: person_p1 0.3s ease-in-out 0.5s both;
+}
+.part-one .content .person span.two {
+  left: 240px;
+  z-index: 2;
+  -webkit-animation: person_p2 0.3s ease-in-out 0.3s both;
+  -moz-animation: person_p2 0.3s ease-in-out 0.3s both;
+  animation: person_p2 0.3s ease-in-out 0.3s both;
+}
+.part-one .content .person span.three {
+  left: inherit;
+  right: 0;
+  top: 60px;
+  z-index: 1;
+  -webkit-animation: person_p3 0.3s ease-in-out 0.5s both;
+  -moz-animation: person_p3 0.3s ease-in-out 0.5s both;
+  animation: person_p3 0.3s ease-in-out 0.5s both;
+}
+.part-one .content .slogan {
+  margin-left: -345px;
+  position: absolute;
+  left: 50%;
+  top: 600px;
+  background: url("../img/one-4.png") no-repeat center;
+  height: 116px;
+  width: 693px;
+  z-index: 1;
+  -webkit-animation: scaleUp 0.25s ease-in 0.7s both;
+  -moz-animation: scaleUp 0.25s ease-in 0.7s both;
+  animation: scaleUp 0.25s ease-in 0.7s both;
+}
+.part-one .content .slogan span.play-video-bg {
+  position: absolute;
+  left: 310px;
+  top: 10px;
+  display: block;
+  height: 86px;
+  width: 85px;
+  -webkit-animation: rotate 4s linear 1s infinite;
+  -moz-animation: rotate 4s linear 1s infinite;
+  animation: rotate 4s linear 1s infinite;
+}
+.part-one .content .slogan a.play-video {
+  position: absolute;
+  left: 315px;
+  top: 15px;
+  display: block;
+  height: 80px;
+  width: 80px;
+  -webkit-animation: flash 0.25s ease-in 0.9s both;
+  -moz-animation: flash 0.25s ease-in 0.9s both;
+  animation: flash 0.25s ease-in 0.9s both;
+}
+.part-one .content .game-download {
+  margin-left: -200px;
+  position: absolute;
+  bottom: 70px;
+  left: 50%;
+  height: 170px;
+  width: 400px;
+  z-index: 2;
+  -webkit-animation: upImg 0.5s ease-in both;
+  -moz-animation: upImg 0.5s ease-in both;
+  animation: upImg 0.5s ease-in both;
+}
+.part-one .content .game-download .ercode {
+  float: left;
+}
+.part-one .content .game-download .and-ios {
+  float: right;
+  height: 162px;
+  width: 229px;
+}
+.part-one .content .game-download .and-ios a {
+  background: url("../img/one-14-static.png") no-repeat;
+  display: block;
+  height: 80px;
+  width: 100%;
+}
+.part-one .content .game-download .and-ios a:hover {
+  background: url("../img/one-14.png") no-repeat;
+}
+.part-one .content .game-download .and-ios a.android {
+  background-position: 0 -80px;
+}
+.part-one .one-cloud {
+  margin-left: -880px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 953px;
+  width: 1760px;
+}
+.part-one .one-flower {
+  margin-left: -762.5px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 1031px;
+  width: 1525px;
+}
+
+.ercode {
+  padding-top: 10px;
+  position: relative;
+  background: url("../img/one-11.png") no-repeat center;
+  height: 160px;
+  width: 171px;
+}
+.ercode .ercode-main {
+  margin: 0 0 0 20px;
+  position: relative;
+  height: 132px;
+  width: 132px;
+}
+.ercode .ercode-main img {
+  margin: 2px 0 0 2px;
+  height: 128px;
+  width: 128px;
+}
+.ercode .ercode-main span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: url("../img/one-10.png") no-repeat center;
+  display: block;
+  height: 12px;
+  width: 100%;
+  -webkit-animation: qrcode 4s linear infinite;
+  -moz-animation: qrcode 4s linear infinite;
+  animation: qrcode 4s linear infinite;
+}
+.ercode em {
+  position: absolute;
+  bottom: 14px;
+  left: 0;
+  display: block;
+  width: 100%;
+  color: #b0325b;
+  font-size: 12px;
+  text-align: center;
+}
+
+h3.part-title {
+  display: block;
+  text-align: center;
+}
+h3.part-title img {
+  display: inline-block;
+}
+
+.part-two {
+  position: relative;
+  background: url("../img/bg-part-1.jpg") no-repeat top;
+  height: 832px;
+  z-index: 9;
+}
+.part-two .content {
+  margin: 0 auto;
+  position: relative;
+  padding-top: 50px;
+  height: 782px;
+  width: 1200px;
+  z-index: 5;
+}
+.part-two .content .swiper-container {
+  margin: 0 auto;
+  width: 880px;
+  height: 713px;
+}
+.part-two .content .swiper-container .swiper-slide.swiper-slide-active span.detail {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  z-index: 2;
+  -webkit-animation: flicker 4s linear infinite;
+  -moz-animation: flicker 4s linear infinite;
+  animation: flicker 4s linear infinite;
+}
+.part-two .content .swiper-container .swiper-slide.swiper-slide-active span.person {
+  -webkit-animation: flash 1s ease-in-out 0.2s both;
+  -moz-animation: flash 1s ease-in-out 0.2s both;
+  animation: flash 1s ease-in-out 0.2s both;
+}
+.part-two .content .swiper-container .swiper-slide.swiper-slide-active span.word {
+  -webkit-animation: rightImg 0.2s ease-in 0.2s both;
+  -moz-animation: rightImg 0.2s ease-in 0.2s both;
+  animation: rightImg 0.2s ease-in 0.2s both;
+}
+.part-two .content .swiper-container .swiper-slide span {
+  display: block;
+}
+.part-two .content .swiper-container .swiper-slide span.detail {
+  position: absolute;
+  left: 0;
+  top: 50px;
+  z-index: 2;
+  -webkit-animation: flicker 4s linear infinite;
+  -moz-animation: flicker 4s linear infinite;
+  animation: flicker 4s linear infinite;
+}
+.part-two .content .swiper-container .swiper-slide span.person {
+  position: absolute;
+  left: 100px;
+  top: 0;
+  z-index: 0;
+}
+.part-two .content .swiper-container .swiper-slide span.word {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  z-index: 1;
+}
+.part-two .content a.prev-btn, .part-two .content a.next-btn {
+  position: absolute;
+  left: 0;
+  top: 342px;
+  display: block;
+}
+.part-two .content a.next-btn {
+  left: inherit;
+  right: 0;
+}
+.part-two .content .swiper-container-horizontal > .swiper-pagination-bullets, .part-two .content .swiper-pagination-custom, .part-two .content .swiper-pagination-fraction {
+  bottom: 20px;
+}
+.part-two .content .swiper-pagination-bullet {
+  background: #d68a8a;
+  height: 10px;
+  width: 10px;
+}
+.part-two .two-flower {
+  margin-left: -799.5px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 624px;
+  width: 1599px;
+  z-index: 4;
+}
+
+.part-three {
+  position: relative;
+  background: url("../img/bg-part-2.jpg") no-repeat top;
+  height: 900px;
+  z-index: 10;
+}
+.part-three .content-wrap {
+  position: relative;
+  background: url("../img/three-4.png") no-repeat bottom center;
+  height: 100%;
+  z-index: 5;
+}
+.part-three .content {
+  padding-top: 40px;
+  margin: 0 auto;
+  width: 1200px;
+}
+.part-three .content .skill .img-show {
+  float: left;
+  margin: 121px 0 0 337px;
+  border-radius: 100%;
+  height: 508px;
+  width: 508px;
+  overflow: hidden;
+}
+.part-three .content .skill .img-btn {
+  float: right;
+  margin: 170px 100px 0 0;
+  width: 184px;
+}
+.part-three .content .skill .img-btn a {
+  background: url("../img/skill.png") no-repeat;
+  display: block;
+  height: 82px;
+  width: 100%;
+}
+.part-three .content .skill .img-btn a:hover, .part-three .content .skill .img-btn a.active {
+  background: url("../img/skill-hover.png") no-repeat;
+}
+.part-three .content .skill .img-btn a.two {
+  background-position: 0 -82px;
+}
+.part-three .content .skill .img-btn a.three {
+  background-position: 0 -164px;
+}
+.part-three .content .skill .img-btn a.four {
+  background-position: 0 -246px;
+}
+.part-three .content .skill .img-btn a.five {
+  background-position: 0 -328px;
+}
+.part-three .three-flower {
+  margin-left: -615.5px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 910px;
+  width: 1231px;
+  z-index: 4;
+}
+.part-three .three-flower-large {
+  margin-left: -960px;
+  position: absolute;
+  left: 50%;
+  top: 0;
+  height: 760px;
+  width: 1920px;
+  z-index: 3;
+}
+.part-three .three-flower-large .left {
+  position: absolute;
+  left: 0;
+  top: -180px;
+}
+.part-three .three-flower-large .right {
+  position: absolute;
+  right: 0;
+  top: -110px;
+}
+
+.part-four {
+  position: relative;
+  height: 900px;
+  z-index: 11;
+}
+.part-four .dialog-bg-wrap {
+  position: absolute;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+}
+.part-four .dialog-bg-wrap .dialog-bg {
+  margin-left: -1100px;
+  position: absolute;
+  left: 50%;
+  top: -130px;
+  background: url("../img/four-7.jpg") no-repeat;
+  height: 100%;
+  width: 2200px;
+  -webkit-transition: all 1s linear 0s;
+  -moz-transition: all 1s linear 0s;
+  transition: all 1s linear 0s;
+}
+.part-four .dialog-bg-wrap .dialog-bg.left {
+  -webkit-transform: translateX(145px);
+  -moz-transform: translateX(145px);
+  -ms-transform: translateX(145px);
+  -o-transform: translateX(145px);
+  transform: translateX(145px);
+}
+.part-four .dialog-bg-wrap .dialog-bg.right {
+  -webkit-transform: translateX(-145px);
+  -moz-transform: translateX(-145px);
+  -ms-transform: translateX(-145px);
+  -o-transform: translateX(-145px);
+  transform: translateX(-145px);
+}
+.part-four .dialog-bg-wrap .dialog-bg .bg-img {
+  width: 100%;
+}
+.part-four .content {
+  margin: 0 auto;
+  padding-top: 60px;
+  position: relative;
+  width: 1200px;
+  z-index: 5;
+}
+.part-four .content .button {
+  margin: 30px auto 0;
+  background: url("../img/three-8.png") no-repeat center;
+  height: 230px;
+  width: 331px;
+}
+.part-four .content .button a {
+  float: left;
+  display: block;
+  height: 100%;
+}
+.part-four .content .button a.one {
+  margin-left: 20px;
+  width: 55px;
+}
+.part-four .content .button a.two {
+  margin-left: 40px;
+  width: 92px;
+}
+.part-four .content .button a.three {
+  margin-left: 60px;
+  width: 55px;
+}
+.part-four .content .dialog-tips {
+  position: absolute;
+  left: 610px;
+  top: 610px;
+  height: 80px;
+  width: 138px;
+  cursor: pointer;
+  opacity: 1;
+  -webkit-transform-origin: 50% 60%;
+  -moz-transform-origin: 50% 60%;
+  -ms-transform-origin: 50% 60%;
+  -o-transform-origin: 50% 60%;
+  transform-origin: 50% 60%;
+  -webkit-transition: all 1s ease-out 0s;
+  -moz-transition: all 1s ease-out 0s;
+  transition: all 1s ease-out 0s;
+}
+.part-four .content .dialog-tips.left {
+  -webkit-transform: translateX(145px);
+  -moz-transform: translateX(145px);
+  -ms-transform: translateX(145px);
+  -o-transform: translateX(145px);
+  transform: translateX(145px);
+}
+.part-four .content .dialog-tips.right {
+  -webkit-transform: translateX(-145px);
+  -moz-transform: translateX(-145px);
+  -ms-transform: translateX(-145px);
+  -o-transform: translateX(-145px);
+  transform: translateX(-145px);
+}
+.part-four .content .dialog-tips.active {
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+}
+.part-four .content .dialog-content {
+  position: absolute;
+  left: 430px;
+  top: 560px;
+  background: url("../img/four-6.png") no-repeat center;
+  height: 102px;
+  width: 415px;
+  opacity: 0;
+  -webkit-transform-origin: 50% 100%;
+  -moz-transform-origin: 50% 100%;
+  -ms-transform-origin: 50% 100%;
+  -o-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 1s ease-out 0s;
+  -moz-transition: all 1s ease-out 0s;
+  transition: all 1s ease-out 0s;
+}
+.part-four .content .dialog-content.active {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+  transform: scale(1);
+}
+.part-four .content .dialog-content.active.left {
+  -webkit-transform: translateX(145px);
+  -moz-transform: translateX(145px);
+  -ms-transform: translateX(145px);
+  -o-transform: translateX(145px);
+  transform: translateX(145px);
+}
+.part-four .content .dialog-content.active.right {
+  -webkit-transform: translateX(-145px);
+  -moz-transform: translateX(-145px);
+  -ms-transform: translateX(-145px);
+  -o-transform: translateX(-145px);
+  transform: translateX(-145px);
+}
+.part-four .content .dialog-content p {
+  position: absolute;
+  left: 30px;
+  top: 10px;
+  width: 370px;
+  color: #ffffff;
+  font-family: "Microsoft YaHei UI";
+  font-size: 18px;
+  line-height: 28px;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease 0s;
+  -moz-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
+}
+.part-four .content .dialog-content p.active {
+  opacity: 1;
+}
+.part-four .content .dialog-content p span, .part-four .content .dialog-content p em {
+  color: #f9af2e;
+}
+.part-four .content .dialog-content p.person-two span {
+  color: #2a98e7;
+}
+.part-four .content .dialog-content p.word-4 {
+  top: 0;
+  font-size: 18px;
+  line-height: 76px;
+}
+.part-four .content .dialog-content p.word-4 a {
+  float: left;
+  margin-left: 20px;
+  display: block;
+}
+.part-four .content .dialog-content p.word-4 button {
+  float: right;
+  margin: 14px 0 14px 0;
+  background: #aedbcf;
+  border: 2px solid #bcffed;
+  border-radius: 25px;
+  height: 50px;
+  width: 90px;
+  color: #1b1a18;
+  font-size: 16px;
+  line-height: 46px;
+  text-align: center;
+  cursor: pointer;
+}
+.part-four .four-bird {
+  margin-left: -834.5px;
+  position: absolute;
+  left: 50%;
+  top: -100px;
+  height: 284px;
+  width: 1669px;
+  z-index: 4;
+}
+.part-four .four-leaf {
+  margin-left: -562px;
+  position: absolute;
+  left: 50%;
+  top: 160px;
+  height: 819px;
+  width: 1124px;
+  z-index: 3;
+}
+
+/*.part-five {
+    background: url("../img/bg-part-4.jpg") no-repeat top;
+    height: 539px;
+    .content {
+        margin: 0 auto;
+        padding-top: 70px;
+        width: 1200px;
+        .ercode {
+            float: none;
+            margin: 40px auto 0;
+        }
+        .wx-code {
+            margin: 10px auto 0;
+            background: url("../img/five-1.png") no-repeat center;
+            height: 78px;
+            width: 228px;
+            span {
+                padding: 28px 0 0 8px;
+                display: block;
+                height: 46px;
+                width: 180px;
+                color: #fff;
+                font-family: "Microsoft YaHei UI";
+                font-size: 24px;
+                line-height: 46px;
+                text-align: center;
+            }
+        }
+    }
+}*/
+.part-five {
+  background: url("../img/part-5.jpg") no-repeat center;
+  height: 881px;
+}
+.part-five .content {
+  margin: 0 auto;
+  padding-top: 50px;
+  position: relative;
+  width: 1200px;
+}
+.part-five .content .swiper-container {
+  margin-top: 30px;
+}
+.part-five .content .swiper-container .swiper-slide {
+  border: 2px solid #86b8ec;
+  height: 300px;
+  width: 600px;
+  opacity: 0.5;
+  overflow: hidden;
+}
+.part-five .content .swiper-container .swiper-slide-active {
+  opacity: 1;
+}
+.part-five .content .news-content {
+  height: 70px;
+  overflow: hidden;
+}
+.part-five .content .news-content span {
+  display: block;
+  color: #6db0fb;
+  font-family: "Microsoft YaHei UI";
+  font-size: 18px;
+  line-height: 70px;
+  text-align: center;
+}
+.part-five .content .swiper-pagination {
+  bottom: inherit;
+  top: 520px;
+  width: 100%;
+}
+.part-five .content .swiper-pagination .swiper-pagination-bullet {
+  margin: 0 10px;
+  background: #253f5b;
+  height: 10px;
+  width: 10px;
+  opacity: 1;
+}
+.part-five .content .swiper-pagination .swiper-pagination-bullet-active {
+  background: #5d80a6;
+}
+.part-five .content .news-list {
+  margin: 40px auto 0;
+  width: 610px;
+  color: #b3d6fe;
+  font-family: "Microsoft YaHei UI";
+  font-size: 18px;
+  line-height: 46px;
+}
+.part-five .content .news-list li {
+  height: 46px;
+}
+.part-five .content .news-list a {
+  float: left;
+  color: #b3d6fe;
+}
+.part-five .content .news-list time {
+  float: right;
+  color: #5d80a6;
+}
+.part-five .content .news-list li:hover {
+  color: #ffffff;
+}
+.part-five .content .news-list li:hover time {
+  color: #80afe1;
+}
+.part-five .content .news-list li:hover a {
+  color: #b3d6fe;
+}
+.part-five .content a.check-more {
+  margin: 20px auto 0;
+  border: 1px solid #5a7c9e;
+  border-radius: 26px;
+  display: block;
+  height: 52px;
+  width: 156px;
+  color: #6db0fb;
+  font-size: 14px;
+  line-height: 52px;
+  text-align: center;
+}
+.part-five .content a.check-more:hover {
+  text-decoration: none;
+}
+
+/*.part-six {
+    padding-top: 100px;
+    background: url("../img/part-6.jpg") no-repeat top;
+    height: 139px;
+    .content {
+        margin: 20px auto 0;
+        height: 75px;
+        width: 750px;
+        span {
+            float: left;
+            padding-left: 155px;
+            display: block;
+            height: 100%;
+            em {
+                display: block;
+                color: #6f9ddc;
+                font-family: "Microsoft YaHei UI";
+                font-size: 18px;
+                a {
+                    color: #6f9ddc;
+                }
+            }
+            &.qq {
+                background: url("../img/footer-0.png") no-repeat left;
+                em {
+                    line-height: 36px;
+                }
+            }
+            &.bbs {
+                float: right;
+                background: url("../img/footer-1.png") no-repeat left;
+                em {
+                    margin-top: 10px;
+                    border-radius: 29px;
+                    border: 1px solid #314e72;
+                    height: 58px;
+                    width: 180px;
+                    line-height: 58px;
+                    text-align: center;
+                }
+            }
+        }
+        !*span {
+            float: left;
+            margin-top: 85px;
+            display: block;
+            width: (491/3)+px;
+            color: #62a5ff;
+            font-family: "Microsoft YaHei UI";
+            font-size: 24px;
+            text-align: center;
+            &.one {
+                margin-right: (491/3-120)+px;
+                width: 120px;
+            }
+            &.three {
+                margin-left: (491/3-120)+px;
+                width: 120px;
+            }
+        }*!
+    }
+}*/
+.part-six {
+  padding-top: 100px;
+  background: url("../img/part-6.jpg") no-repeat top;
+  height: 139px;
+}
+.part-six .content-wrap {
+  margin: -30px auto 0;
+  width: 1100px;
+}
+.part-six .content-wrap .qrcode-wrap {
+  float: left;
+}
+.part-six .content-wrap .qrcode-wrap .ercode {
+  float: left;
+  background-size: 100% 100%;
+  height: 150px;
+  width: 161px;
+}
+.part-six .content-wrap .qrcode-wrap .ercode .ercode-main {
+  height: 118px;
+  width: 118px;
+}
+.part-six .content-wrap .qrcode-wrap .ercode .ercode-main img {
+  height: 100%;
+  width: 100%;
+}
+.part-six .content-wrap .qrcode-wrap .wx-code {
+  float: left;
+  margin: 70px 0 0 15px;
+  padding: 28px 0 0 20px;
+  background: url("../img/five-1-1.png") no-repeat;
+  height: 44px;
+  width: 170px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 44px;
+}
+.part-six .content {
+  float: right;
+  margin: 50px auto 0;
+  height: 75px;
+  width: 680px;
+}
+.part-six .content span {
+  float: left;
+  padding-left: 130px;
+  display: block;
+  height: 100%;
+}
+.part-six .content span em {
+  display: block;
+  color: #6f9ddc;
+  font-family: "Microsoft YaHei UI";
+  font-size: 18px;
+}
+.part-six .content span em a {
+  color: #6f9ddc;
+}
+.part-six .content span.qq {
+  background: url("../img/footer-0.png") no-repeat left;
+}
+.part-six .content span.qq em {
+  line-height: 36px;
+}
+.part-six .content span.bbs {
+  float: right;
+  background: url("../img/footer-1.png") no-repeat left;
+}
+.part-six .content span.bbs em {
+  margin-top: 10px;
+  border-radius: 29px;
+  border: 1px solid #314e72;
+  height: 58px;
+  width: 180px;
+  line-height: 58px;
+  text-align: center;
+}
+
+/*动画跟移动端相同*/
+.img-flash {
+  -webkit-animation: flash ease-in-out 0.4s both;
+  -moz-animation: flash ease-in-out 0.4s both;
+  animation: flash ease-in-out 0.4s both;
+}
+
+.rightImg {
+  -webkit-animation: rightImg 0.2s ease-in both;
+  -moz-animation: rightImg 0.2s ease-in both;
+  animation: rightImg 0.2s ease-in both;
+}
+
+.upImg {
+  -webkit-animation: upImg 0.5s ease-in both;
+  -moz-animation: upImg 0.5s ease-in both;
+  animation: upImg 0.5s ease-in both;
+}
+
+.downImg {
+  -webkit-animation: downImg 0.5s ease-in both;
+  -moz-animation: downImg 0.5s ease-in both;
+  animation: downImg 0.5s ease-in both;
+}
+
+.rightImg {
+  -webkit-animation: rightImg 0.5s ease-in both;
+  -moz-animation: rightImg 0.5s ease-in both;
+  animation: rightImg 0.5s ease-in both;
+}
+
+@-webkit-keyframes person_p1 {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(8%, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(2.5%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@-moz-keyframes person_p1 {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(-100%, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translate3d(8%, 0, 0);
+  }
+  75% {
+    -moz-transform: translate3d(-5%, 0, 0);
+  }
+  90% {
+    -moz-transform: translate3d(2.5%, 0, 0);
+  }
+  100% {
+    -moz-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes person_p1 {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -moz-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    -o-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(8%, 0, 0);
+    -moz-transform: translate3d(8%, 0, 0);
+    -ms-transform: translate3d(8%, 0, 0);
+    -o-transform: translate3d(8%, 0, 0);
+    transform: translate3d(8%, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(-5%, 0, 0);
+    -moz-transform: translate3d(-5%, 0, 0);
+    -ms-transform: translate3d(-5%, 0, 0);
+    -o-transform: translate3d(-5%, 0, 0);
+    transform: translate3d(-5%, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(2.5%, 0, 0);
+    -moz-transform: translate3d(2.5%, 0, 0);
+    -ms-transform: translate3d(2.5%, 0, 0);
+    -o-transform: translate3d(2.5%, 0, 0);
+    transform: translate3d(2.5%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes person_p2 {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 8%, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -5%, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 2.5%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@-moz-keyframes person_p2 {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(0, -100%, 0);
+  }
+  60% {
+    opacity: 1;
+    -moz-transform: translate3d(0, 8%, 0);
+  }
+  75% {
+    -moz-transform: translate3d(0, -5%, 0);
+  }
+  90% {
+    -moz-transform: translate3d(0, 2.5%, 0);
+  }
+  100% {
+    -moz-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes person_p2 {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    -moz-transform: translate3d(0, -100%, 0);
+    -ms-transform: translate3d(0, -100%, 0);
+    -o-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 8%, 0);
+    -moz-transform: translate3d(0, 8%, 0);
+    -ms-transform: translate3d(0, 8%, 0);
+    -o-transform: translate3d(0, 8%, 0);
+    transform: translate3d(0, 8%, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(0, -5%, 0);
+    -moz-transform: translate3d(0, -5%, 0);
+    -ms-transform: translate3d(0, -5%, 0);
+    -o-transform: translate3d(0, -5%, 0);
+    transform: translate3d(0, -5%, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(0, 2.5%, 0);
+    -moz-transform: translate3d(0, 2.5%, 0);
+    -ms-transform: translate3d(0, 2.5%, 0);
+    -o-transform: translate3d(0, 2.5%, 0);
+    transform: translate3d(0, 2.5%, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes person_p3 {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+  }
+  60% {
+    opacity: 100;
+    -webkit-transform: translate3d(-8%, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(5%, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(-2.5%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+}
+@-moz-keyframes person_p3 {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -moz-transform: translate3d(100%, 0, 0);
+  }
+  60% {
+    opacity: 100;
+    -moz-transform: translate3d(-8%, 0, 0);
+  }
+  75% {
+    -moz-transform: translate3d(5%, 0, 0);
+  }
+  90% {
+    -moz-transform: translate3d(-2.5%, 0, 0);
+  }
+  100% {
+    -moz-transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes person_p3 {
+  0%, 60%, 75%, 90%, 100% {
+    -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    -moz-transform: translate3d(100%, 0, 0);
+    -ms-transform: translate3d(100%, 0, 0);
+    -o-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+  60% {
+    opacity: 100;
+    -webkit-transform: translate3d(-8%, 0, 0);
+    -moz-transform: translate3d(-8%, 0, 0);
+    -ms-transform: translate3d(-8%, 0, 0);
+    -o-transform: translate3d(-8%, 0, 0);
+    transform: translate3d(-8%, 0, 0);
+  }
+  75% {
+    -webkit-transform: translate3d(5%, 0, 0);
+    -moz-transform: translate3d(5%, 0, 0);
+    -ms-transform: translate3d(5%, 0, 0);
+    -o-transform: translate3d(5%, 0, 0);
+    transform: translate3d(5%, 0, 0);
+  }
+  90% {
+    -webkit-transform: translate3d(-2.5%, 0, 0);
+    -moz-transform: translate3d(-2.5%, 0, 0);
+    -ms-transform: translate3d(-2.5%, 0, 0);
+    -o-transform: translate3d(-2.5%, 0, 0);
+    transform: translate3d(-2.5%, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@-webkit-keyframes qrcode {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 120px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@-moz-keyframes qrcode {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 120px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes qrcode {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 120px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@-webkit-keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-moz-keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scaleUp {
+  0% {
+    opacity: 0;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes rotate {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes rotate {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes upImg {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes upImg {
+  0% {
+    opacity: 0;
+    -moz-transform: translateY(100px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+@keyframes upImg {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+    -moz-transform: translateY(100px);
+    -ms-transform: translateY(100px);
+    -o-transform: translateY(100px);
+    transform: translateY(100px);
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes rightImg {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(170px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+  }
+}
+@-moz-keyframes rightImg {
+  0% {
+    opacity: 0;
+    -moz-transform: translateX(170px);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: translateX(0rem);
+  }
+}
+@keyframes rightImg {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(170px);
+    -moz-transform: translateX(170px);
+    -ms-transform: translateX(170px);
+    -o-transform: translateX(170px);
+    transform: translateX(170px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0rem);
+    -moz-transform: translateX(0rem);
+    -ms-transform: translateX(0rem);
+    -o-transform: translateX(0rem);
+    transform: translateX(0rem);
+  }
+}
+@-webkit-keyframes flicker {
+  0% {
+    opacity: .8;
+    -webkit-transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+  }
+  100% {
+    opacity: .8;
+    -webkit-transform: translateY(0);
+  }
+}
+@-moz-keyframes flicker {
+  0% {
+    opacity: .8;
+    -moz-transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    -moz-transform: translateY(20px);
+  }
+  100% {
+    opacity: .8;
+    -moz-transform: translateY(0);
+  }
+}
+@keyframes flicker {
+  0% {
+    opacity: .8;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    -webkit-transform: translateY(20px);
+    -moz-transform: translateY(20px);
+    -ms-transform: translateY(20px);
+    -o-transform: translateY(20px);
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: .8;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+/*---------------------------------------pulic---------------------------------------*/
+/*video*/
+.popmask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+}
+
+.video-wrap {
+  position: fixed;
+  top: 30%;
+  display: none;
+  z-index: 9999;
+  width: 650px;
+  height: 400px;
+  left: 50%;
+  margin-left: -325px;
+}
+.video-wrap video {
+  width: 650px;
+  height: 400px;
+}
+.video-wrap a {
+  position: absolute;
+  right: -41px;
+  top: 17px;
+  background: rgba(255, 255, 255, 0.4);
+  display: block;
+  height: 36px;
+  width: 36px;
+}
+.video-wrap a img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+/*browser*/
+.browser-mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: url("../img/brower-tips-bg.png");
+  display: none;
+  height: 100%;
+  width: 100%;
+  z-index: 9998;
+}
+
+.browser-tips {
+  margin-left: -300px;
+  padding: 0 100px 0 19px;
+  position: fixed;
+  left: 50%;
+  top: 200px;
+  background: url("../img/brower-tips-pop-bg.png") no-repeat center;
+  display: none;
+  border-radius: 5px;
+  height: 466px;
+  width: 600px;
+  color: #454545;
+  z-index: 9999;
+}
+.browser-tips a.brower-close {
+  position: absolute;
+  right: 52px;
+  top: 40px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+}
+.browser-tips h1 {
+  margin: 75px auto 50px;
+  display: block;
+  width: 460px;
+  color: #ba5750;
+  font-size: 36px;
+  text-align: center;
+}
+.browser-tips h3 {
+  margin: 20px auto 0;
+  width: 460px;
+  color: #764b45;
+  font-size: 16px;
+  line-height: 46px;
+}
+.browser-tips p {
+  margin: 50px auto 0;
+  width: 600px;
+  text-align: center;
+}
+.browser-tips p a {
+  margin: 0 10px;
+  background: url("../img/brower-tips-btn-bg.png") no-repeat center;
+  display: inline-block;
+  height: 51px;
+  width: 148px;
+  color: #b74c44;
+  font-size: 16px;
+  line-height: 51px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=index.css.map */

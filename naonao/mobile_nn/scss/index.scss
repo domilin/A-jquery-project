@@ -1,6 +1,6 @@
-@import "../../../_sass/bourbon/bourbon";
-@import "../../../_sass/normalize/normalize.scss";
-@import "../../../_sass/public/public";
+@import "../../../../_sass/bourbon/bourbon";
+@import "../../../../_sass/normalize/normalize.scss";
+@import "../../../../_sass/public/public";
 
 $rule: 640/750;
 
@@ -515,6 +515,7 @@ a.audio-btn {
 
 /*footer*/
 footer {
+    position: relative;
     padding: rem(20) 0;
     background: #000000;
     width: 100%;
@@ -523,6 +524,28 @@ footer {
     text-align: center;
     overflow: hidden;
     z-index: 999;
+    .img-href{
+        position:absolute;
+        width: 100%;
+        height: rem(60);
+        left: 0;
+        top: rem(10);
+        .span1,.span2{
+            position: absolute;
+            left: rem(100);
+            width: rem(180);
+            height: rem(60);
+            a{
+                display: block;
+                width: rem(180);
+                height: rem(60);
+            }
+        }
+        .span2{
+            left: rem(310);
+        }
+
+    }
     span {
         margin-bottom: rem(20);
         display: block;
@@ -602,5 +625,12 @@ footer {
             height: 100%;
             width: 100%;
         }
+    }
+}
+@media (min-width: rem(800))   {
+    .video-wrap{
+        width: 80%;
+        top: 20%;
+        left: 10%;
     }
 }

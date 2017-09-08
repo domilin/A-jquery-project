@@ -86,6 +86,9 @@ $(function () {
             $bm[0].play();
         }
     });
+    $bm.on('ended', function () {
+        $pm.removeClass('active');
+    });
 
 
     //下载
@@ -116,9 +119,11 @@ $(function () {
             } else {
                 var u = window.navigator.userAgent.toLowerCase();
                 if (u.indexOf('iphone') > 0 || u.indexOf("ipad") > 0) {
-                    window.location.href = iosUrl;
+                    //window.location.href = iosUrl;
+                    alert('下载暂未开启，敬请期待')
                 } else if (u.indexOf('android') > 0) {
-                    window.location.href = andUrl;
+                    //window.location.href = andUrl;
+                    alert('下载暂未开启，敬请期待')
                 }
             }
             return false;
